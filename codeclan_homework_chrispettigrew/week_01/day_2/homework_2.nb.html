@@ -1752,10 +1752,6 @@ summary {
 <p>#Part 1 #Q1.1</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfcHJpY2VzIDwtYygyMywgMjcsIDIzLCAyMSwgMzQsIDI0LCAyNSwgMzAsIDM3LCAzMClcbnN0b2NrX3ByaWNlc1xuYGBgIn0= -->
-<pre class="r"><code>stock_prices &lt;-c(23, 27, 23, 21, 34, 24, 25, 30, 37, 30)
-stock_prices</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Q1.2</p>
@@ -1765,6 +1761,10 @@ stock_prices</code></pre>
 <pre class="r"><code>day_of_week &lt;-c(&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;)
 day_of_week</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIk1vbmRheVwiICAgIFwiVHVlc2RheVwiICAgXCJXZWRuZXNkYXlcIiBcIlRodXJzZGF5XCIgIFwiRnJpZGF5XCIgICAgXCJNb25kYXlcIiAgICBcIlR1ZXNkYXlcIiAgXG4gWzhdIFwiV2VkbmVzZGF5XCIgXCJUaHVyc2RheVwiICBcIkZyaWRheVwiICAgXG4ifQ== -->
+<pre><code> [1] &quot;Monday&quot;    &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;    &quot;Monday&quot;    &quot;Tuesday&quot;  
+ [8] &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;   </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Q2.1</p>
@@ -1774,14 +1774,27 @@ day_of_week</code></pre>
 <pre class="r"><code>day_of_week_factor &lt;- as.factor(day_of_week)
 day_of_week_factor</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBNb25kYXkgICAgVHVlc2RheSAgIFdlZG5lc2RheSBUaHVyc2RheSAgRnJpZGF5ICAgIE1vbmRheSAgICBUdWVzZGF5ICAgV2VkbmVzZGF5XG4gWzldIFRodXJzZGF5ICBGcmlkYXkgICBcbkxldmVsczogRnJpZGF5IE1vbmRheSBUaHVyc2RheSBUdWVzZGF5IFdlZG5lc2RheVxuIn0= -->
+<pre><code> [1] Monday    Tuesday   Wednesday Thursday  Friday    Monday    Tuesday   Wednesday
+ [9] Thursday  Friday   
+Levels: Friday Monday Thursday Tuesday Wednesday</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Q2.2 X</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZWRfc3RvY2tfcHJpY2VzIDwtID8/XG5gYGAifQ== -->
-<pre class="r"><code>named_stock_prices &lt;- ??</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZWRfc3RvY2tfcHJpY2VzIDwtIHN0b2NrX3ByaWNlc1xubmFtZXMobmFtZWRfc3RvY2tfcHJpY2VzKSA8LSBkYXlfb2Zfd2Vla1xubmFtZWRfc3RvY2tfcHJpY2VzXG5gYGAifQ== -->
+<pre class="r"><code>named_stock_prices &lt;- stock_prices
+names(named_stock_prices) &lt;- day_of_week
+named_stock_prices</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgTW9uZGF5ICAgVHVlc2RheSBXZWRuZXNkYXkgIFRodXJzZGF5ICAgIEZyaWRheSAgICBNb25kYXkgICBUdWVzZGF5IFdlZG5lc2RheSAgVGh1cnNkYXkgXG4gICAgICAgMjMgICAgICAgIDI3ICAgICAgICAyMyAgICAgICAgMjEgICAgICAgIDM0ICAgICAgICAyNCAgICAgICAgMjUgICAgICAgIDMwICAgICAgICAzNyBcbiAgIEZyaWRheSBcbiAgICAgICAzMCBcbiJ9 -->
+<pre><code>   Monday   Tuesday Wednesday  Thursday    Friday    Monday   Tuesday Wednesday  Thursday 
+       23        27        23        21        34        24        25        30        37 
+   Friday 
+       30 </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Q3</p>
@@ -1791,6 +1804,13 @@ day_of_week_factor</code></pre>
 <pre class="r"><code>stock_data &lt;- data.frame(stock_prices = stock_prices, day_of_week = day_of_week)
 stock_data</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSd1U2RFFCQmRLTFNDdG1uUzd5Z0hUV09OaWFuRzlPYkZZT3lOckxCWUF1NDJ5MkwxNXBlM3pzSnNTMGxKNE0xN084eWJtWDE5WHQzNEs1OFEwaU85UG54ZENJbjdGaTZuYzBJY0c0aEZIT0pwL0lIakNRUmFITUhyTDI1Si9TenVFUTJmSVQ0aXpoSHZFQjhRbi81T09OUWY2cnJvNGVoTzZzNTBFMmUxa3diN0JmdG1SUW5SdU01Q2RTbXpoUDRhOWlMNGtWMkU2MHFXUno0SUs5YWkzanRMZUNPY09ybHhRVXRqZExCUGFheUVoR2pYVGVmMGk1bDBHOFdyVW9rNGp6WXlpK0dzMFM3QktoSnB0R1VzNzlUd3BOZ0dwbzdla3Qzc1RtOUxKL2IyblhiOGhDb2FwQkorT2RQU1FHeFVKamdVc3llNDB2YlBsdXdJNDRwcjgyUWFyeXVlVDY5bmVFOFdYdHdRWTc4VjI0Mm5Zem83M0Fqam54bG5aamtGL1dBRmtoRk1XUThad0Y2NE1xT0FXZ1pLS0dyeS9GZ1VScW1ISTd0L1F1Z2ljOG9DQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday"},{"1":"27","2":"Tuesday"},{"1":"23","2":"Wednesday"},{"1":"21","2":"Thursday"},{"1":"34","2":"Friday"},{"1":"24","2":"Monday"},{"1":"25","2":"Tuesday"},{"1":"30","2":"Wednesday"},{"1":"37","2":"Thursday"},{"1":"30","2":"Friday"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Q4</p>
@@ -1800,40 +1820,60 @@ stock_data</code></pre>
 <pre class="r"><code>stock_list &lt;- list(stock_prices = stock_prices, day_of_week = day_of_week, stock_data = stock_data)
 stock_list</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJHN0b2NrX3ByaWNlc1xuIFsxXSAyMyAyNyAyMyAyMSAzNCAyNCAyNSAzMCAzNyAzMFxuXG4kZGF5X29mX3dlZWtcbiBbMV0gXCJNb25kYXlcIiAgICBcIlR1ZXNkYXlcIiAgIFwiV2VkbmVzZGF5XCIgXCJUaHVyc2RheVwiICBcIkZyaWRheVwiICAgIFwiTW9uZGF5XCIgICAgXCJUdWVzZGF5XCIgIFxuIFs4XSBcIldlZG5lc2RheVwiIFwiVGh1cnNkYXlcIiAgXCJGcmlkYXlcIiAgIFxuXG4kc3RvY2tfZGF0YVxuIn0= -->
+<pre><code>$stock_prices
+ [1] 23 27 23 21 34 24 25 30 37 30
+
+$day_of_week
+ [1] &quot;Monday&quot;    &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;    &quot;Monday&quot;    &quot;Tuesday&quot;  
+ [8] &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;   
+
+$stock_data</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSVVUvQ01CQXVZNEJVSVNUOERwYW9NV0pNREJyRG15OW1SdDVJN1lvczFKWjBuZWdidnh5OWJsZGdDMHUyNzc2dnQvdnVycS9QczJzNm80U1FKbW0yNGR1Q2tMVGU0dWxvVEVnWUFHbVFrSFFkL3NEeEVBSW45dUdsazF0U1BKTjdSTTl2RUI4Ung0aDNpQStJVDlzS2gvbzlWeGM5UXRkSjBabHI0cVJXYWJBdHhiZVFHVVNESWd2VnFVa1Q5dXZaaTFZSGRoWXZjNU1kZUNmT3hSSHR2b3RFbFVMVnFjVWx5N3pSM243QnVOVUdvbDA5WGJFdjRkTURGQzh5cS9scXZqWXBoN05TT3dlcnVWN01OMEtzYWpXNlJtOGlYOGR0S1NoMzU3YmxFcHQvdFhab3dpeUxGZ1orT2RGU1I2OXRxaFVVQzRhNDB1T2ZHNlltREhMbHpKTVJYK1pxTmJxOHdudHE0TVgxTUtaSGNWQjZocjZ6L1kwSTlaa3E0WmNqMlllUVNQb3daVEZrQkh0UjFvOENhaFpaYlpuUG8xeExyeFREa2QwLzVpYTlKTW9DQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday"},{"1":"27","2":"Tuesday"},{"1":"23","2":"Wednesday"},{"1":"21","2":"Thursday"},{"1":"34","2":"Friday"},{"1":"24","2":"Monday"},{"1":"25","2":"Tuesday"},{"1":"30","2":"Wednesday"},{"1":"37","2":"Thursday"},{"1":"30","2":"Friday"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTkFcbiJ9 -->
+<pre><code>NA</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Part2.2 #Q1.1</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfcHJpY2VzIFs0OjZdXG5gYGAifQ== -->
-<pre class="r"><code>stock_prices [4:6]</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Q1.2</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ3JlYXRlcl90aGFuXzMwIDwtIHN0b2NrX3ByaWNlcyA+IDMwXG5zdG9ja19wcmljZXMgW2dyZWF0ZXJfdGhhbl8zMF1cbmBgYCJ9 -->
-<pre class="r"><code>greater_than_30 &lt;- stock_prices &gt; 30
-stock_prices [greater_than_30]</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfcHJpY2VzIFtzdG9ja19wcmljZXMgPiAzMF1cbmBgYCJ9 -->
+<pre class="r"><code>stock_prices [stock_prices &gt; 30]</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDM0IDM3XG4ifQ== -->
+<pre><code>[1] 34 37</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Q2.1</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfZGF0YVssMl1cblxuYGBgIn0= -->
-<pre class="r"><code>stock_data[,2]
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfZGF0YSRkYXlfb2Zfd2Vla1xuYGBgIn0= -->
+<pre class="r"><code>stock_data$day_of_week</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBNb25kYXkgICAgVHVlc2RheSAgIFdlZG5lc2RheSBUaHVyc2RheSAgRnJpZGF5ICAgIE1vbmRheSAgICBUdWVzZGF5ICAgV2VkbmVzZGF5XG4gWzldIFRodXJzZGF5ICBGcmlkYXkgICBcbkxldmVsczogRnJpZGF5IE1vbmRheSBUaHVyc2RheSBUdWVzZGF5IFdlZG5lc2RheVxuIn0= -->
+<pre><code> [1] Monday    Tuesday   Wednesday Thursday  Friday    Monday    Tuesday   Wednesday
+ [9] Thursday  Friday   
+Levels: Friday Monday Thursday Tuesday Wednesday</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Q2.2 Select the rows of the stock_data data frame where the stock_prices are less than 25.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfcHJpY2VzIDwgMjVcbmBgYCJ9 -->
-<pre class="r"><code>stock_prices &lt; 25</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Q3.1</p>
@@ -1842,30 +1882,31 @@ stock_prices [greater_than_30]</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfZGF0YVssMV1cbmBgYCJ9 -->
 <pre class="r"><code>stock_data[,1]</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAyMyAyNyAyMyAyMSAzNCAyNCAyNSAzMCAzNyAzMFxuIn0= -->
+<pre><code> [1] 23 27 23 21 34 24 25 30 37 30</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Q3.2</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfZGF0YVszLF1cbmBgYCJ9 -->
-<pre class="r"><code>stock_data[3,]</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Q3.3</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfZGF0YVszLDFdXG5gYGAifQ== -->
-<pre class="r"><code>stock_data[3,1]</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#Q4 X</p>
+<p>#Q4</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuP1xuYGBgIn0= -->
-<pre class="r"><code>?</code></pre>
-<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSMzAvQ01CQXUyd0NwUWtqNE83YkVFQ1BHeEtBeHZQbGlNUEpHYWxka29iYWs2MFRmL012QjYzYmx4OEtTN2J2djYrMit1K3ZyODJ4SVo1UVFFcEt3QmQ4bWhLVDVOcDNFSTBLaUFFaURSS1RqOEFlT0J4QTRzUWN2SGQrUzhobmZJM3ArZy9pSU9FSzhRM3hBZlBvNzRWQy82K3FpUitRNktUdHpUWnpWVGhwc1NmRXRaQTVSdjh4Q2RXS3lsUDE2OXFMVmdWMU1sNFhKRDd3OUxjUVI3YnlMVkZYQ3FWT1RTNVo3bzczOWduR3JEVVRiZXJwaVg4S25CeWhlNVZiejFYeHRNZzVubFhZSlZuTzltRytFV05WcWRJemVKTDZPMjFKUTdjNXR5eVdHdTFvN05HV1dKUXNEdjV4cHFhM1hOdE1LaWdVRFhPbnh6dzFURS9xRmN1WnB6SmVGV3NYRGE3eW5CbDVjRjJONkZBZVZaK1E3MjkrSVVKK1pFbjQ1a24wSWlhUUhVNVpESnJBWFpmMG9vT2FKMVpiNVBNcTE5RW81SE5uK0EwMTVLUERLQWdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday"},{"1":"27","2":"Tuesday"},{"1":"23","2":"Wednesday"},{"1":"21","2":"Thursday"},{"1":"34","2":"Friday"},{"1":"24","2":"Monday"},{"1":"25","2":"Tuesday"},{"1":"30","2":"Wednesday"},{"1":"37","2":"Thursday"},{"1":"30","2":"Friday"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Part 3</p>
@@ -1874,11 +1915,17 @@ stock_prices [greater_than_30]</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcInRpbnlxdWFudFwiKVxuYGBgIn0= -->
 <pre class="r"><code>install.packages(&quot;tinyquant&quot;)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBpbiBpbnN0YWxsLnBhY2thZ2VzIDpcbiAgcGFja2FnZSDigJh0aW55cXVhbnTigJkgaXMgbm90IGF2YWlsYWJsZSAoZm9yIFIgdmVyc2lvbiAzLjYuMClcbiJ9 -->
+<pre><code>Warning in install.packages :
+  package ‘tinyquant’ is not available (for R version 3.6.0)</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>google_prices[ , c(“date”, “close”)]</p>
+<p>subset(google_prices, close &gt; mean&gt;(close))</p>
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQojUGFydCAxCiNRMS4xCmBgYHtyfQpzdG9ja19wcmljZXMgPC1jKDIzLCAyNywgMjMsIDIxLCAzNCwgMjQsIDI1LCAzMCwgMzcsIDMwKQpzdG9ja19wcmljZXMKYGBgCiNRMS4yCmBgYHtyfQpkYXlfb2Zfd2VlayA8LWMoIk1vbmRheSIsICJUdWVzZGF5IiwgIldlZG5lc2RheSIsICJUaHVyc2RheSIsICJGcmlkYXkiLCAiTW9uZGF5IiwgIlR1ZXNkYXkiLCAiV2VkbmVzZGF5IiwgIlRodXJzZGF5IiwgIkZyaWRheSIpCmRheV9vZl93ZWVrCmBgYAojUTIuMQpgYGB7cn0KZGF5X29mX3dlZWtfZmFjdG9yIDwtIGFzLmZhY3RvcihkYXlfb2Zfd2VlaykKZGF5X29mX3dlZWtfZmFjdG9yCmBgYAojUTIuMiBYCmBgYHtyfQpuYW1lZF9zdG9ja19wcmljZXMgPC0gPz8KYGBgCiNRMwpgYGB7cn0Kc3RvY2tfZGF0YSA8LSBkYXRhLmZyYW1lKHN0b2NrX3ByaWNlcyA9IHN0b2NrX3ByaWNlcywgZGF5X29mX3dlZWsgPSBkYXlfb2Zfd2VlaykKc3RvY2tfZGF0YQpgYGAKI1E0CmBgYHtyfQpzdG9ja19saXN0IDwtIGxpc3Qoc3RvY2tfcHJpY2VzID0gc3RvY2tfcHJpY2VzLCBkYXlfb2Zfd2VlayA9IGRheV9vZl93ZWVrLCBzdG9ja19kYXRhID0gc3RvY2tfZGF0YSkKc3RvY2tfbGlzdApgYGAKI1BhcnQyLjIKI1ExLjEKYGBge3J9CnN0b2NrX3ByaWNlcyBbNDo2XQpgYGAKI1ExLjIKYGBge3J9CmdyZWF0ZXJfdGhhbl8zMCA8LSBzdG9ja19wcmljZXMgPiAzMApzdG9ja19wcmljZXMgW2dyZWF0ZXJfdGhhbl8zMF0KYGBgCiNRMi4xCmBgYHtyfQpzdG9ja19kYXRhWywyXQoKYGBgCiNRMi4yClNlbGVjdCB0aGUgcm93cyBvZiB0aGUgc3RvY2tfZGF0YSBkYXRhIGZyYW1lIHdoZXJlIHRoZSBzdG9ja19wcmljZXMgYXJlIGxlc3MgdGhhbiAyNS4KYGBge3J9CnN0b2NrX3ByaWNlcyA8IDI1CmBgYAoKClEzLjEKYGBge3J9CnN0b2NrX2RhdGFbLDFdCmBgYAojUTMuMgpgYGB7cn0Kc3RvY2tfZGF0YVszLF0KYGBgCiNRMy4zCmBgYHtyfQpzdG9ja19kYXRhWzMsMV0KYGBgCiNRNCBYCmBgYHtyfQo/CmBgYAoKI1BhcnQgMwpgYGB7cn0KaW5zdGFsbC5wYWNrYWdlcygidGlueXF1YW50IikKYGBgCgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQojUGFydCAxCiNRMS4xCmBgYHtyfQpzdG9ja19wcmljZXMgPC1jKDIzLCAyNywgMjMsIDIxLCAzNCwgMjQsIDI1LCAzMCwgMzcsIDMwKQpzdG9ja19wcmljZXMKYGBgCiNRMS4yCmBgYHtyfQpkYXlfb2Zfd2VlayA8LWMoIk1vbmRheSIsICJUdWVzZGF5IiwgIldlZG5lc2RheSIsICJUaHVyc2RheSIsICJGcmlkYXkiLCAiTW9uZGF5IiwgIlR1ZXNkYXkiLCAiV2VkbmVzZGF5IiwgIlRodXJzZGF5IiwgIkZyaWRheSIpCmRheV9vZl93ZWVrCmBgYAojUTIuMQpgYGB7cn0KZGF5X29mX3dlZWtfZmFjdG9yIDwtIGFzLmZhY3RvcihkYXlfb2Zfd2VlaykKZGF5X29mX3dlZWtfZmFjdG9yCmBgYAojUTIuMiBYCmBgYHtyfQpuYW1lZF9zdG9ja19wcmljZXMgPC0gc3RvY2tfcHJpY2VzCm5hbWVzKG5hbWVkX3N0b2NrX3ByaWNlcykgPC0gZGF5X29mX3dlZWsKbmFtZWRfc3RvY2tfcHJpY2VzCmBgYAojUTMKYGBge3J9CnN0b2NrX2RhdGEgPC0gZGF0YS5mcmFtZShzdG9ja19wcmljZXMgPSBzdG9ja19wcmljZXMsIGRheV9vZl93ZWVrID0gZGF5X29mX3dlZWspCnN0b2NrX2RhdGEKYGBgCiNRNApgYGB7cn0Kc3RvY2tfbGlzdCA8LSBsaXN0KHN0b2NrX3ByaWNlcyA9IHN0b2NrX3ByaWNlcywgZGF5X29mX3dlZWsgPSBkYXlfb2Zfd2Vlaywgc3RvY2tfZGF0YSA9IHN0b2NrX2RhdGEpCnN0b2NrX2xpc3QKYGBgCiNQYXJ0Mi4yCiNRMS4xCmBgYHtyfQpzdG9ja19wcmljZXMgWzQ6Nl0KYGBgCiNRMS4yCmBgYHtyfQpzdG9ja19wcmljZXMgW3N0b2NrX3ByaWNlcyA+IDMwXQpgYGAKI1EyLjEKYGBge3J9CnN0b2NrX2RhdGEkZGF5X29mX3dlZWsKYGBgCiNRMi4yClNlbGVjdCB0aGUgcm93cyBvZiB0aGUgc3RvY2tfZGF0YSBkYXRhIGZyYW1lIHdoZXJlIHRoZSBzdG9ja19wcmljZXMgYXJlIGxlc3MgdGhhbiAyNS4KYGBge3J9CnN0b2NrX3ByaWNlcyA8IDI1CmBgYAoKClEzLjEKYGBge3J9CnN0b2NrX2RhdGFbLDFdCmBgYAojUTMuMgpgYGB7cn0Kc3RvY2tfZGF0YVszLF0KYGBgCiNRMy4zCmBgYHtyfQpzdG9ja19kYXRhWzMsMV0KYGBgCiNRNApgYGB7cn0Kc3RvY2tfbGlzdCRzdG9ja19kYXRhCmBgYAoKI1BhcnQgMwpgYGB7cn0KaW5zdGFsbC5wYWNrYWdlcygidGlueXF1YW50IikKYGBgCgoKZ29vZ2xlX3ByaWNlc1sgLCBjKCJkYXRlIiwgImNsb3NlIildCgpzdWJzZXQoZ29vZ2xlX3ByaWNlcywgY2xvc2UgPiBtZWFuPihjbG9zZSkpCgo=</div>
 
 
 
