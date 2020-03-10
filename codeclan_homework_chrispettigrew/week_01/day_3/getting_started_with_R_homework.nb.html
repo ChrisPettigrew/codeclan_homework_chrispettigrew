@@ -1749,267 +1749,474 @@ summary {
 
 
 <!-- rnb-text-begin -->
-<p>#Part 1 #Q1.1</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q1.2</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF5X29mX3dlZWsgPC1jKFwiTW9uZGF5XCIsIFwiVHVlc2RheVwiLCBcIldlZG5lc2RheVwiLCBcIlRodXJzZGF5XCIsIFwiRnJpZGF5XCIsIFwiTW9uZGF5XCIsIFwiVHVlc2RheVwiLCBcIldlZG5lc2RheVwiLCBcIlRodXJzZGF5XCIsIFwiRnJpZGF5XCIpXG5kYXlfb2Zfd2Vla1xuYGBgIn0= -->
-<pre class="r"><code>day_of_week &lt;-c(&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;)
-day_of_week</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVtcF9pbl9lZGluYnVyZ2ggPC0gYyg4LCA3LCA3LCA5LCA4KVxuY2xhc3ModGVtcF9pbl9lZGluYnVyZ2gpXG5gYGAifQ== -->
+<pre class="r"><code>temp_in_edinburgh &lt;- c(8, 7, 7, 9, 8)
+class(temp_in_edinburgh)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIk1vbmRheVwiICAgIFwiVHVlc2RheVwiICAgXCJXZWRuZXNkYXlcIiBcIlRodXJzZGF5XCIgIFwiRnJpZGF5XCIgICAgXCJNb25kYXlcIiAgICBcIlR1ZXNkYXlcIiAgXG4gWzhdIFwiV2VkbmVzZGF5XCIgXCJUaHVyc2RheVwiICBcIkZyaWRheVwiICAgXG4ifQ== -->
-<pre><code> [1] &quot;Monday&quot;    &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;    &quot;Monday&quot;    &quot;Tuesday&quot;  
- [8] &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;   </code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibnVtZXJpY1wiXG4ifQ== -->
+<pre><code>[1] &quot;numeric&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#Q2.1</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF5X29mX3dlZWtfZmFjdG9yIDwtIGFzLmZhY3RvcihkYXlfb2Zfd2VlaylcbmRheV9vZl93ZWVrX2ZhY3RvclxuYGBgIn0= -->
-<pre class="r"><code>day_of_week_factor &lt;- as.factor(day_of_week)
-day_of_week_factor</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmFpbl9pbl9lZGluYnVyZ2ggPC0gYygxMCwgMjAsIDIwLCA2MCwgMjApXG5jbGFzcyhyYWluX2luX2VkaW5idXJnaClcbmBgYCJ9 -->
+<pre class="r"><code>rain_in_edinburgh &lt;- c(10, 20, 20, 60, 20)
+class(rain_in_edinburgh)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBNb25kYXkgICAgVHVlc2RheSAgIFdlZG5lc2RheSBUaHVyc2RheSAgRnJpZGF5ICAgIE1vbmRheSAgICBUdWVzZGF5ICAgV2VkbmVzZGF5XG4gWzldIFRodXJzZGF5ICBGcmlkYXkgICBcbkxldmVsczogRnJpZGF5IE1vbmRheSBUaHVyc2RheSBUdWVzZGF5IFdlZG5lc2RheVxuIn0= -->
-<pre><code> [1] Monday    Tuesday   Wednesday Thursday  Friday    Monday    Tuesday   Wednesday
- [9] Thursday  Friday   
-Levels: Friday Monday Thursday Tuesday Wednesday</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibnVtZXJpY1wiXG4ifQ== -->
+<pre><code>[1] &quot;numeric&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#Q2.2 X</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZWRfc3RvY2tfcHJpY2VzIDwtIHN0b2NrX3ByaWNlc1xubmFtZXMobmFtZWRfc3RvY2tfcHJpY2VzKSA8LSBkYXlfb2Zfd2Vla1xubmFtZWRfc3RvY2tfcHJpY2VzXG5gYGAifQ== -->
-<pre class="r"><code>named_stock_prices &lt;- stock_prices
-names(named_stock_prices) &lt;- day_of_week
-named_stock_prices</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xvdWRfY292ZXJfaW5fZWRpbmJ1cmdoIDwtIGMoXCJwYXJ0bHlcIiwgXCJtb3N0bHlcIiwgXCJtb3N0bHlcIiwgXCJzaG93ZXJzXCIsIFwicGFydGx5XCIpXG5jbGFzcyhjbG91ZF9jb3Zlcl9pbl9lZGluYnVyZ2gpXG5gYGAifQ== -->
+<pre class="r"><code>cloud_cover_in_edinburgh &lt;- c(&quot;partly&quot;, &quot;mostly&quot;, &quot;mostly&quot;, &quot;showers&quot;, &quot;partly&quot;)
+class(cloud_cover_in_edinburgh)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgTW9uZGF5ICAgVHVlc2RheSBXZWRuZXNkYXkgIFRodXJzZGF5ICAgIEZyaWRheSAgICBNb25kYXkgICBUdWVzZGF5IFdlZG5lc2RheSAgVGh1cnNkYXkgXG4gICAgICAgMjMgICAgICAgIDI3ICAgICAgICAyMyAgICAgICAgMjEgICAgICAgIDM0ICAgICAgICAyNCAgICAgICAgMjUgICAgICAgIDMwICAgICAgICAzNyBcbiAgIEZyaWRheSBcbiAgICAgICAzMCBcbiJ9 -->
-<pre><code>   Monday   Tuesday Wednesday  Thursday    Friday    Monday   Tuesday Wednesday  Thursday 
-       23        27        23        21        34        24        25        30        37 
-   Friday 
-       30 </code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiY2hhcmFjdGVyXCJcbiJ9 -->
+<pre><code>[1] &quot;character&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICBcbmBgYCJ9 -->
+<pre class="r"><code>  </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF5cyA8LSBjKFwiV2VkXCIsIFwiVGh1XCIsIFwiRnJpXCIsIFwiU2F0XCIsIFwiU3VuXCIpXG5gYGAifQ== -->
+<pre class="r"><code>days &lt;- c(&quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZWRfdGVtcF9pbl9lZGluYnVyZ2ggPC0gdGVtcF9pbl9lZGluYnVyZ2hcbm5hbWVzKG5hbWVkX3RlbXBfaW5fZWRpbmJ1cmdoKSA8LSBkYXlzXG5uYW1lZF90ZW1wX2luX2VkaW5idXJnaFxuYGBgIn0= -->
+<pre class="r"><code>named_temp_in_edinburgh &lt;- temp_in_edinburgh
+names(named_temp_in_edinburgh) &lt;- days
+named_temp_in_edinburgh</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2VkIFRodSBGcmkgU2F0IFN1biBcbiAgOCAgIDcgICA3ICAgOSAgIDggXG4ifQ== -->
+<pre><code>Wed Thu Fri Sat Sun 
+  8   7   7   9   8 </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#Q3</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfZGF0YSA8LSBkYXRhLmZyYW1lKHN0b2NrX3ByaWNlcyA9IHN0b2NrX3ByaWNlcywgZGF5X29mX3dlZWsgPSBkYXlfb2Zfd2VlaylcbnN0b2NrX2RhdGFcbmBgYCJ9 -->
-<pre class="r"><code>stock_data &lt;- data.frame(stock_prices = stock_prices, day_of_week = day_of_week)
-stock_data</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZWRfcmFpbl9pbl9lZGluYnVyZ2ggPC0gcmFpbl9pbl9lZGluYnVyZ2hcbm5hbWVzKG5hbWVkX3JhaW5faW5fZWRpbmJ1cmdoKSA8LSBkYXlzXG5uYW1lZF9yYWluX2luX2VkaW5idXJnaFxuYGBgIn0= -->
+<pre class="r"><code>named_rain_in_edinburgh &lt;- rain_in_edinburgh
+names(named_rain_in_edinburgh) &lt;- days
+named_rain_in_edinburgh</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSd1U2RFFCQmRLTFNDdG1uUzd5Z0hUV09OaWFuRzlPYkZZT3lOckxCWUF1NDJ5MkwxNXBlM3pzSnNTMGxKNE0xN084eWJtWDE5WHQzNEs1OFEwaU85UG54ZENJbjdGaTZuYzBJY0c0aEZIT0pwL0lIakNRUmFITUhyTDI1Si9TenVFUTJmSVQ0aXpoSHZFQjhRbi81T09OUWY2cnJvNGVoTzZzNTBFMmUxa3diN0JmdG1SUW5SdU01Q2RTbXpoUDRhOWlMNGtWMkU2MHFXUno0SUs5YWkzanRMZUNPY09ybHhRVXRqZExCUGFheUVoR2pYVGVmMGk1bDBHOFdyVW9rNGp6WXlpK0dzMFM3QktoSnB0R1VzNzlUd3BOZ0dwbzdla3Qzc1RtOUxKL2IyblhiOGhDb2FwQkorT2RQU1FHeFVKamdVc3llNDB2YlBsdXdJNDRwcjgyUWFyeXVlVDY5bmVFOFdYdHdRWTc4VjI0Mm5Zem83M0Fqam54bG5aamtGL1dBRmtoRk1XUThad0Y2NE1xT0FXZ1pLS0dyeS9GZ1VScW1ISTd0L1F1Z2ljOG9DQUFBPSJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2VkIFRodSBGcmkgU2F0IFN1biBcbiAxMCAgMjAgIDIwICA2MCAgMjAgXG4ifQ== -->
+<pre><code>Wed Thu Fri Sat Sun 
+ 10  20  20  60  20 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZWRfY2xvdWRfY292ZXJfaW5fZWRpbmJ1cmdoIDwtIGNsb3VkX2NvdmVyX2luX2VkaW5idXJnaFxubmFtZXMobmFtZWRfY2xvdWRfY292ZXJfaW5fZWRpbmJ1cmdoKSA8LSBkYXlzXG5uYW1lZF9jbG91ZF9jb3Zlcl9pbl9lZGluYnVyZ2hcbmBgYCJ9 -->
+<pre class="r"><code>named_cloud_cover_in_edinburgh &lt;- cloud_cover_in_edinburgh
+names(named_cloud_cover_in_edinburgh) &lt;- days
+named_cloud_cover_in_edinburgh</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgV2VkICAgICAgIFRodSAgICAgICBGcmkgICAgICAgU2F0ICAgICAgIFN1biBcbiBcInBhcnRseVwiICBcIm1vc3RseVwiICBcIm1vc3RseVwiIFwic2hvd2Vyc1wiICBcInBhcnRseVwiIFxuIn0= -->
+<pre><code>      Wed       Thu       Fri       Sat       Sun 
+ &quot;partly&quot;  &quot;mostly&quot;  &quot;mostly&quot; &quot;showers&quot;  &quot;partly&quot; </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVhbih0ZW1wX2luX2VkaW5idXJnaClcbmBgYCJ9 -->
+<pre class="r"><code>mean(temp_in_edinburgh)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDcuOFxuIn0= -->
+<pre><code>[1] 7.8</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVhbihyYWluX2luX2VkaW5idXJnaClcbmBgYCJ9 -->
+<pre class="r"><code>mean(rain_in_edinburgh)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDI2XG4ifQ== -->
+<pre><code>[1] 26</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVtcF9pbl9lZGluYnVyZ2hbdGVtcF9pbl9lZGluYnVyZ2ggPiA3LjhdXG5gYGAifQ== -->
+<pre class="r"><code>temp_in_edinburgh[temp_in_edinburgh &gt; 7.8]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDggOSA4XG4ifQ== -->
+<pre><code>[1] 8 9 8</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#Select only the the temperatures when the chance of rain is lower than or equal to the average.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVtcF9pbl9lZGluYnVyZ2hbcmFpbl9pbl9lZGluYnVyZ2ggPD0gbWVhbih0ZW1wX2luX2VkaW5idXJnaCldXG5gYGAifQ== -->
+<pre class="r"><code>temp_in_edinburgh[rain_in_edinburgh &lt;= mean(temp_in_edinburgh)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoibnVtZXJpYygwKVxuIn0= -->
+<pre><code>numeric(0)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#Select only the cloud covers from the weekend.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xvdWRfY292ZXJfaW5fZWRpbmJ1cmdoWzQ6NV1cbmBgYCJ9 -->
+<pre class="r"><code>cloud_cover_in_edinburgh[4:5]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwic2hvd2Vyc1wiIFwicGFydGx5XCIgXG4ifQ== -->
+<pre><code>[1] &quot;showers&quot; &quot;partly&quot; </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVzdF9yZXN1bHRzIDwtIGMoNiwgNywgOSwgNywgOSwgMywgOSwgNywgMywgOCwgMTAsIDUsIDUsIDksIDcsIDUsIDksIDgsIDksIDUpXG5ucm93KHRlc3RfcmVzdWx0cylcbmBgYCJ9 -->
+<pre class="r"><code>test_results &lt;- c(6, 7, 9, 7, 9, 3, 9, 7, 3, 8, 10, 5, 5, 9, 7, 5, 9, 8, 9, 5)
+nrow(test_results)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTlVMTFxuIn0= -->
+<pre><code>NULL</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#How many marks do we have?</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGVuZ3RoKHRlc3RfcmVzdWx0cylcbmBgYCJ9 -->
+<pre class="r"><code>length(test_results)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIwXG4ifQ== -->
+<pre><code>[1] 20</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#What was the average mark?</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWVhbih0ZXN0X3Jlc3VsdHMpXG5gYGAifQ== -->
+<pre class="r"><code>mean(test_results)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDdcbiJ9 -->
+<pre><code>[1] 7</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#What was the highest and lowest result?</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWF4KHRlc3RfcmVzdWx0cylcbmBgYCJ9 -->
+<pre class="r"><code>max(test_results)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEwXG4ifQ== -->
+<pre><code>[1] 10</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWluKHRlc3RfcmVzdWx0cylcbmBgYCJ9 -->
+<pre class="r"><code>min(test_results)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDNcbiJ9 -->
+<pre><code>[1] 3</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#How many people scored each mark?</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFibGUodGVzdF9yZXN1bHRzKVxuYGBgIn0= -->
+<pre class="r"><code>table(test_results)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoidGVzdF9yZXN1bHRzXG4gMyAgNSAgNiAgNyAgOCAgOSAxMCBcbiAyICA0ICAxICA0ICAyICA2ICAxIFxuIn0= -->
+<pre><code>test_results
+ 3  5  6  7  8  9 10 
+ 2  4  1  4  2  6  1 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Express each mark as a percentage out of 100</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVzdF9yZXN1bHRzLzEwICogMTAwXG5gYGAifQ== -->
+<pre class="r"><code>test_results/10 * 100</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAgNjAgIDcwICA5MCAgNzAgIDkwICAzMCAgOTAgIDcwICAzMCAgODAgMTAwICA1MCAgNTAgIDkwICA3MCAgNTAgIDkwICA4MCAgOTAgIDUwXG4ifQ== -->
+<pre><code> [1]  60  70  90  70  90  30  90  70  30  80 100  50  50  90  70  50  90  80  90  50</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>How many people scored eight or higher?</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtKHRlc3RfcmVzdWx0cyA+PTgpXG5gYGAifQ== -->
+<pre class="r"><code>sum(test_results &gt;=8)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDlcbiJ9 -->
+<pre><code>[1] 9</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#Matrix</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVtcF9mb3JlY2FzdF9lZGluIDwtYyAoNywgNywgOSwgOSwgMTAsIDEwLCA4LCA4LCA4LCA3LCA3LCA3LCA4LCA3KVxuXG5gYGAifQ== -->
+<pre class="r"><code>temp_forecast_edin &lt;-c (7, 7, 9, 9, 10, 10, 8, 8, 8, 7, 7, 7, 8, 7)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3QgPC0gbWF0cml4KHRlbXBfZm9yZWNhc3RfZWRpbiwgbnJvdyA9IDIsIG5jb2wgPSA3LCBieXJvdyA9IFRSVUUpXG5mb3J0bmlnaHRfdGVtcF9mb3JlY2FzdFxuYGBgIn0= -->
+<pre class="r"><code>fortnight_temp_forecast &lt;- matrix(temp_forecast_edin, nrow = 2, ncol = 7, byrow = TRUE)
+fortnight_temp_forecast</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXSBbLDRdIFssNV0gWyw2XSBbLDddXG5bMSxdICAgIDcgICAgNyAgICA5ICAgIDkgICAxMCAgIDEwICAgIDhcblsyLF0gICAgOCAgICA4ICAgIDcgICAgNyAgICA3ICAgIDggICAgN1xuIn0= -->
+<pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+[1,]    7    7    9    9   10   10    8
+[2,]    8    8    7    7    7    8    7</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm93bmFtZXMoZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3QpIDwtIGMoXCJ3ZWVrIDFcIiwgXCJ3ZWVrIDJcIilcbmNvbG5hbWVzKGZvcnRuaWdodF90ZW1wX2ZvcmVjYXN0KSA8LSBjKFwiVGh1XCIsIFwiRnJpXCIsIFwiU2F0XCIsIFwiU3VuXCIsIFwiTW9uXCIsIFwiVHVlXCIsIFwiV2VkXCIpXG5mb3J0bmlnaHRfdGVtcF9mb3JlY2FzdFxuYGBgIn0= -->
+<pre class="r"><code>rownames(fortnight_temp_forecast) &lt;- c(&quot;week 1&quot;, &quot;week 2&quot;)
+colnames(fortnight_temp_forecast) &lt;- c(&quot;Thu&quot;, &quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;, &quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;)
+fortnight_temp_forecast</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgIFRodSBGcmkgU2F0IFN1biBNb24gVHVlIFdlZFxud2VlayAxICAgNyAgIDcgICA5ICAgOSAgMTAgIDEwICAgOFxud2VlayAyICAgOCAgIDggICA3ICAgNyAgIDcgICA4ICAgN1xuIn0= -->
+<pre><code>       Thu Fri Sat Sun Mon Tue Wed
+week 1   7   7   9   9  10  10   8
+week 2   8   8   7   7   7   8   7</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm93TWVhbnMoZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3QpXG5gYGAifQ== -->
+<pre class="r"><code>rowMeans(fortnight_temp_forecast)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICB3ZWVrIDEgICB3ZWVrIDIgXG44LjU3MTQyOSA3LjQyODU3MSBcbiJ9 -->
+<pre><code>  week 1   week 2 
+8.571429 7.428571 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#Find the average temperature on each day of the week (i.e the average temperature on the two Mondays, the two Tuesdays etc.)</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sTWVhbnMoZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3QpXG5gYGAifQ== -->
+<pre class="r"><code>colMeans(fortnight_temp_forecast)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiVGh1IEZyaSBTYXQgU3VuIE1vbiBUdWUgV2VkIFxuNy41IDcuNSA4LjAgOC4wIDguNSA5LjAgNy41IFxuIn0= -->
+<pre><code>Thu Fri Sat Sun Mon Tue Wed 
+7.5 7.5 8.0 8.0 8.5 9.0 7.5 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3RbMiwzXVxuYGBgIn0= -->
+<pre class="r"><code>fortnight_temp_forecast[2,3]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDdcbiJ9 -->
+<pre><code>[1] 7</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3RbMixdXG5gYGAifQ== -->
+<pre class="r"><code>fortnight_temp_forecast[2,]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiVGh1IEZyaSBTYXQgU3VuIE1vbiBUdWUgV2VkIFxuICA4ICAgOCAgIDcgICA3ICAgNyAgIDggICA3IFxuIn0= -->
+<pre><code>Thu Fri Sat Sun Mon Tue Wed 
+  8   8   7   7   7   8   7 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3RbLFwiV2VkXCJdXG5gYGAifQ== -->
+<pre class="r"><code>fortnight_temp_forecast[,&quot;Wed&quot;]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoid2VlayAxIHdlZWsgMiBcbiAgICAgOCAgICAgIDcgXG4ifQ== -->
+<pre><code>week 1 week 2 
+     8      7 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3QgKiAxLjggKyAzMlxuYGBgIn0= -->
+<pre class="r"><code>fortnight_temp_forecast * 1.8 + 32</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICBUaHUgIEZyaSAgU2F0ICBTdW4gIE1vbiAgVHVlICBXZWRcbndlZWsgMSA0NC42IDQ0LjYgNDguMiA0OC4yIDUwLjAgNTAuMCA0Ni40XG53ZWVrIDIgNDYuNCA0Ni40IDQ0LjYgNDQuNiA0NC42IDQ2LjQgNDQuNlxuIn0= -->
+<pre><code>        Thu  Fri  Sat  Sun  Mon  Tue  Wed
+week 1 44.6 44.6 48.2 48.2 50.0 50.0 46.4
+week 2 46.4 46.4 44.6 44.6 44.6 46.4 44.6</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<div id="factors" class="section level1">
+<h1>Factors</h1>
+<p>Now we will go back to our 5 day forecast.</p>
+<p>Make the vector with the days of the week into an ordered factor, where the order correspond to the order of days in a week, starting Monday.</p>
+<p>Now select only the temperatures after Tuesday.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF5c19pbl9vcmRlciA8LSBjKFxuICBcIk1vbmRheVwiLFxuICBcIlR1ZXNkYXlcIixcbiAgXCJXZWRuZXNkYXlcIixcbiAgXCJUaHVyc2RheVwiLFxuICBcIkZyaWRheVwiLFxuICBcIlNhdHVyZGF5XCIsXG4gIFwiU3VuZGF5XCJcbilcblxuZGF5c19vZl93ZWVrX2ZhY3RvciA8LSBmYWN0b3IoXG4gIGRheXMsXG4gIGxldmVscyA9IGRheXNfaW5fb3JkZXIsXG4gIG9yZGVyZWQgPSBUUlVFXG4pXG5gYGAifQ== -->
+<pre class="r"><code>days_in_order &lt;- c(
+  &quot;Monday&quot;,
+  &quot;Tuesday&quot;,
+  &quot;Wednesday&quot;,
+  &quot;Thursday&quot;,
+  &quot;Friday&quot;,
+  &quot;Saturday&quot;,
+  &quot;Sunday&quot;
+)
+
+days_of_week_factor &lt;- factor(
+  days,
+  levels = days_in_order,
+  ordered = TRUE
+)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yZWNhc3RfNV9kYXlzIDwtIGRhdGEuZnJhbWUoXG4gIHRlbXBfaW5fZWRpbmJ1cmdoID0gdGVtcF9pbl9lZGluYnVyZ2gsXG4gIHJhaW5faW5fZWRpbmJ1cmdoID0gcmFpbl9pbl9lZGluYnVyZ2gsXG4gIGNsb3VkX2NvdmVyX2luX2VkaW5idXJnaCA9IGNsb3VkX2NvdmVyX2luX2VkaW5idXJnaCxcbiAgZGF5cyA9IGRheXNcbilcbmBgYCJ9 -->
+<pre class="r"><code>forecast_5_days &lt;- data.frame(
+  temp_in_edinburgh = temp_in_edinburgh,
+  rain_in_edinburgh = rain_in_edinburgh,
+  cloud_cover_in_edinburgh = cloud_cover_in_edinburgh,
+  days = days
+)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm0odGVtcF9pbl9lZGluYnVyZ2gpXG5ybShyYWluX2luX2VkaW5idXJnaClcbnJtKGNsb3VkX2NvdmVyX2luX2VkaW5idXJnaClcbnJtKGRheXMpXG5ybShkYXlzX29mX3dlZWtfZmFjdG9yKVxuYGBgIn0= -->
+<pre class="r"><code>rm(temp_in_edinburgh)
+rm(rain_in_edinburgh)
+rm(cloud_cover_in_edinburgh)
+rm(days)
+rm(days_of_week_factor)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3Vic2V0KGZvcmVjYXN0XzVfZGF5cywgdGVtcF9pbl9lZGluYnVyZ2ggPiBtZWFuKHRlbXBfaW5fZWRpbmJ1cmdoKSlcbmBgYCJ9 -->
+<pre class="r"><code>subset(forecast_5_days, temp_in_edinburgh &gt; mean(temp_in_edinburgh))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUEzMVJQVy9DTUJCMXZrQkVBbEd4ZEt5cXJzblNEblJqcUJnN3RGUmxpMHhpU0ZUSGpod0h5cCtIT3VrZGdZZzJrblB2M3ZudTNwM2ZYcGFQL3RJbmhEakU2Wm0vWnlEeFBoYnpZRXFJYXh2SElpNFoxUGJiaENjR3VPYU02b3paSFdtKzJUMVk4RS94QitCZndUNWgyQmsySFFteFczdlJyTWZabHZIU29IRnpBOWhjbHBydjBTdW9hcjErbWNvZFUyV25rQmR6V21LZFUvVTFqYlZVQmgzT3RIaXRucnFFZllRc0Q3S2N1Y29RdmxOOWdwVkF1RWdyaEo4cytTM2pIUDlyZnFsVjBKeWhWaGZJRzgzeUlzcEV4SkpNckNxMVNUR2dxR0d2Qkc1akxxc2tpdVdXcVd0eE42SDc3cG9HU3U1Q2JJOExzZUN4dlQ4bThST3FhYmhXSnUzS05IMVo2RXdLVTlDZXdIYlBreTNWSWNhVnFBVWtRWnhXNGl1WVB0Y2RRSVVGcWl4UU5telYxVDNkN2xQMW1OaGtndUZlT1YweERzN0lUTm9NR2hZcUUvaUt2bUhMVUV0TjhaNGZTNDVNTXh3NS9BQVFzbCt2TFFNQUFBPT0ifQ== -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday"},{"1":"27","2":"Tuesday"},{"1":"23","2":"Wednesday"},{"1":"21","2":"Thursday"},{"1":"34","2":"Friday"},{"1":"24","2":"Monday"},{"1":"25","2":"Tuesday"},{"1":"30","2":"Wednesday"},{"1":"37","2":"Thursday"},{"1":"30","2":"Friday"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["temp_in_edinburgh"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["rain_in_edinburgh"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["cloud_cover_in_edinburgh"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["days"],"name":[4],"type":["fctr"],"align":["left"]}],"data":[{"1":"8","2":"10","3":"partly","4":"Wed","_rn_":"1"},{"1":"9","2":"60","3":"showers","4":"Sat","_rn_":"4"},{"1":"8","2":"20","3":"partly","4":"Sun","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbmBgYCJ9 -->
+<pre class="r"><code>NA</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#Select the rows when the chance of rain is lower than or equal to the average. .</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3Vic2V0KGZvcmVjYXN0XzVfZGF5cywgcmFpbl9pbl9lZGluYnVyZ2ggPD0gbWVhbihyYWluX2luX2VkaW5idXJnaCkpXG5gYGAifQ== -->
+<pre class="r"><code>subset(forecast_5_days, rain_in_edinburgh &lt;= mean(rain_in_edinburgh))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6NH0sInJkZiI6Ikg0c0lBQUFBQUFBQUEzMVNQVytETUJBMVlJaUNsQ2hWbGc0ZE9uUUZWV3FIZHN0UTVRZTBxWm9OT2VBRVZNZEd4aVRObjA5NmdFMEpRa1dDZS9mTzkrN0R2TCt0bi95MWp4QnlrT1BCMXdXSTNNL1ZNbmhCQ052Z1dBaWpjV1YvSUR3SGdPR2RWblp4aitwbmNkZXptbS9QUFdqK2VkaUM3a1RyTmdXYjErNDE0REY2b0t3QU5LdjcxZXhlRklxZGpKY1QrZWVOaWxRY3FTeDZRbTdNU0dGMFd2VXRpWldRZ002ZGZseHRyYnBpTFdOZmRLYXJNNTJsekF6OElLcUZKVGR3bFpZR2Z0R2trWEV1L3pWdzNTOG5lMnI2eFpxOFVYU2ZSeG1QYUpMeFRTbDNxUWxJQXV4QTREWm1va3lpV0J5b0hJcmpoSno2cXhwTGNReE4rVWxuR1hhemtHcEJnOVA0Q1ZFazNFcElIWmhvSkhLVkNRNmk5bHh2dVp0c3lSNHhLM25WUkJMRWFjbS9nOWZIcWtMblY1bG9pNjl4VlJQM3I4dWpmSmR4YW5iTHlJWXk3VXhoMm5yWU1KY1pOemZwQTF1RVNpaGl6dm14WUlhcGgwUG5YMkZjQkZkSkF3QUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["temp_in_edinburgh"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["rain_in_edinburgh"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["cloud_cover_in_edinburgh"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["days"],"name":[4],"type":["fctr"],"align":["left"]}],"data":[{"1":"8","2":"10","3":"partly","4":"Wed","_rn_":"1"},{"1":"7","2":"20","3":"mostly","4":"Thu","_rn_":"2"},{"1":"7","2":"20","3":"mostly","4":"Fri","_rn_":"3"},{"1":"8","2":"20","3":"partly","4":"Sun","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#Q4</p>
+<p>#Sort the data frame so that the highest temperatures come first.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfbGlzdCA8LSBsaXN0KHN0b2NrX3ByaWNlcyA9IHN0b2NrX3ByaWNlcywgZGF5X29mX3dlZWsgPSBkYXlfb2Zfd2Vlaywgc3RvY2tfZGF0YSA9IHN0b2NrX2RhdGEpXG5zdG9ja19saXN0XG5gYGAifQ== -->
-<pre class="r"><code>stock_list &lt;- list(stock_prices = stock_prices, day_of_week = day_of_week, stock_data = stock_data)
-stock_list</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG9zaXRpb25zIDwtIHJldihvcmRlcihmb3JlY2FzdF81X2RheXMkdGVtcF9pbl9lZGluYnVyZ2gpKVxuXG5mb3JlY2FzdF81X2RheXNbcG9zaXRpb25zLCBdXG5gYGAifQ== -->
+<pre class="r"><code>positions &lt;- rev(order(forecast_5_days$temp_in_edinburgh))
+
+forecast_5_days[positions, ]</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJHN0b2NrX3ByaWNlc1xuIFsxXSAyMyAyNyAyMyAyMSAzNCAyNCAyNSAzMCAzNyAzMFxuXG4kZGF5X29mX3dlZWtcbiBbMV0gXCJNb25kYXlcIiAgICBcIlR1ZXNkYXlcIiAgIFwiV2VkbmVzZGF5XCIgXCJUaHVyc2RheVwiICBcIkZyaWRheVwiICAgIFwiTW9uZGF5XCIgICAgXCJUdWVzZGF5XCIgIFxuIFs4XSBcIldlZG5lc2RheVwiIFwiVGh1cnNkYXlcIiAgXCJGcmlkYXlcIiAgIFxuXG4kc3RvY2tfZGF0YVxuIn0= -->
-<pre><code>$stock_prices
- [1] 23 27 23 21 34 24 25 30 37 30
-
-$day_of_week
- [1] &quot;Monday&quot;    &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;    &quot;Monday&quot;    &quot;Tuesday&quot;  
- [8] &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;   
-
-$stock_data</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSVVUvQ01CQXVZNEJVSVNUOERwYW9NV0pNREJyRG15OW1SdDVJN1lvczFKWjBuZWdidnh5OWJsZGdDMHUyNzc2dnQvdnVycS9QczJzNm80U1FKbW0yNGR1Q2tMVGU0dWxvVEVnWUFHbVFrSFFkL3NEeEVBSW45dUdsazF0U1BKTjdSTTl2RUI4Ung0aDNpQStJVDlzS2gvbzlWeGM5UXRkSjBabHI0cVJXYWJBdHhiZVFHVVNESWd2VnFVa1Q5dXZaaTFZSGRoWXZjNU1kZUNmT3hSSHR2b3RFbFVMVnFjVWx5N3pSM243QnVOVUdvbDA5WGJFdjRkTURGQzh5cS9scXZqWXBoN05TT3dlcnVWN01OMEtzYWpXNlJtOGlYOGR0S1NoMzU3YmxFcHQvdFhab3dpeUxGZ1orT2RGU1I2OXRxaFVVQzRhNDB1T2ZHNlltREhMbHpKTVJYK1pxTmJxOHdudHE0TVgxTUtaSGNWQjZocjZ6L1kwSTlaa3E0WmNqMlllUVNQb3daVEZrQkh0UjFvOENhaFpaYlpuUG8xeExyeFREa2QwLzVpYTlKTW9DQUFBPSJ9 -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6NX0sInJkZiI6Ikg0c0lBQUFBQUFBQUEzMVNQVy9DTUJCMUVnZEVwQ0lxbGc0ZHFxb3JHVnFHZG1Pb0dEdTBWR1ZESmpFa3FyRWp4NEh5NXdFbjNQRVJSWTNrM0x1dmwzZm5mTDVQWDRKcFFBanhpTmV5Yjk5QzRuOVB4b05YUXFockhZZFEwaW50bjAzM0xhRDJkTXVxMFNPcG50RkR6ZDVmMjFQOUI4U0hZSjlxL2hETHZadXl2bEpGaUF2SE9aNHJVUzNCMTF6a0Z2V3Fhb2l1Vkc3RUZyMk02YlBYemhPMTRUcXZFZm1SWURueW5OZ1hMREpLVzdTNzBPU0NMaDgwMFNPVnU0ZHVIN3E5c1U0UmZqRnpnb1ZFT0VrS2hEODhQdEo0Ky85RVhHdVdiTVZSTTRYZ3JlR3JiSmJLR1k5VE9TLzBNc0dFWmpiYWtMaUxoQ3JpV2FUV1hEZmxhY3kyOVhWMXROcUUrSGxjREwxWUNseGM0MFJCekF3TEY5cTJOMHpWVnBsSmxiVEViaDhJTDVzZFhRdjBDbGtLaVFkUlVzamZ3ZHR6K1lYejcxS3BjNEFJTVZ3WnJWOVppOHRsS2pudVY3QTVGK0IwN2NUVndHR21VNG0zR2Rob0hocGxHTllGa1JJWXFZWWp1d01qc3ZhSFpRTUFBQT09In0= -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday"},{"1":"27","2":"Tuesday"},{"1":"23","2":"Wednesday"},{"1":"21","2":"Thursday"},{"1":"34","2":"Friday"},{"1":"24","2":"Monday"},{"1":"25","2":"Tuesday"},{"1":"30","2":"Wednesday"},{"1":"37","2":"Thursday"},{"1":"30","2":"Friday"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTkFcbiJ9 -->
-<pre><code>NA</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Part2.2 #Q1.1</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q1.2</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfcHJpY2VzIFtzdG9ja19wcmljZXMgPiAzMF1cbmBgYCJ9 -->
-<pre class="r"><code>stock_prices [stock_prices &gt; 30]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDM0IDM3XG4ifQ== -->
-<pre><code>[1] 34 37</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q2.1</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfZGF0YSRkYXlfb2Zfd2Vla1xuYGBgIn0= -->
-<pre class="r"><code>stock_data$day_of_week</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBNb25kYXkgICAgVHVlc2RheSAgIFdlZG5lc2RheSBUaHVyc2RheSAgRnJpZGF5ICAgIE1vbmRheSAgICBUdWVzZGF5ICAgV2VkbmVzZGF5XG4gWzldIFRodXJzZGF5ICBGcmlkYXkgICBcbkxldmVsczogRnJpZGF5IE1vbmRheSBUaHVyc2RheSBUdWVzZGF5IFdlZG5lc2RheVxuIn0= -->
-<pre><code> [1] Monday    Tuesday   Wednesday Thursday  Friday    Monday    Tuesday   Wednesday
- [9] Thursday  Friday   
-Levels: Friday Monday Thursday Tuesday Wednesday</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q2.2 Select the rows of the stock_data data frame where the stock_prices are less than 25.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Q3.1</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfZGF0YVssMV1cbmBgYCJ9 -->
-<pre class="r"><code>stock_data[,1]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAyMyAyNyAyMyAyMSAzNCAyNCAyNSAzMCAzNyAzMFxuIn0= -->
-<pre><code> [1] 23 27 23 21 34 24 25 30 37 30</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q3.2</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q3.3</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q4</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSMzAvQ01CQXUyd0NwUWtqNE83YkVFQ1BHeEtBeHZQbGlNUEpHYWxka29iYWs2MFRmL012QjYzYmx4OEtTN2J2djYrMit1K3ZyODJ4SVo1UVFFcEt3QmQ4bWhLVDVOcDNFSTBLaUFFaURSS1RqOEFlT0J4QTRzUWN2SGQrUzhobmZJM3ArZy9pSU9FSzhRM3hBZlBvNzRWQy82K3FpUitRNktUdHpUWnpWVGhwc1NmRXRaQTVSdjh4Q2RXS3lsUDE2OXFMVmdWMU1sNFhKRDd3OUxjUVI3YnlMVkZYQ3FWT1RTNVo3bzczOWduR3JEVVRiZXJwaVg4S25CeWhlNVZiejFYeHRNZzVubFhZSlZuTzltRytFV05WcWRJemVKTDZPMjFKUTdjNXR5eVdHdTFvN05HV1dKUXNEdjV4cHFhM1hOdE1LaWdVRFhPbnh6dzFURS9xRmN1WnB6SmVGV3NYRGE3eW5CbDVjRjJONkZBZVZaK1E3MjkrSVVKK1pFbjQ1a24wSWlhUUhVNVpESnJBWFpmMG9vT2FKMVpiNVBNcTE5RW81SE5uK0EwMTVLUERLQWdBQSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday"},{"1":"27","2":"Tuesday"},{"1":"23","2":"Wednesday"},{"1":"21","2":"Thursday"},{"1":"34","2":"Friday"},{"1":"24","2":"Monday"},{"1":"25","2":"Tuesday"},{"1":"30","2":"Wednesday"},{"1":"37","2":"Thursday"},{"1":"30","2":"Friday"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["temp_in_edinburgh"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["rain_in_edinburgh"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["cloud_cover_in_edinburgh"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["days"],"name":[4],"type":["fctr"],"align":["left"]}],"data":[{"1":"9","2":"60","3":"showers","4":"Sat","_rn_":"4"},{"1":"8","2":"20","3":"partly","4":"Sun","_rn_":"5"},{"1":"8","2":"10","3":"partly","4":"Wed","_rn_":"1"},{"1":"7","2":"20","3":"mostly","4":"Fri","_rn_":"3"},{"1":"7","2":"20","3":"mostly","4":"Thu","_rn_":"2"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#Part 3</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcInRpZHlxdWFudFwiKVxuYGBgIn0= -->
-<pre class="r"><code>install.packages(&quot;tidyquant&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yZWNhc3RfNV9kYXlzX2xpc3QgPC0gbGlzdChcbiAgXCJUaHVyc2RheVwiID0gYXMubGlzdChmb3JlY2FzdF81X2RheXNbMSwgMTozXSksXG4gIFwiRnJpZGF5XCIgICA9IGFzLmxpc3QoZm9yZWNhc3RfNV9kYXlzWzIsIDE6M10pLCAgXG4gIFwiU2F0dXJkYXlcIiA9IGFzLmxpc3QoZm9yZWNhc3RfNV9kYXlzWzMsIDE6M10pLFxuICBcIlN1bmRheVwiICAgPSBhcy5saXN0KGZvcmVjYXN0XzVfZGF5c1s0LCAxOjNdKSxcbiAgXCJNb25kYXlcIiAgID0gYXMubGlzdChmb3JlY2FzdF81X2RheXNbNSwgMTozXSlcbilcbmBgYCJ9 -->
+<pre class="r"><code>forecast_5_days_list &lt;- list(
+  &quot;Thursday&quot; = as.list(forecast_5_days[1, 1:3]),
+  &quot;Friday&quot;   = as.list(forecast_5_days[2, 1:3]),  
+  &quot;Saturday&quot; = as.list(forecast_5_days[3, 1:3]),
+  &quot;Sunday&quot;   = as.list(forecast_5_days[4, 1:3]),
+  &quot;Monday&quot;   = as.list(forecast_5_days[5, 1:3])
+)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiYWxzbyBpbnN0YWxsaW5nIHRoZSBkZXBlbmRlbmNpZXMg4oCYaG1z4oCZLCDigJhxdWFkcHJvZ+KAmSwg4oCYem9v4oCZLCDigJh0aWR5c2VsZWN04oCZLCDigJhwbG9ncuKAmSwg4oCYcGFkcuKAmSwg4oCYcmVhZHLigJksIOKAmFBlcmZvcm1hbmNlQW5hbHl0aWNz4oCZLCDigJhxdWFudG1vZOKAmSwg4oCYZHBseXLigJksIOKAmFF1YW5kbOKAmSwg4oCYdGlkeXLigJksIOKAmHRpbWV0a+KAmSwg4oCYVFRS4oCZLCDigJh4dHPigJlcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi9obXNfMC41LjMudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAxMDM2MTIgYnl0ZXMgKDEwMSBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDEwMSBLQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3F1YWRwcm9nXzEuNS04LnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggMzkyOTUgYnl0ZXMgKDM4IEtCKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmRvd25sb2FkZWQgMzggS0JcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi96b29fMS44LTcudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAxMDkzOTY4IGJ5dGVzICgxLjAgTUIpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCAxLjAgTUJcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi90aWR5c2VsZWN0XzEuMC4wLnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggMjQwMTYyIGJ5dGVzICgyMzQgS0IpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCAyMzQgS0JcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi9wbG9ncl8wLjIuMC50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDEzMTc4IGJ5dGVzICgxMiBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDEyIEtCXG5cbnRyeWluZyBVUkwgJ2h0dHBzOi8vY3Jhbi5yc3R1ZGlvLmNvbS9iaW4vbWFjb3N4L2VsLWNhcGl0YW4vY29udHJpYi8zLjYvcGFkcl8wLjUuMC50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDMwNjMzNjQgYnl0ZXMgKDIuOSBNQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDIuOSBNQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3JlYWRyXzEuMy4xLnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggNzkyNjU3IGJ5dGVzICg3NzQgS0IpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCA3NzQgS0JcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi9QZXJmb3JtYW5jZUFuYWx5dGljc18yLjAuNC50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDMxNjEyNzAgYnl0ZXMgKDMuMCBNQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDMuMCBNQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3F1YW50bW9kXzAuNC0xNS50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDk2MjkzMSBieXRlcyAoOTQwIEtCKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmRvd25sb2FkZWQgOTQwIEtCXG5cbnRyeWluZyBVUkwgJ2h0dHBzOi8vY3Jhbi5yc3R1ZGlvLmNvbS9iaW4vbWFjb3N4L2VsLWNhcGl0YW4vY29udHJpYi8zLjYvZHBseXJfMC44LjQudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCA2ODQ2Mzk1IGJ5dGVzICg2LjUgTUIpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCA2LjUgTUJcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi9RdWFuZGxfMi4xMC4wLnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggNTk1NDYgYnl0ZXMgKDU4IEtCKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmRvd25sb2FkZWQgNTggS0JcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi90aWR5cl8xLjAuMi50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDEwMjA0NjEgYnl0ZXMgKDk5NiBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDk5NiBLQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3RpbWV0a18wLjEuMi50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDI4MjQ2NTkgYnl0ZXMgKDIuNyBNQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDIuNyBNQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L1RUUl8wLjIzLTYudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCA1MTgzMzIgYnl0ZXMgKDUwNiBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDUwNiBLQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3h0c18wLjEyLTAudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCA5NDc4MjYgYnl0ZXMgKDkyNSBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDkyNSBLQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3RpZHlxdWFudF8wLjUuMTAudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAzMzA4Mzk4IGJ5dGVzICgzLjIgTUIpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCAzLjIgTUJcbiJ9 -->
-<pre><code>also installing the dependencies ‘hms’, ‘quadprog’, ‘zoo’, ‘tidyselect’, ‘plogr’, ‘padr’, ‘readr’, ‘PerformanceAnalytics’, ‘quantmod’, ‘dplyr’, ‘Quandl’, ‘tidyr’, ‘timetk’, ‘TTR’, ‘xts’
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/hms_0.5.3.tgz'
-Content type 'application/x-gzip' length 103612 bytes (101 KB)
-==================================================
-downloaded 101 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/quadprog_1.5-8.tgz'
-Content type 'application/x-gzip' length 39295 bytes (38 KB)
-==================================================
-downloaded 38 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/zoo_1.8-7.tgz'
-Content type 'application/x-gzip' length 1093968 bytes (1.0 MB)
-==================================================
-downloaded 1.0 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/tidyselect_1.0.0.tgz'
-Content type 'application/x-gzip' length 240162 bytes (234 KB)
-==================================================
-downloaded 234 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/plogr_0.2.0.tgz'
-Content type 'application/x-gzip' length 13178 bytes (12 KB)
-==================================================
-downloaded 12 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/padr_0.5.0.tgz'
-Content type 'application/x-gzip' length 3063364 bytes (2.9 MB)
-==================================================
-downloaded 2.9 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/readr_1.3.1.tgz'
-Content type 'application/x-gzip' length 792657 bytes (774 KB)
-==================================================
-downloaded 774 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/PerformanceAnalytics_2.0.4.tgz'
-Content type 'application/x-gzip' length 3161270 bytes (3.0 MB)
-==================================================
-downloaded 3.0 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/quantmod_0.4-15.tgz'
-Content type 'application/x-gzip' length 962931 bytes (940 KB)
-==================================================
-downloaded 940 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/dplyr_0.8.4.tgz'
-Content type 'application/x-gzip' length 6846395 bytes (6.5 MB)
-==================================================
-downloaded 6.5 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/Quandl_2.10.0.tgz'
-Content type 'application/x-gzip' length 59546 bytes (58 KB)
-==================================================
-downloaded 58 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/tidyr_1.0.2.tgz'
-Content type 'application/x-gzip' length 1020461 bytes (996 KB)
-==================================================
-downloaded 996 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/timetk_0.1.2.tgz'
-Content type 'application/x-gzip' length 2824659 bytes (2.7 MB)
-==================================================
-downloaded 2.7 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/TTR_0.23-6.tgz'
-Content type 'application/x-gzip' length 518332 bytes (506 KB)
-==================================================
-downloaded 506 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/xts_0.12-0.tgz'
-Content type 'application/x-gzip' length 947826 bytes (925 KB)
-==================================================
-downloaded 925 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/tidyquant_0.5.10.tgz'
-Content type 'application/x-gzip' length 3308398 bytes (3.2 MB)
-==================================================
-downloaded 3.2 MB</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy83MS82dnJuXzhweDF0Z2NmbDh3cTQxMGRsX20wMDAwZ24vVC8vUnRtcGU3WEduSS9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
-<pre><code>
-The downloaded binary packages are in
-    /var/folders/71/6vrn_8px1tgcfl8wq410dl_m0000gn/T//Rtmpe7XGnI/downloaded_packages</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yZWNhc3RfNV9kYXlzX2xpc3QkU3VuZGF5JHJhaW5faW5fZWRpbmJ1cmdoXG5gYGAifQ== -->
+<pre class="r"><code>forecast_5_days_list$Sunday$rain_in_edinburgh</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDYwXG4ifQ== -->
+<pre><code>[1] 60</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>google_prices[ , c(“date”, “close”)]</p>
-<p>subset(google_prices, close &gt; mean&gt;(close))</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yZWNhc3RfNV9kYXlzX2xpc3QkRnJpZGF5JGNsb3VkX2NvdmVyX2luX2VkaW5idXJnaFxuYGBgIn0= -->
+<pre class="r"><code>forecast_5_days_list$Friday$cloud_cover_in_edinburgh</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIG1vc3RseVxuTGV2ZWxzOiBtb3N0bHkgcGFydGx5IHNob3dlcnNcbiJ9 -->
+<pre><code>[1] mostly
+Levels: mostly partly showers</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yZWNhc3RfNV9kYXlzX2xpc3QkVGh1cnNkYXkkdGVtcF9pbl9lZGluYnVyZ2hcbmBgYCJ9 -->
+<pre class="r"><code>forecast_5_days_list$Thursday$temp_in_edinburgh</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDhcbiJ9 -->
+<pre><code>[1] 8</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQojUGFydCAxCiNRMS4xCmBgYHtyfQpzdG9ja19wcmljZXMgPC1jKDIzLCAyNywgMjMsIDIxLCAzNCwgMjQsIDI1LCAzMCwgMzcsIDMwKQpzdG9ja19wcmljZXMKYGBgCiNRMS4yCmBgYHtyfQpkYXlfb2Zfd2VlayA8LWMoIk1vbmRheSIsICJUdWVzZGF5IiwgIldlZG5lc2RheSIsICJUaHVyc2RheSIsICJGcmlkYXkiLCAiTW9uZGF5IiwgIlR1ZXNkYXkiLCAiV2VkbmVzZGF5IiwgIlRodXJzZGF5IiwgIkZyaWRheSIpCmRheV9vZl93ZWVrCmBgYAojUTIuMQpgYGB7cn0KZGF5X29mX3dlZWtfZmFjdG9yIDwtIGFzLmZhY3RvcihkYXlfb2Zfd2VlaykKZGF5X29mX3dlZWtfZmFjdG9yCmBgYAojUTIuMiBYCmBgYHtyfQpuYW1lZF9zdG9ja19wcmljZXMgPC0gc3RvY2tfcHJpY2VzCm5hbWVzKG5hbWVkX3N0b2NrX3ByaWNlcykgPC0gZGF5X29mX3dlZWsKbmFtZWRfc3RvY2tfcHJpY2VzCmBgYAojUTMKYGBge3J9CnN0b2NrX2RhdGEgPC0gZGF0YS5mcmFtZShzdG9ja19wcmljZXMgPSBzdG9ja19wcmljZXMsIGRheV9vZl93ZWVrID0gZGF5X29mX3dlZWspCnN0b2NrX2RhdGEKYGBgCiNRNApgYGB7cn0Kc3RvY2tfbGlzdCA8LSBsaXN0KHN0b2NrX3ByaWNlcyA9IHN0b2NrX3ByaWNlcywgZGF5X29mX3dlZWsgPSBkYXlfb2Zfd2Vlaywgc3RvY2tfZGF0YSA9IHN0b2NrX2RhdGEpCnN0b2NrX2xpc3QKYGBgCiNQYXJ0Mi4yCiNRMS4xCmBgYHtyfQpzdG9ja19wcmljZXMgWzQ6Nl0KYGBgCiNRMS4yCmBgYHtyfQpzdG9ja19wcmljZXMgW3N0b2NrX3ByaWNlcyA+IDMwXQpgYGAKI1EyLjEKYGBge3J9CnN0b2NrX2RhdGEkZGF5X29mX3dlZWsKYGBgCiNRMi4yClNlbGVjdCB0aGUgcm93cyBvZiB0aGUgc3RvY2tfZGF0YSBkYXRhIGZyYW1lIHdoZXJlIHRoZSBzdG9ja19wcmljZXMgYXJlIGxlc3MgdGhhbiAyNS4KYGBge3J9CnN0b2NrX3ByaWNlcyA8IDI1CmBgYAoKClEzLjEKYGBge3J9CnN0b2NrX2RhdGFbLDFdCmBgYAojUTMuMgpgYGB7cn0Kc3RvY2tfZGF0YVszLF0KYGBgCiNRMy4zCmBgYHtyfQpzdG9ja19kYXRhWzMsMV0KYGBgCiNRNApgYGB7cn0Kc3RvY2tfbGlzdCRzdG9ja19kYXRhCmBgYAoKI1BhcnQgMwpgYGB7cn0KaW5zdGFsbC5wYWNrYWdlcygidGlkeXF1YW50IikKYGBgCgoKZ29vZ2xlX3ByaWNlc1sgLCBjKCJkYXRlIiwgImNsb3NlIildCgpzdWJzZXQoZ29vZ2xlX3ByaWNlcywgY2xvc2UgPiBtZWFuPihjbG9zZSkpCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CnRlbXBfaW5fZWRpbmJ1cmdoIDwtIGMoOEwsIDdMLCA3TCwgOUwsIDhMKQpjbGFzcyh0ZW1wX2luX2VkaW5idXJnaCkKYGBgYAoKYGBge3J9CnJhaW5faW5fZWRpbmJ1cmdoIDwtIGMoMTAsIDIwLCAyMCwgNjAsIDIwKQpjbGFzcyhyYWluX2luX2VkaW5idXJnaCkKYGBgCgpgYGB7cn0KY2xvdWRfY292ZXJfaW5fZWRpbmJ1cmdoIDwtIGMoInBhcnRseSIsICJtb3N0bHkiLCAibW9zdGx5IiwgInNob3dlcnMiLCAicGFydGx5IikKY2xhc3MoY2xvdWRfY292ZXJfaW5fZWRpbmJ1cmdoKQogIApgYGAKCmBgYHtyfQpkYXlzIDwtIGMoIldlZCIsICJUaHUiLCAiRnJpIiwgIlNhdCIsICJTdW4iKQpgYGAKCmBgYHtyfQpuYW1lZF90ZW1wX2luX2VkaW5idXJnaCA8LSB0ZW1wX2luX2VkaW5idXJnaApuYW1lcyhuYW1lZF90ZW1wX2luX2VkaW5idXJnaCkgPC0gZGF5cwpuYW1lZF90ZW1wX2luX2VkaW5idXJnaApgYGAKCmBgYHtyfQpuYW1lZF9yYWluX2luX2VkaW5idXJnaCA8LSByYWluX2luX2VkaW5idXJnaApuYW1lcyhuYW1lZF9yYWluX2luX2VkaW5idXJnaCkgPC0gZGF5cwpuYW1lZF9yYWluX2luX2VkaW5idXJnaApgYGAKCmBgYHtyfQpuYW1lZF9jbG91ZF9jb3Zlcl9pbl9lZGluYnVyZ2ggPC0gY2xvdWRfY292ZXJfaW5fZWRpbmJ1cmdoCm5hbWVzKG5hbWVkX2Nsb3VkX2NvdmVyX2luX2VkaW5idXJnaCkgPC0gZGF5cwpuYW1lZF9jbG91ZF9jb3Zlcl9pbl9lZGluYnVyZ2gKYGBgCgpgYGB7cn0KbWVhbih0ZW1wX2luX2VkaW5idXJnaCkKYGBgCgpgYGB7cn0KbWVhbihyYWluX2luX2VkaW5idXJnaCkKYGBgCgpgYGB7cn0KdGVtcF9pbl9lZGluYnVyZ2hbdGVtcF9pbl9lZGluYnVyZ2ggPiA3LjhdCiN0ZW1wZXJhdHVyZVtjaGFuY2Vfb2ZfcmFpbiA8PSBtZWFuKGNoYW5jZV9vZl9yYWluKV0KYGBgCgojU2VsZWN0IG9ubHkgdGhlIHRoZSB0ZW1wZXJhdHVyZXMgd2hlbiB0aGUgY2hhbmNlIG9mIHJhaW4gaXMgbG93ZXIgdGhhbiBvciBlcXVhbCB0byB0aGUgYXZlcmFnZS4KYGBge3J9CnRlbXBfaW5fZWRpbmJ1cmdoW3JhaW5faW5fZWRpbmJ1cmdoIDw9IDI2XQpgYGAKCiNTZWxlY3Qgb25seSB0aGUgY2xvdWQgY292ZXJzIGZyb20gdGhlIHdlZWtlbmQuCmBgYHtyfQpjbG91ZF9jb3Zlcl9pbl9lZGluYnVyZ2hbNDo1XQpgYGAKCgpgYGB7cn0KdGVzdF9yZXN1bHRzIDwtIGMoNiwgNywgOSwgNywgOSwgMywgOSwgNywgMywgOCwgMTAsIDUsIDUsIDksIDcsIDUsIDksIDgsIDksIDUpCmBgYAojSG93IG1hbnkgbWFya3MgZG8gd2UgaGF2ZT8KYGBge3J9Cmxlbmd0aCh0ZXN0X3Jlc3VsdHMpCmBgYAoKCiNXaGF0IHdhcyB0aGUgYXZlcmFnZSBtYXJrPwpgYGB7cn0KbWVhbih0ZXN0X3Jlc3VsdHMpCmBgYAoKI1doYXQgd2FzIHRoZSBoaWdoZXN0IGFuZCBsb3dlc3QgcmVzdWx0PwpgYGB7cn0KbWF4KHRlc3RfcmVzdWx0cykKbWluKHRlc3RfcmVzdWx0cykKYGBgCgojSG93IG1hbnkgcGVvcGxlIHNjb3JlZCBlYWNoIG1hcms/CmBgYHtyfQp0YWJsZSh0ZXN0X3Jlc3VsdHMpCmBgYAoKRXhwcmVzcyBlYWNoIG1hcmsgYXMgYSBwZXJjZW50YWdlIG91dCBvZiAxMDAKYGBge3J9CnRlc3RfcmVzdWx0cy8xMCAqIDEwMApgYGAKCgpIb3cgbWFueSBwZW9wbGUgc2NvcmVkIGVpZ2h0IG9yIGhpZ2hlcj8KCmBgYHtyfQpzdW0odGVzdF9yZXN1bHRzID49OCkKYGBgCgojTWF0cml4CmBgYHtyfQp0ZW1wX2ZvcmVjYXN0X2VkaW4gPC1jICg3LCA3LCA5LCA5LCAxMCwgMTAsIDgsIDgsIDgsIDcsIDcsIDcsIDgsIDcpCmZvcmVjYXN0X2RheXMgPC0gYygiVGh1IiwgIkZyaSIsICJTYXQiLCAiU3VuIiwgIk1vbiIsICJUdWUiLCAiV2VkIikKd2VlayA8LWMoIndlZWsgMSIsICJ3ZWVrIDIiKQpgYGAKCmBgYHtyfQpmb3J0bmlnaHRfdGVtcF9mb3JlY2FzdCA8LSBtYXRyaXgodGVtcF9mb3JlY2FzdF9lZGluLCBucm93ID0gMiwgbmNvbCA9IDcsIGJ5cm93ID0gVFJVRSkKZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3QKYGBgCgpgYGB7cn0Kcm93bmFtZXMoZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3QpIDwtIGMoIndlZWsgMSIsICJ3ZWVrIDIiKQpjb2xuYW1lcyhmb3J0bmlnaHRfdGVtcF9mb3JlY2FzdCkgPC0gYygiVGh1IiwgIkZyaSIsICJTYXQiLCAiU3VuIiwgIk1vbiIsICJUdWUiLCAiV2VkIikKZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3QKYGBgCgpgYGB7cn0Kcm93TWVhbnMoZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3QpCmBgYAoKI0ZpbmQgdGhlIGF2ZXJhZ2UgdGVtcGVyYXR1cmUgb24gZWFjaCBkYXkgb2YgdGhlIHdlZWsgKGkuZSB0aGUgYXZlcmFnZSB0ZW1wZXJhdHVyZSBvbiB0aGUgdHdvIE1vbmRheXMsIHRoZSB0d28gVHVlc2RheXMgZXRjLikKCmBgYHtyfQpjb2xNZWFucyhmb3J0bmlnaHRfdGVtcF9mb3JlY2FzdCkKYGBgCgpgYGB7cn0KZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3RbMiwzXQpgYGAKCmBgYHtyfQpmb3J0bmlnaHRfdGVtcF9mb3JlY2FzdFsyLF0KYGBgCgpgYGB7cn0KZm9ydG5pZ2h0X3RlbXBfZm9yZWNhc3RbLCJXZWQiXQpgYGAKCmBgYHtyfQpmb3J0bmlnaHRfdGVtcF9mb3JlY2FzdCAqIDEuOCArIDMyCgpgYGAKCiMgRmFjdG9ycwpOb3cgd2Ugd2lsbCBnbyBiYWNrIHRvIG91ciA1IGRheSBmb3JlY2FzdC4KCk1ha2UgdGhlIHZlY3RvciB3aXRoIHRoZSBkYXlzIG9mIHRoZSB3ZWVrIGludG8gYW4gb3JkZXJlZCBmYWN0b3IsIHdoZXJlIHRoZSBvcmRlciBjb3JyZXNwb25kIHRvIHRoZSBvcmRlciBvZiBkYXlzIGluIGEgd2Vlaywgc3RhcnRpbmcgTW9uZGF5LgoKTm93IHNlbGVjdCBvbmx5IHRoZSB0ZW1wZXJhdHVyZXMgYWZ0ZXIgVHVlc2RheS4KCmBgYHtyfQpkYXlzX2luX29yZGVyIDwtIGMoCiAgIk1vbmRheSIsCiAgIlR1ZXNkYXkiLAogICJXZWRuZXNkYXkiLAogICJUaHVyc2RheSIsCiAgIkZyaWRheSIsCiAgIlNhdHVyZGF5IiwKICAiU3VuZGF5IgopCgpkYXlzX29mX3dlZWtfZmFjdG9yIDwtIGZhY3RvcigKICBkYXlzLAogIGxldmVscyA9IGRheXNfaW5fb3JkZXIsCiAgb3JkZXJlZCA9IFRSVUUKKQpgYGAKCmBgYHtyfQpmb3JlY2FzdF81X2RheXMgPC0gZGF0YS5mcmFtZSgKICB0ZW1wX2luX2VkaW5idXJnaCA9IHRlbXBfaW5fZWRpbmJ1cmdoLAogIHJhaW5faW5fZWRpbmJ1cmdoID0gcmFpbl9pbl9lZGluYnVyZ2gsCiAgY2xvdWRfY292ZXJfaW5fZWRpbmJ1cmdoID0gY2xvdWRfY292ZXJfaW5fZWRpbmJ1cmdoLAogIGRheXMgPSBkYXlzCikKYGBgCgpgYGB7cn0Kcm0odGVtcF9pbl9lZGluYnVyZ2gpCnJtKHJhaW5faW5fZWRpbmJ1cmdoKQpybShjbG91ZF9jb3Zlcl9pbl9lZGluYnVyZ2gpCnJtKGRheXMpCnJtKGRheXNfb2Zfd2Vla19mYWN0b3IpCmBgYAoKYGBge3J9CnN1YnNldChmb3JlY2FzdF81X2RheXMsIHRlbXBfaW5fZWRpbmJ1cmdoID4gbWVhbih0ZW1wX2luX2VkaW5idXJnaCkpCgpgYGAKCiNTZWxlY3QgdGhlIHJvd3Mgd2hlbiB0aGUgY2hhbmNlIG9mIHJhaW4gaXMgbG93ZXIgdGhhbiBvciBlcXVhbCB0byB0aGUgYXZlcmFnZS4gLgpgYGB7cn0Kc3Vic2V0KGZvcmVjYXN0XzVfZGF5cywgcmFpbl9pbl9lZGluYnVyZ2ggPD0gbWVhbihyYWluX2luX2VkaW5idXJnaCkpCmBgYAoKI1NvcnQgdGhlIGRhdGEgZnJhbWUgc28gdGhhdCB0aGUgaGlnaGVzdCB0ZW1wZXJhdHVyZXMgY29tZSBmaXJzdC4KYGBge3J9CnBvc2l0aW9ucyA8LSByZXYob3JkZXIoZm9yZWNhc3RfNV9kYXlzJHRlbXBfaW5fZWRpbmJ1cmdoKSkKCmZvcmVjYXN0XzVfZGF5c1twb3NpdGlvbnMsIF0KYGBgCgpgYGB7cn0KZm9yZWNhc3RfNV9kYXlzX2xpc3QgPC0gbGlzdCgKICAiVGh1cnNkYXkiID0gYXMubGlzdChmb3JlY2FzdF81X2RheXNbMSwgMTozXSksCiAgIkZyaWRheSIgICA9IGFzLmxpc3QoZm9yZWNhc3RfNV9kYXlzWzIsIDE6M10pLCAgCiAgIlNhdHVyZGF5IiA9IGFzLmxpc3QoZm9yZWNhc3RfNV9kYXlzWzMsIDE6M10pLAogICJTdW5kYXkiICAgPSBhcy5saXN0KGZvcmVjYXN0XzVfZGF5c1s0LCAxOjNdKSwKICAiTW9uZGF5IiAgID0gYXMubGlzdChmb3JlY2FzdF81X2RheXNbNSwgMTozXSkKKQpgYGAKCmBgYHtyfQpmb3JlY2FzdF81X2RheXNfbGlzdCRTdW5kYXkkcmFpbl9pbl9lZGluYnVyZ2gKYGBgCgpgYGB7cn0KZm9yZWNhc3RfNV9kYXlzX2xpc3QkRnJpZGF5JGNsb3VkX2NvdmVyX2luX2VkaW5idXJnaAoKYGBgCgpgYGB7cn0KZm9yZWNhc3RfNV9kYXlzX2xpc3QkVGh1cnNkYXkkdGVtcF9pbl9lZGluYnVyZ2gKCmBgYAoK</div>
 
 
 
@@ -2056,7 +2263,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("homework_2.Rmd");
+  window.initializeSourceEmbed("getting_started_with_R_homework.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

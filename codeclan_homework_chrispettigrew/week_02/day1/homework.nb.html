@@ -1749,267 +1749,130 @@ summary {
 
 
 <!-- rnb-text-begin -->
-<p>#Part 1 #Q1.1</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q1.2</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF5X29mX3dlZWsgPC1jKFwiTW9uZGF5XCIsIFwiVHVlc2RheVwiLCBcIldlZG5lc2RheVwiLCBcIlRodXJzZGF5XCIsIFwiRnJpZGF5XCIsIFwiTW9uZGF5XCIsIFwiVHVlc2RheVwiLCBcIldlZG5lc2RheVwiLCBcIlRodXJzZGF5XCIsIFwiRnJpZGF5XCIpXG5kYXlfb2Zfd2Vla1xuYGBgIn0= -->
-<pre class="r"><code>day_of_week &lt;-c(&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;)
-day_of_week</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcInJlYWRyXCIpXG5gYGAifQ== -->
+<pre class="r"><code>install.packages(&quot;readr&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIk1vbmRheVwiICAgIFwiVHVlc2RheVwiICAgXCJXZWRuZXNkYXlcIiBcIlRodXJzZGF5XCIgIFwiRnJpZGF5XCIgICAgXCJNb25kYXlcIiAgICBcIlR1ZXNkYXlcIiAgXG4gWzhdIFwiV2VkbmVzZGF5XCIgXCJUaHVyc2RheVwiICBcIkZyaWRheVwiICAgXG4ifQ== -->
-<pre><code> [1] &quot;Monday&quot;    &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;    &quot;Monday&quot;    &quot;Tuesday&quot;  
- [8] &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;   </code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gaW5zdGFsbC5wYWNrYWdlcyA6IFVwZGF0aW5nIGxvYWRlZCBwYWNrYWdlc1xuIn0= -->
+<pre><code>Error in install.packages : Updating loaded packages</code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmBgYCJ9 -->
+<pre class="r"><code>library(readr)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#Q2.1</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF5X29mX3dlZWtfZmFjdG9yIDwtIGFzLmZhY3RvcihkYXlfb2Zfd2VlaylcbmRheV9vZl93ZWVrX2ZhY3RvclxuYGBgIn0= -->
-<pre class="r"><code>day_of_week_factor &lt;- as.factor(day_of_week)
-day_of_week_factor</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RhdGVfaW5jb21lIDwtIHJlYWQuY3N2KFwiZGF0YS9zdGF0ZV9pbmNvbWVfZGF0YS5jc3ZcIilcbnN0YXRlX2luY29tZVxuYGBgIn0= -->
+<pre class="r"><code>state_income &lt;- read.csv(&quot;data/state_income_data.csv&quot;)
+state_income</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBNb25kYXkgICAgVHVlc2RheSAgIFdlZG5lc2RheSBUaHVyc2RheSAgRnJpZGF5ICAgIE1vbmRheSAgICBUdWVzZGF5ICAgV2VkbmVzZGF5XG4gWzldIFRodXJzZGF5ICBGcmlkYXkgICBcbkxldmVsczogRnJpZGF5IE1vbmRheSBUaHVyc2RheSBUdWVzZGF5IFdlZG5lc2RheVxuIn0= -->
-<pre><code> [1] Monday    Tuesday   Wednesday Thursday  Friday    Monday    Tuesday   Wednesday
- [9] Thursday  Friday   
-Levels: Friday Monday Thursday Tuesday Wednesday</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q2.2 X</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZWRfc3RvY2tfcHJpY2VzIDwtIHN0b2NrX3ByaWNlc1xubmFtZXMobmFtZWRfc3RvY2tfcHJpY2VzKSA8LSBkYXlfb2Zfd2Vla1xubmFtZWRfc3RvY2tfcHJpY2VzXG5gYGAifQ== -->
-<pre class="r"><code>named_stock_prices &lt;- stock_prices
-names(named_stock_prices) &lt;- day_of_week
-named_stock_prices</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgTW9uZGF5ICAgVHVlc2RheSBXZWRuZXNkYXkgIFRodXJzZGF5ICAgIEZyaWRheSAgICBNb25kYXkgICBUdWVzZGF5IFdlZG5lc2RheSAgVGh1cnNkYXkgXG4gICAgICAgMjMgICAgICAgIDI3ICAgICAgICAyMyAgICAgICAgMjEgICAgICAgIDM0ICAgICAgICAyNCAgICAgICAgMjUgICAgICAgIDMwICAgICAgICAzNyBcbiAgIEZyaWRheSBcbiAgICAgICAzMCBcbiJ9 -->
-<pre><code>   Monday   Tuesday Wednesday  Thursday    Friday    Monday   Tuesday Wednesday  Thursday 
-       23        27        23        21        34        24        25        30        37 
-   Friday 
-       30 </code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q3</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfZGF0YSA8LSBkYXRhLmZyYW1lKHN0b2NrX3ByaWNlcyA9IHN0b2NrX3ByaWNlcywgZGF5X29mX3dlZWsgPSBkYXlfb2Zfd2VlaylcbnN0b2NrX2RhdGFcbmBgYCJ9 -->
-<pre class="r"><code>stock_data &lt;- data.frame(stock_prices = stock_prices, day_of_week = day_of_week)
-stock_data</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSd1U2RFFCQmRLTFNDdG1uUzd5Z0hUV09OaWFuRzlPYkZZT3lOckxCWUF1NDJ5MkwxNXBlM3pzSnNTMGxKNE0xN084eWJtWDE5WHQzNEs1OFEwaU85UG54ZENJbjdGaTZuYzBJY0c0aEZIT0pwL0lIakNRUmFITUhyTDI1Si9TenVFUTJmSVQ0aXpoSHZFQjhRbi81T09OUWY2cnJvNGVoTzZzNTBFMmUxa3diN0JmdG1SUW5SdU01Q2RTbXpoUDRhOWlMNGtWMkU2MHFXUno0SUs5YWkzanRMZUNPY09ybHhRVXRqZExCUGFheUVoR2pYVGVmMGk1bDBHOFdyVW9rNGp6WXlpK0dzMFM3QktoSnB0R1VzNzlUd3BOZ0dwbzdla3Qzc1RtOUxKL2IyblhiOGhDb2FwQkorT2RQU1FHeFVKamdVc3llNDB2YlBsdXdJNDRwcjgyUWFyeXVlVDY5bmVFOFdYdHdRWTc4VjI0Mm5Zem83M0Fqam54bG5aamtGL1dBRmtoRk1XUThad0Y2NE1xT0FXZ1pLS0dyeS9GZ1VScW1ISTd0L1F1Z2ljOG9DQUFBPSJ9 -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MTYsIm5yb3ciOjUxfSwicmRmIjoiSDRzSUFBQUFBQUFBQTRWWUMzaE5WOXAreWRXUmNQYjl2Z1dwSWtKQ2c3aVRESUlrUmhMQ0ZEbEpEamx5Y2s3bW5CTkpVSFdyS2IxaFdtcXFaa2FybEtLVUtvYTBicVVZMDdvTWs5YW9TMi9xOTdqOWYvbUwrZEprbnh4NVpwN3hlSE8rYisyOTEvN2U3MXZyWFd2dE1lbjVQV3o1TmdCaENJdWt2eEZrSWlJdmQyaGlieUM4T1RuTkVJNFdkYjlWZEprancwNi9zZlRiNDVlTGo2TjVDTUlhRUY3WEk0RzZSMVFUUkRlZzdnVzIvNEtXL3dVeElhaUxyeFdoZFFQc0RXQUliQU80eC9FWTJVaTNjN3JUN1c5NGlyTlNNTmd5MGl3ajNUS0dXc1l3eXhodUdSbVdNZEl5UmxsR3BtVmtXVWEyWll5MmpER1drV01adVphUlp4bGpMV05jRXlJUlJXNkgzK0lSWkRmRlVSVHcrc2g2MktTV1Z0MmExaXkwUmxhdVEzTWNtdHU2ZlBJRWdTQVNKSUpNVUFncVFTUG9CSU5nRXRvUTRnaHRDZTBJN1FueGhDY0lIUWhQRWpvU09oRTZFeElJWFFpSmhLNkVib1FrUWpLaGV6Mlh1aFEwZjlRUVY0OEcxbEdEM1k1Q1I1bkRTZ0s1L2xKSDhLTFBOY1Byc2R6b3diNVNoOGZ2OERmNHRqU0gyelhGNi9PNGduZWtlZDFlbjZQWTIrQzNUUE42UE02aWdLdW9JbURka3U1ME95b2RQbWVEejZlNy9BR2ZxeWdRNTUwU1I0OVhsQlVHdTRzYVNyMjVpb1B1TUtmWE56VjROWEk0OWVOeVdUWE5LSGFVV08rTnpuQzdYUjZ2eTRvMEtzTlQ3SElFaVlSbmVDdUR2WXdNcFJROTB1a0pWQlNWVmpmNExVWjVLMXora0Vjak1oMHVqeFY3ZEtiRFYrMTJlSW9iL05oTUdsYU9vcElLdnpNUUNIYVo2U29xY1UxMWVLd3VNMTJVRTc4M1lIWFpNdFBsOTlmOUx5OTNOVDdqOTNzcmZKWWZsZW4xQkJxRGlNNXlGdnBDNmhTWjVaenVDS1lwTnN0WkdUZmNVVmJ1TDNFRjAyeXJheHpoOVBtZDFhRXRtYzRxVjVHM3Nkdkt1UEZlWDJtRDN5ckw2d3VVeEtVNWZGN0twdFY5VEgxcnVxTzBrVUo0ZG9rcjJFdDJxWnNxMFRpa3NuM09xVjZMZmN4b3A4ZmpyM1pQZHpTT21wZ3hKZDVpWjF5R1B5U1ZyWEs4RmYvbTNmV3RqNzI3UmE2ekxwOStwMFUxSXRkWkZTeG9lRjdBVVdKbGNhelRWMGFKdEFJZDY2TFIxQmlHYlp5RE11YVpHZ2dHR3p2TzZRL0VOYm10eFRpWHY4anI4YnVzdTZMR1ZYdkw2TG42R1JabXpiQi9xeXVvMXhYdXlESXd0Yk9odm5vTTRvWmFLRHVkNE9lT2h2eDdPL2hSbDJHLyt4S00rMk5nZUpNaFpnNEJ2L1krcFBCd2FJWUk4ZUp6a0NMM1FkczBIWExYU1pBN3pJR3NmZ0tsL1FWd2h6aW96cmt3MDFMQXJqa0kvZTAxMEErc2hMRC9FSVFOcERqUHJvSzJmeXFFakJPUU4wNkIvRUVsdEdkZkJmUDlhbWhGQmVEakgwSDhJUW55MVhaZ3Rqd0RiZTBia0hxY2hCYVpEMmFPQ0Nick9zekUxNkM4M2g3YXlKK2dpV09EbkhndEc4YjN1MkZHeDhBczN3SmxXUnZvN3g0RmUvSTR1Tjk4QXRNZEM5RzFIZEp6ZThHT2ZoM0M3UkdRc3BaQXJUZ0gwWFlSM05iakVMV1hZYi9sZ1BLbUNjR3JROWw5Rzh3TDE2QzhjaERjcmxiUWZ6TUkwcHd3Y0Q5bmdHbTJBUHJJTldCS2JXQjNaRUJlWGdwdVp3Mmtsc2xRbnZTQm4raUZtbjhVSXBjR1l5M3hXMUFENXVXdkliNlhSMHFjQ25aZ0hyUzdxV0QyZndsbFh3RUVwaWVraEZzUWEyOEZPVEhNT21oN3IwS0k2QWFHVDROK3BoMzBUdytCalg0QTFmWUkvTDBQSUx6N0QyaC96Z083c0JQVVJjc2dIbmtDWE1FNnlMRmJJUFhwQ1cxR2Iranoxb010Zng5NjZtSEl1NnNoZThKZ3hMYUhmR1VpdE5ZdmdNKzdCZUhqU2pCQ0xkaCtYc2lyL3dmR1l2Sy92QTN4VHgyaHYzVWN3c05wVUFvWFFudnhPYkN2dHdHWDh6V0VtazVRY3UvQWJQTVdqSC8rR3VaVFlSQVBYNFQrajUvQlpzNERjeXNlM0tZYXNNTVhCRG1KaDZkQ2xONkRscndUeHE2UkVKZm5nNzF3SGxKaUhvUlNMN1FyWmVDUEZVRjc0dmZnbWwrRE5IOEZ1SUdkd0U1K0RVTHlMRWdGKzhEeFgwTGRVdzZqeTNjUWNuNkFaaGFDcitnQzZmUU5HT3RhUXc3UEJsZDJBK3oxcFZEUGVtQk8zQXcyS2daTXh5U3F4eDhnT2ZaQWpDaUdNdXQ1YUw0K1lFWWVCbU1TNXhzSElBNXFEZUdQTzhDc093QkRuUTMyMWdESVNqUG9HWDhFVTVNTC9ZdnRFSDQ4Qi8zRC9DQW4rOVcvUVMrSmd2Mkw3NkJVRFlOYS9TYjBsNzNRWlIvbGJSaTBoYVBBbDU4RFArQWh4UFNkWU9KeWFCeHRnOTZqQmFSZHo4QitmZzZZcCsrQlBaVkk0eklQM01NQmtDYmRnMXIwTHN4UnE4QnZ6QUYvL3hYSWY2MkdlSFVibE5vQlVMVHBrQmFjaERyS0NlSFFBekNiKzBIWXR4QlM2WHJ3VVFNZy90Z09waUJCRHpzSmFjWkdDR3NuUUJ2TVExLytQSVFiTk05elJrTmxONEtmTkJwR0xvMFpaUkxVSFkrQ25JUjdDeUZPdkFuN2RhcjV6QWZRMWcrQnR2a3ptSjJYZ0R0ZkRIbENKcmg1WThHK053SENxVStnMlZpb0cxYUQ2VGNDWWdKeDkzaGdkTm9ESXpNUi9NaEowRVlkZ1dEZkN1bGFKSmlGSjZDNiswTGNWQUV6ZlRTNHVZT2czdHdQN3ExZVlONDVDUEc1cFJCejVrTzc5RFQwK1hmQTI2T2gyczlBV0hjYjB2a1B3WjZ1Z25aK0k3Z0ZxeUdNWHdGbHlCN29rL01oMVM0Rk8zUWU1SnFyVUplb1VJZXlrUHB2RDNJeU5yOEVhZE1YVUd0NmdtMGJEWEhyS2VpclBvUDZvd3ZxNVNTd0tRYlU0d3EwVnUxZ1pOU0FMOWdGL1JVRFRORms4UHBrR0RVZHdIMUY0MVhvRCs1d0JPejM5OExzTHNPYzNJWTJFaEVRanFWUjdmZFFMaWtQVTZmRHNMMEQ5WnNxU05mYmdiMTBCS3FuT2JoOEJlcWdPRWp4bEwvRXpqUy8yb0g3Ylc4d1M3ZlN1RDRBNW12U2lndFRvQTJhQjJORkxwajRHNlFkUXlDOTlocllLNnRoOW9xQ25McXNrZE9HTWdqWG5vRzA4dytRYTUrQ1VqUVk2dDQwbUFwcDl2YXRVRis0QXExbUtPU0xGVERjRjZGdW5nTWxheWYwbXVGZ1hoa0k2ZFJITUdwSnp6cmRoUm5URW1aNE5kWG9MY2d0R09qbk15ajJaR2pWNzBITzlJRXJJdDM2ckFycXQ2UVpIMDZEZHVRakNBYzZnb21PaGpLWDVwODlIdnJRczlDbjBaajc2UnhNRjJtTy96cjA5R2p3L1dkUlBiZkE2SHNlOHJZVmtOTTBTSDhwaERUclBveXdNUkR2ZkJya3hGN0tndnpWKytET2tiNVViWUY4ZEMrTTVEMHdiUlBBWHl1QjJyb2IySXcwTURQbWdzL01wUG00Q01LMlF6RG5QSVM2YXlLazlRN3dxMjVBdk5BQjh1blpOTTZvRHYrVXdZM2JBTlBYRVlMV0Y4eUJEZURmcUFXVEdnVXBvenU0N0I4Z1J0RlluM1VXOHN3UG9JM3RCbWxhS2VUa1ZDaUxwOEwrOTIwUUxsNmo4ZnByOEF1emFONU9BbnRzSmtTeExlVHR0NGhmVzZycFdUQVBEMENhelVIcDZBZTNaRkxqZlByL08yQ1BzR0FHbmFFNmRJVVMvcjlRU3ZOZ2JOa092azBzK0hlK2gvajNXdWdEeTJCRVg0VFkrelJ4bVEzcFJJRHlHRTl6OFRRa1lSL1lLZ1pxZEFIMHBaOVNIVGVBOHlkRHRwVlI3VW1qYTA1QlN2NFlyUEU3TUw1dVVKdTVJS1RzaHRMbmVTanZmd3RweDFod1RwcFRKeTVCK3h2RnNXZ1l4RFU2dEVTWmFwZ0FwZDFMRU12R3cweUtCTGVlMW9ZSnRPNWUvQWJNaTR1Z0wvc2RqRGRQa3U2ZGJheVR0b05pS2lhZHpBVzdoTmFBbkJTSSsxOEZ1KzhtektFYXpKUitZSDcxT3ZRK2o2Qjh0UnlLa0EzbDhua1lmQUd0OHpRRzl5VERHSEFFN0prK0VLNy9DY3pObGhEZnJJVXFHVENlT0FKejdHWm9sUUdhYjBjaDNhWjlSYS8yWU5Kb0x1VXZoN2hnUHNUTHV5QldOb2R3WmovWTNVOUNlZWtVRFBZU3VQZkh3Mmo3TE9rOHJUTnJUa1B2K1RuMFhXL0QvbjBxMUFRN3VMUklhUEpHaU5uVlVBdFhRbGwwTU1oSi94VnA3a2dSL0lsc3lDT0kvOXFQd055L0RUbitYU2h6dkRDNlpaSGUvd1Q5R0hHbnZROGZSUno2SklEcFB3VE1kL3NnTERnS2ZmMGpjR3R2Z0RlWGdXLzFKTlN5VEdqYnU4Q1VVbURvZzZGUUhPSkVGNVFUSGNFdHYwcWFGUTM3OFgyUUR6ME50VThLN0xVUElPVitERjFxRHYwUnJZR3BuME9jYjRjMGNSVGtERm8vNWhWQStyd1hsR3VMU1I4VU1NKzhBNlh0UitDOFAwRFp2Qk9TN1Z1WVpSMkNuS1NqTXlBYjB5QU5ud2IrNEVBSTNUWkJNRWw3Ym15SE52L1B0QmJUSG0wbXhkS0w4cmJyT05RT1BXbDlXUWx6WEdjSTUxYkM4RStEbXJFWVJwc1pZR3hWdE00dmdqS0Q5T1RuRnlHMW1RS2xTempVZTIvQWZuTUdyVzhKWUxjdEFIdjNFZlMrS1pDbTlLVDVNUjd5MC9HUXZyd1BmZHNWMGh0YXA2Skl1NnArSk8yTUFkdHVNTGl2dTROZm5nS2xEZFZzWmw5d3k3NmhQYzRwQ0Fsdmd5Mm9ndkovTE8wQitqZnEzZ0RTcXg1UlVPTGQ0SWZ2aFNJUEJKK1ZCTFZYYjhobkFsUUhtZ08xWjZEbW1xUnphNkNlcEJwMldnV3grQUtVMk1VUTRudkQ2QjVKZTQ3UEllVXRwZkZsd3JpYkFTV3VNMm1XQzJiaElKaUJxMkM2dHFZOTZtVVlNWCtoNjhsZ1c0K21OU2tkL0lXVllEOHhJTThRNlNUOUFOd2RFL3FWRjZBRW5vZTg0Z3ZhUno0TFpoenB6Sjd0VUNNb2Y0WDNJRjI1QXIyZkNpRzhQOWdSbjBKUHVFRDdpalZOUHc5NEhHVk82L09BUFhpKzlCUTdxeXduSitBSUJNOGI0N3NuSlhVUGRYcUVPaytGT2ltaFRzOVFwMWVvMHp2VVNRMXhrcE5DbmVSUUp6U0M1TkFJa2tNalNFNXBRcmFGejF2WjFTSmNWOW5tYy9ETHZ4Ny80VHhqSzNZRUhGMm4rT2lSK2pQTlk5MUZlY3NETGpvZFVUOTFuendpbWp6Y3pOZWtvWFdGcCs3bHhZbDBhdmFVSnRaOXFyQ2gvck1MR2dKcVZoOU0wTGJYdnpMY0NpekNPbWc1UFZNYnorWVJia2VoMDIyZEpvbmtMeHk3bHZ0Y3dRT2dqVnI5WFFOMGxMVHVzeFY1M1ZaTC9YbnQ0YjhBZjFhR0hRMFVBQUE9In0= -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday"},{"1":"27","2":"Tuesday"},{"1":"23","2":"Wednesday"},{"1":"21","2":"Thursday"},{"1":"34","2":"Friday"},{"1":"24","2":"Monday"},{"1":"25","2":"Tuesday"},{"1":"30","2":"Wednesday"},{"1":"37","2":"Thursday"},{"1":"30","2":"Friday"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
+{"columns":[{"label":["Index"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["State"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["Y2002"],"name":[3],"type":["int"],"align":["right"]},{"label":["Y2003"],"name":[4],"type":["int"],"align":["right"]},{"label":["Y2004"],"name":[5],"type":["int"],"align":["right"]},{"label":["Y2005"],"name":[6],"type":["int"],"align":["right"]},{"label":["Y2006"],"name":[7],"type":["int"],"align":["right"]},{"label":["Y2007"],"name":[8],"type":["int"],"align":["right"]},{"label":["Y2008"],"name":[9],"type":["int"],"align":["right"]},{"label":["Y2009"],"name":[10],"type":["int"],"align":["right"]},{"label":["Y2010"],"name":[11],"type":["int"],"align":["right"]},{"label":["Y2011"],"name":[12],"type":["int"],"align":["right"]},{"label":["Y2012"],"name":[13],"type":["int"],"align":["right"]},{"label":["Y2013"],"name":[14],"type":["int"],"align":["right"]},{"label":["Y2014"],"name":[15],"type":["int"],"align":["right"]},{"label":["Y2015"],"name":[16],"type":["int"],"align":["right"]}],"data":[{"1":"A","2":"Alabama","3":"1296530","4":"1317711","5":"1118631","6":"1492583","7":"1107408","8":"1440134","9":"1945229","10":"1944173","11":"1237582","12":"1440756","13":"1186741","14":"1852841","15":"1558906","16":"1916661"},{"1":"A","2":"Alaska","3":"1170302","4":"1960378","5":"1818085","6":"1447852","7":"1861639","8":"1465841","9":"1551826","10":"1436541","11":"1629616","12":"1230866","13":"1512804","14":"1985302","15":"1580394","16":"1979143"},{"1":"A","2":"Arizona","3":"1742027","4":"1968140","5":"1377583","6":"1782199","7":"1102568","8":"1109382","9":"1752886","10":"1554330","11":"1300521","12":"1130709","13":"1907284","14":"1363279","15":"1525866","16":"1647724"},{"1":"A","2":"Arkansas","3":"1485531","4":"1994927","5":"1119299","6":"1947979","7":"1669191","8":"1801213","9":"1188104","10":"1628980","11":"1669295","12":"1928238","13":"1216675","14":"1591896","15":"1360959","16":"1329341"},{"1":"C","2":"California","3":"1685349","4":"1675807","5":"1889570","6":"1480280","7":"1735069","8":"1812546","9":"1487315","10":"1663809","11":"1624509","12":"1639670","13":"1921845","14":"1156536","15":"1388461","16":"1644607"},{"1":"C","2":"Colorado","3":"1343824","4":"1878473","5":"1886149","6":"1236697","7":"1871471","8":"1814218","9":"1875146","10":"1752387","11":"1913275","12":"1665877","13":"1491604","14":"1178355","15":"1383978","16":"1330736"},{"1":"C","2":"Connecticut","3":"1610512","4":"1232844","5":"1181949","6":"1518933","7":"1841266","8":"1976976","9":"1764457","10":"1972730","11":"1968730","12":"1945524","13":"1228529","14":"1582249","15":"1503156","16":"1718072"},{"1":"D","2":"Delaware","3":"1330403","4":"1268673","5":"1706751","6":"1403759","7":"1441351","8":"1300836","9":"1762096","10":"1553585","11":"1370984","12":"1318669","13":"1984027","14":"1671279","15":"1803169","16":"1627508"},{"1":"D","2":"District of Columbia","3":"1111437","4":"1993741","5":"1374643","6":"1827949","7":"1803852","8":"1595981","9":"1193245","10":"1739748","11":"1707823","12":"1353449","13":"1979708","14":"1912654","15":"1782169","16":"1410183"},{"1":"F","2":"Florida","3":"1964626","4":"1468852","5":"1419738","6":"1362787","7":"1339608","8":"1278550","9":"1756185","10":"1818438","11":"1198403","12":"1497051","13":"1131928","14":"1107448","15":"1407784","16":"1170389"},{"1":"G","2":"Georgia","3":"1929009","4":"1541565","5":"1810773","6":"1779091","7":"1326846","8":"1223770","9":"1773090","10":"1630325","11":"1145473","12":"1851245","13":"1850111","14":"1887157","15":"1259353","16":"1725470"},{"1":"H","2":"Hawaii","3":"1461570","4":"1200280","5":"1213993","6":"1245931","7":"1459383","8":"1430465","9":"1919423","10":"1928416","11":"1330509","12":"1902816","13":"1695126","14":"1517184","15":"1948108","16":"1150882"},{"1":"I","2":"Idaho","3":"1353210","4":"1438538","5":"1739154","6":"1541015","7":"1122387","8":"1772050","9":"1335481","10":"1748608","11":"1436809","12":"1456340","13":"1643855","14":"1312561","15":"1713718","16":"1757171"},{"1":"I","2":"Illinois","3":"1508356","4":"1527440","5":"1493029","6":"1261353","7":"1540274","8":"1747614","9":"1871645","10":"1658551","11":"1422021","12":"1751422","13":"1696729","14":"1915435","15":"1645465","16":"1583516"},{"1":"I","2":"Indiana","3":"1776918","4":"1734104","5":"1269927","6":"1204117","7":"1848073","8":"1129546","9":"1139551","10":"1883976","11":"1999102","12":"1559924","13":"1905760","14":"1129794","15":"1988394","16":"1467614"},{"1":"I","2":"Iowa","3":"1499269","4":"1444576","5":"1576367","6":"1388924","7":"1554813","8":"1452911","9":"1317983","10":"1150783","11":"1751389","12":"1992996","13":"1501879","14":"1173694","15":"1431705","16":"1641866"},{"1":"K","2":"Kansas","3":"1509054","4":"1290700","5":"1522230","6":"1532094","7":"1104256","8":"1863278","9":"1949478","10":"1561528","11":"1550433","12":"1465812","13":"1882929","14":"1410249","15":"1930090","16":"1385528"},{"1":"K","2":"Kentucky","3":"1813878","4":"1448846","5":"1800760","6":"1250524","7":"1137913","8":"1911227","9":"1301848","10":"1956681","11":"1350895","12":"1512894","13":"1916616","14":"1878271","15":"1722762","16":"1913350"},{"1":"L","2":"Louisiana","3":"1584734","4":"1110625","5":"1868456","6":"1751920","7":"1233709","8":"1920301","9":"1185085","10":"1124853","11":"1498662","12":"1210385","13":"1234234","14":"1287663","15":"1908602","16":"1403857"},{"1":"M","2":"Maine","3":"1582720","4":"1678622","5":"1208496","6":"1912040","7":"1438549","8":"1330014","9":"1295877","10":"1969163","11":"1627262","12":"1706080","13":"1437088","14":"1318546","15":"1116792","16":"1529233"},{"1":"M","2":"Maryland","3":"1579713","4":"1404700","5":"1849798","6":"1397738","7":"1310270","8":"1789128","9":"1112765","10":"1967225","11":"1486246","12":"1872327","13":"1175819","14":"1314343","15":"1979529","16":"1569566"},{"1":"M","2":"Massachusetts","3":"1647582","4":"1686259","5":"1620601","6":"1777250","7":"1531641","8":"1380529","9":"1978904","10":"1567651","11":"1761048","12":"1658538","13":"1482203","14":"1731917","15":"1669749","16":"1963337"},{"1":"M","2":"Michigan","3":"1295635","4":"1149931","5":"1601027","6":"1340716","7":"1729449","8":"1567494","9":"1990431","10":"1575185","11":"1267626","12":"1274673","13":"1709853","14":"1815596","15":"1965196","16":"1646634"},{"1":"M","2":"Minnesota","3":"1729921","4":"1675204","5":"1903907","6":"1561839","7":"1985692","8":"1148621","9":"1328133","10":"1890633","11":"1995304","12":"1575533","13":"1910216","14":"1972021","15":"1515366","16":"1864553"},{"1":"M","2":"Mississippi","3":"1983285","4":"1292558","5":"1631325","6":"1943311","7":"1354579","8":"1731643","9":"1428291","10":"1568049","11":"1383227","12":"1629132","13":"1988270","14":"1907777","15":"1649668","16":"1991232"},{"1":"M","2":"Missouri","3":"1221316","4":"1858368","5":"1773451","6":"1573967","7":"1374863","8":"1486197","9":"1735099","10":"1800620","11":"1164202","12":"1425363","13":"1800052","14":"1698105","15":"1767835","16":"1996005"},{"1":"M","2":"Montana","3":"1877154","4":"1540099","5":"1332722","6":"1273327","7":"1625721","8":"1983568","9":"1251742","10":"1592690","11":"1350619","12":"1520064","13":"1185225","14":"1465705","15":"1110394","16":"1125903"},{"1":"N","2":"Nebraska","3":"1885081","4":"1309769","5":"1425527","6":"1240465","7":"1500594","8":"1278272","9":"1140598","10":"1270585","11":"1128711","12":"1187207","13":"1569665","14":"1690920","15":"1459243","16":"1802211"},{"1":"N","2":"Nevada","3":"1426117","4":"1114500","5":"1119707","6":"1758830","7":"1694526","8":"1765826","9":"1903270","10":"1231480","11":"1526066","12":"1143343","13":"1980195","14":"1283813","15":"1225348","16":"1903804"},{"1":"N","2":"New Hampshire","3":"1419776","4":"1854370","5":"1195119","6":"1990062","7":"1645430","8":"1286967","9":"1762936","10":"1763211","11":"1265642","12":"1704297","13":"1131298","14":"1197576","15":"1242623","16":"1963313"},{"1":"N","2":"New Jersey","3":"1605532","4":"1141514","5":"1613550","6":"1181452","7":"1541327","8":"1156804","9":"1568034","10":"1357418","11":"1443718","12":"1390010","13":"1202326","14":"1100990","15":"1850165","16":"1183568"},{"1":"N","2":"New Mexico","3":"1819239","4":"1226057","5":"1935991","6":"1124400","7":"1723493","8":"1475985","9":"1237704","10":"1820856","11":"1801430","12":"1653384","13":"1475715","14":"1623388","15":"1533494","16":"1868612"},{"1":"N","2":"New York","3":"1395149","4":"1611371","5":"1170675","6":"1446810","7":"1426941","8":"1463171","9":"1732098","10":"1426216","11":"1604531","12":"1683687","13":"1500089","14":"1718837","15":"1619033","16":"1367705"},{"1":"N","2":"North Carolina","3":"1616742","4":"1292223","5":"1482792","6":"1532347","7":"1158716","8":"1827420","9":"1267737","10":"1116168","11":"1791535","12":"1553750","13":"1472258","14":"1104893","15":"1596452","16":"1229085"},{"1":"N","2":"North Dakota","3":"1618807","4":"1510193","5":"1876940","6":"1443172","7":"1425030","8":"1868788","9":"1720352","10":"1671468","11":"1534571","12":"1271132","13":"1430978","14":"1529024","15":"1563898","16":"1604118"},{"1":"O","2":"Ohio","3":"1802132","4":"1648498","5":"1441386","6":"1670280","7":"1534888","8":"1314824","9":"1516621","10":"1511460","11":"1585465","12":"1887714","13":"1227303","14":"1840898","15":"1880804","16":"1573117"},{"1":"O","2":"Oklahoma","3":"1173918","4":"1334639","5":"1663622","6":"1798714","7":"1312574","8":"1708245","9":"1256746","10":"1853142","11":"1673831","12":"1822933","13":"1674707","14":"1900523","15":"1956742","16":"1307678"},{"1":"O","2":"Oregon","3":"1794912","4":"1726665","5":"1805445","6":"1133510","7":"1502242","8":"1419251","9":"1482786","10":"1862351","11":"1103794","12":"1935687","13":"1905378","14":"1522129","15":"1509171","16":"1893515"},{"1":"P","2":"Pennsylvania","3":"1320191","4":"1446723","5":"1218591","6":"1122030","7":"1971479","8":"1563062","9":"1274168","10":"1571032","11":"1433835","12":"1483292","13":"1290329","14":"1475344","15":"1931500","16":"1668232"},{"1":"R","2":"Rhode Island","3":"1501744","4":"1942942","5":"1266657","6":"1961923","7":"1835983","8":"1234040","9":"1151409","10":"1993136","11":"1983569","12":"1781016","13":"1909119","14":"1531212","15":"1990412","16":"1611730"},{"1":"S","2":"South Carolina","3":"1631522","4":"1803455","5":"1425193","6":"1458191","7":"1538731","8":"1825195","9":"1250499","10":"1864685","11":"1345102","12":"1116203","13":"1532332","14":"1591735","15":"1188417","16":"1110655"},{"1":"S","2":"South Dakota","3":"1159037","4":"1150689","5":"1660148","6":"1417141","7":"1418586","8":"1279134","9":"1171870","10":"1852424","11":"1554782","12":"1647245","13":"1811156","14":"1147488","15":"1302834","16":"1136443"},{"1":"T","2":"Tennessee","3":"1811867","4":"1485909","5":"1974179","6":"1157059","7":"1786132","8":"1399191","9":"1826406","10":"1326460","11":"1231739","12":"1469785","13":"1849041","14":"1560887","15":"1349173","16":"1162164"},{"1":"T","2":"Texas","3":"1520591","4":"1310777","5":"1957713","6":"1907326","7":"1873544","8":"1655483","9":"1785986","10":"1827503","11":"1447457","12":"1978374","13":"1882532","14":"1698698","15":"1646508","16":"1705322"},{"1":"U","2":"Utah","3":"1771096","4":"1195861","5":"1979395","6":"1241662","7":"1437456","8":"1859416","9":"1939284","10":"1915865","11":"1619186","12":"1288285","13":"1108281","14":"1123353","15":"1801019","16":"1729273"},{"1":"V","2":"Vermont","3":"1146902","4":"1832249","5":"1492704","6":"1579265","7":"1332048","8":"1563537","9":"1123567","10":"1618583","11":"1326369","12":"1792600","13":"1714960","14":"1146278","15":"1282790","16":"1565924"},{"1":"V","2":"Virginia","3":"1134317","4":"1163996","5":"1891068","6":"1853855","7":"1708715","8":"1197698","9":"1803330","10":"1590043","11":"1516758","12":"1171686","13":"1262342","14":"1647032","15":"1706707","16":"1850394"},{"1":"W","2":"Washington","3":"1977749","4":"1687136","5":"1199490","6":"1163092","7":"1334864","8":"1621989","9":"1545621","10":"1555554","11":"1179331","12":"1150089","13":"1775787","14":"1273834","15":"1387428","16":"1377341"},{"1":"W","2":"West Virginia","3":"1677347","4":"1380662","5":"1176100","6":"1888948","7":"1922085","8":"1740826","9":"1238174","10":"1539322","11":"1539603","12":"1872519","13":"1462137","14":"1683127","15":"1204344","16":"1198791"},{"1":"W","2":"Wisconsin","3":"1788920","4":"1518578","5":"1289663","6":"1436888","7":"1251678","8":"1721874","9":"1980167","10":"1901394","11":"1648755","12":"1940943","13":"1729177","14":"1510119","15":"1701650","16":"1846238"},{"1":"W","2":"Wyoming","3":"1775190","4":"1498098","5":"1198212","6":"1881688","7":"1750527","8":"1523124","9":"1587602","10":"1504455","11":"1282142","12":"1881814","13":"1673668","14":"1994022","15":"1204029","16":"1853858"}],"options":{"columns":{"min":{},"max":[10],"total":[16]},"rows":{"min":[10],"max":[10],"total":[51]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jc3RhdGUgY29sIG5hbWVzIGJ5IGluY2x1ZGluZ2ZvbGxvd2luZyBpbiB0aGUgc2NyaXB0IGNvbF9uYW1lcyA9IGMoXCJDb2wgbmFtZSAxXCIpXG5gYGAifQ== -->
+<pre class="r"><code>
+#state col names by includingfollowing in the script col_names = c(&quot;Col name 1&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#Read in the cars.csv file and use the col_types() function to ensure you load in:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2FycyA8LSByZWFkLmNzdihcbiAgXCJkYXRhL2NhcnMuY3N2XCIsIFxuICBjb2xfdHlwZXMgPSBjb2xzKFxuICAgIHgxID0gY29sX2NoYXJhY3RlcigpLFxuICAgIG1wZyA9IGNvbF9kb3VibGUoKSxcbiAgICBjeWwgPSBjb2xfZG91YmxlKCksXG4gICAgZGlzcCA9IGNvbF9kb3VibGUoKSxcbiAgICBocCA9IGNvbF9kb3VibGUoKSxcbiAgICB2cyA9IGNvbF9sb2dpY2FsKClcbiAgICApXG4pXG5gYGAifQ== -->
+<pre class="r"><code>cars &lt;- read.csv(
+  &quot;data/cars.csv&quot;, 
+  col_types = cols(
+    x1 = col_character(),
+    mpg = col_double(),
+    cyl = col_double(),
+    disp = col_double(),
+    hp = col_double(),
+    vs = col_logical()
+    )
+)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gcmVhZC50YWJsZShmaWxlID0gZmlsZSwgaGVhZGVyID0gaGVhZGVyLCBzZXAgPSBzZXAsIHF1b3RlID0gcXVvdGUsICA6IFxuICB1bnVzZWQgYXJndW1lbnQgKGNvbF90eXBlcyA9IGNvbHMoeDEgPSBjb2xfY2hhcmFjdGVyKCksIG1wZyA9IGNvbF9kb3VibGUoKSwgY3lsID0gY29sX2RvdWJsZSgpLCBkaXNwID0gY29sX2RvdWJsZSgpLCBocCA9IGNvbF9kb3VibGUoKSwgdnMgPSBjb2xfbG9naWNhbCgpKSlcbiJ9 -->
+<pre><code>Error in read.table(file = file, header = header, sep = sep, quote = quote,  : 
+  unused argument (col_types = cols(x1 = col_character(), mpg = col_double(), cyl = col_double(), disp = col_double(), hp = col_double(), vs = col_logical()))</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#Read in the scotland.txt file using the appropriate function.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2NvdGxhbmQgPC0gcmVhZC5jc3YyKFwiZGF0YS9zY290bGFuZC50eHRcIiwgc2tpcCA9IDEpXG5zY290bGFuZFxuYGBgIn0= -->
+<pre class="r"><code>scotland &lt;- read.csv2(&quot;data/scotland.txt&quot;, skip = 1)
+scotland</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6NSwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBNDFVdlc3Yk1CQSsvVnRxMGhUcEMzRHBhQzlaTWpad2toYW9VUVJPMm1hbEpjb21USk1HUmNYTjFvZnBzd1RkT25Udm5LZElTa21rTEt0SlVRRW5reC92ZU4vZGZmTDA5UG9vdVU0QXdBTXYxTzlBTHlINGRIVStQQWJ3WGIxeHdJZTQrdjJxajE5WHA5cjJ0U1gxSVlCYlIydHZjNmF2Z1VqYlFGdmMrSGxkLzhqRStBWUxqZC9BeEh1OXhDRWpONFFWZXZXcWptalFHS0YzREJkenNXbUJreG1SR1NIY0FIdG9YSzQweEhISk1vTkY2TFRrMnFkMTBkdWN5QldqM0dJdjBSa3VGUHBBMlV6U3pLSUpPc3NvbjVWeXZtanp2Y2NyeXBTdytWNmdDYjJoZkY1c29RRzZ3TFJnNUxaWFVwQnE2cmFpdHM0Y3AwcEl2WHBvT3h4Ly9nR1JsT0FkM0lNN1BnWm4rQjJjTjJ1QTMzY0F2OTRDL0dRQWQvZTlEbmZOZmRvcU91NmpZZUJhV21oTTFXMjd1UkliM25oNmovL2kydVlPelAyT1VVUlhCUU16OGJDWE8yN2Jic2ZYSlhGWWI1REkvMnIvbnBua0x1VnptdHVKN1Z0OTdONzNVVWkxUUJQTXNWd1dDeXEzN2xQQ2MwazJYZkFRWFlyeUdmY3ZSS3RrSXRTQzR2L3EwcTRBT0Y0Uks0REFnUDRVODZWVnprU2ttRzJKSnhkaVhUS3NhS3V0OEZKaFZSYTJIV05SOHBTeTBZa2t1SmNzbG1JenNnbXJXYm5mb0g2U1ozZ25HVlo0bEVzZDhnVDNTS3dyR3ZveTEvNGRkSU1kMlFNT1NsNGx6NGJwb3VUTDRWRkhxR0FJT1FhejY2Qko2VnRpdGtNaDRmUHRseG93UENQTTZrY1hXZGM0V2t2S2xhMUVvOFZJQ1lXdFg1SUtacEhtUzN2NEE2S0dzaEVGQlFBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Rank"],"name":[1],"type":["int"],"align":["right"]},{"label":["Locality"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["Population"],"name":[3],"type":["int"],"align":["right"]},{"label":["Status"],"name":[4],"type":["fctr"],"align":["left"]},{"label":["Council.Area"],"name":[5],"type":["fctr"],"align":["left"]}],"data":[{"1":"1","2":"Glasgow","3":"612040","4":"City","5":"Glasgow City"},{"1":"2","2":"Edinburgh","3":"488050","4":"City","5":"City of Edinburgh"},{"1":"3","2":"Aberdeen","3":"200680","4":"City","5":"Aberdeen City"},{"1":"4","2":"Dundee","3":"148280","4":"City","5":"Dundee City"},{"1":"5","2":"Paisley","3":"77220","4":"Town","5":"Renfrewshire"},{"1":"6","2":"East Kilbride","3":"75120","4":"Town","5":"South Lanarkshire"},{"1":"7","2":"Livingston","3":"57030","4":"Town","5":"West Lothian"},{"1":"8","2":"Hamilton","3":"54080","4":"Town","5":"South Lanarkshire"},{"1":"9","2":"Dunfermline","3":"53100","4":"Town","5":"Fife"},{"1":"10","2":"Cumbernauld","3":"50920","4":"Town","5":"North Lanarkshire"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#Q4</p>
+<p>#How do you read text into a one element character vector?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfbGlzdCA8LSBsaXN0KHN0b2NrX3ByaWNlcyA9IHN0b2NrX3ByaWNlcywgZGF5X29mX3dlZWsgPSBkYXlfb2Zfd2Vlaywgc3RvY2tfZGF0YSA9IHN0b2NrX2RhdGEpXG5zdG9ja19saXN0XG5gYGAifQ== -->
-<pre class="r"><code>stock_list &lt;- list(stock_prices = stock_prices, day_of_week = day_of_week, stock_data = stock_data)
-stock_list</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#Read in the steam-200k-sample.csv file. Fix any problems you may encounter.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RlYW1fMjAwayA8LSByZWFkLmNzdihcImRhdGEvc3RlYW0tMjAway1zYW1wbGUuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>steam_200k &lt;- read.csv(&quot;data/steam-200k-sample.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJHN0b2NrX3ByaWNlc1xuIFsxXSAyMyAyNyAyMyAyMSAzNCAyNCAyNSAzMCAzNyAzMFxuXG4kZGF5X29mX3dlZWtcbiBbMV0gXCJNb25kYXlcIiAgICBcIlR1ZXNkYXlcIiAgIFwiV2VkbmVzZGF5XCIgXCJUaHVyc2RheVwiICBcIkZyaWRheVwiICAgIFwiTW9uZGF5XCIgICAgXCJUdWVzZGF5XCIgIFxuIFs4XSBcIldlZG5lc2RheVwiIFwiVGh1cnNkYXlcIiAgXCJGcmlkYXlcIiAgIFxuXG4kc3RvY2tfZGF0YVxuIn0= -->
-<pre><code>$stock_prices
- [1] 23 27 23 21 34 24 25 30 37 30
-
-$day_of_week
- [1] &quot;Monday&quot;    &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;    &quot;Monday&quot;    &quot;Tuesday&quot;  
- [8] &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;   
-
-$stock_data</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSVVUvQ01CQXVZNEJVSVNUOERwYW9NV0pNREJyRG15OW1SdDVJN1lvczFKWjBuZWdidnh5OWJsZGdDMHUyNzc2dnQvdnVycS9QczJzNm80U1FKbW0yNGR1Q2tMVGU0dWxvVEVnWUFHbVFrSFFkL3NEeEVBSW45dUdsazF0U1BKTjdSTTl2RUI4Ung0aDNpQStJVDlzS2gvbzlWeGM5UXRkSjBabHI0cVJXYWJBdHhiZVFHVVNESWd2VnFVa1Q5dXZaaTFZSGRoWXZjNU1kZUNmT3hSSHR2b3RFbFVMVnFjVWx5N3pSM243QnVOVUdvbDA5WGJFdjRkTURGQzh5cS9scXZqWXBoN05TT3dlcnVWN01OMEtzYWpXNlJtOGlYOGR0S1NoMzU3YmxFcHQvdFhab3dpeUxGZ1orT2RGU1I2OXRxaFVVQzRhNDB1T2ZHNlltREhMbHpKTVJYK1pxTmJxOHdudHE0TVgxTUtaSGNWQjZocjZ6L1kwSTlaa3E0WmNqMlllUVNQb3daVEZrQkh0UjFvOENhaFpaYlpuUG8xeExyeFREa2QwLzVpYTlKTW9DQUFBPSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday"},{"1":"27","2":"Tuesday"},{"1":"23","2":"Wednesday"},{"1":"21","2":"Thursday"},{"1":"34","2":"Friday"},{"1":"24","2":"Monday"},{"1":"25","2":"Tuesday"},{"1":"30","2":"Wednesday"},{"1":"37","2":"Thursday"},{"1":"30","2":"Friday"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTkFcbiJ9 -->
-<pre><code>NA</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gbWFrZS5uYW1lcyhjb2wubmFtZXMsIHVuaXF1ZSA9IFRSVUUpIDogXG4gIGludmFsaWQgbXVsdGlieXRlIHN0cmluZyBhdCAnPGI0Pjw4ZT48ZTg+XCI8NDQ+YXRhIFNvdXJjZVwiJ1xuIn0= -->
+<pre><code>Error in make.names(col.names, unique = TRUE) : 
+  invalid multibyte string at '&lt;b4&gt;&lt;8e&gt;&lt;e8&gt;&quot;&lt;44&gt;ata Source&quot;'</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#Part2.2 #Q1.1</p>
+<p>#Read in the historic_eu_payments.tsv file.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q1.2</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfcHJpY2VzIFtzdG9ja19wcmljZXMgPiAzMF1cbmBgYCJ9 -->
-<pre class="r"><code>stock_prices [stock_prices &gt; 30]</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXVfcGF5bWVudHMgPC0gcmVhZC50c3YoXCJkYXRhL2hpc3RvcmljX2V1X3BheW1lbnRzLnRzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>eu_payments &lt;- read.tsv(&quot;data/historic_eu_payments.tsv&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDM0IDM3XG4ifQ== -->
-<pre><code>[1] 34 37</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gcmVhZC50c3YoXCJkYXRhL2hpc3RvcmljX2V1X3BheW1lbnRzLnRzdlwiKSA6IFxuICBjb3VsZCBub3QgZmluZCBmdW5jdGlvbiBcInJlYWQudHN2XCJcbiJ9 -->
+<pre><code>Error in read.tsv(&quot;data/historic_eu_payments.tsv&quot;) : 
+  could not find function &quot;read.tsv&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#Q2.1</p>
+<p>#How do you read lines of text into a multi-element text vector?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfZGF0YSRkYXlfb2Zfd2Vla1xuYGBgIn0= -->
-<pre class="r"><code>stock_data$day_of_week</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#Read in the JSON file from the following url: <a href="http://makemeanalyst.com/wp-content/uploads/2017/06/sample_json.txt" class="uri">http://makemeanalyst.com/wp-content/uploads/2017/06/sample_json.txt</a></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcInJqc29uXCIpXG5gYGAifQ== -->
+<pre class="r"><code>install.packages(&quot;rjson&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBNb25kYXkgICAgVHVlc2RheSAgIFdlZG5lc2RheSBUaHVyc2RheSAgRnJpZGF5ICAgIE1vbmRheSAgICBUdWVzZGF5ICAgV2VkbmVzZGF5XG4gWzldIFRodXJzZGF5ICBGcmlkYXkgICBcbkxldmVsczogRnJpZGF5IE1vbmRheSBUaHVyc2RheSBUdWVzZGF5IFdlZG5lc2RheVxuIn0= -->
-<pre><code> [1] Monday    Tuesday   Wednesday Thursday  Friday    Monday    Tuesday   Wednesday
- [9] Thursday  Friday   
-Levels: Friday Monday Thursday Tuesday Wednesday</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>#Q2.2 Select the rows of the stock_data data frame where the stock_prices are less than 25.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Q3.1</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfZGF0YVssMV1cbmBgYCJ9 -->
-<pre class="r"><code>stock_data[,1]</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2FtcGxlX2pzb24gPC0gZnJvbUpTT04oZ2V0VVJMKFwiaHR0cDovL21ha2VtZWFuYWx5c3QuY29tL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDE3LzA2L3NhbXBsZV9qc29uLnR4dFwiKSlcbmBgYCJ9 -->
+<pre class="r"><code>sample_json &lt;- fromJSON(getURL(&quot;http://makemeanalyst.com/wp-content/uploads/2017/06/sample_json.txt&quot;))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAyMyAyNyAyMyAyMSAzNCAyNCAyNSAzMCAzNyAzMFxuIn0= -->
-<pre><code> [1] 23 27 23 21 34 24 25 30 37 30</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gZnJvbUpTT04oZ2V0VVJMKFwiaHR0cDovL21ha2VtZWFuYWx5c3QuY29tL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDE3LzA2L3NhbXBsZV9qc29uLnR4dFwiKSkgOiBcbiAgY291bGQgbm90IGZpbmQgZnVuY3Rpb24gXCJmcm9tSlNPTlwiXG4ifQ== -->
+<pre><code>Error in fromJSON(getURL(&quot;http://makemeanalyst.com/wp-content/uploads/2017/06/sample_json.txt&quot;)) : 
+  could not find function &quot;fromJSON&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q3.2</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q3.3</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Q4</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSMzAvQ01CQXUyd0NwUWtqNE83YkVFQ1BHeEtBeHZQbGlNUEpHYWxka29iYWs2MFRmL012QjYzYmx4OEtTN2J2djYrMit1K3ZyODJ4SVo1UVFFcEt3QmQ4bWhLVDVOcDNFSTBLaUFFaURSS1RqOEFlT0J4QTRzUWN2SGQrUzhobmZJM3ArZy9pSU9FSzhRM3hBZlBvNzRWQy82K3FpUitRNktUdHpUWnpWVGhwc1NmRXRaQTVSdjh4Q2RXS3lsUDE2OXFMVmdWMU1sNFhKRDd3OUxjUVI3YnlMVkZYQ3FWT1RTNVo3bzczOWduR3JEVVRiZXJwaVg4S25CeWhlNVZiejFYeHRNZzVubFhZSlZuTzltRytFV05WcWRJemVKTDZPMjFKUTdjNXR5eVdHdTFvN05HV1dKUXNEdjV4cHFhM1hOdE1LaWdVRFhPbnh6dzFURS9xRmN1WnB6SmVGV3NYRGE3eW5CbDVjRjJONkZBZVZaK1E3MjkrSVVKK1pFbjQ1a24wSWlhUUhVNVpESnJBWFpmMG9vT2FKMVpiNVBNcTE5RW81SE5uK0EwMTVLUERLQWdBQSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday"},{"1":"27","2":"Tuesday"},{"1":"23","2":"Wednesday"},{"1":"21","2":"Thursday"},{"1":"34","2":"Friday"},{"1":"24","2":"Monday"},{"1":"25","2":"Tuesday"},{"1":"30","2":"Wednesday"},{"1":"37","2":"Thursday"},{"1":"30","2":"Friday"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>#Part 3</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcInRpZHlxdWFudFwiKVxuYGBgIn0= -->
-<pre class="r"><code>install.packages(&quot;tidyquant&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiYWxzbyBpbnN0YWxsaW5nIHRoZSBkZXBlbmRlbmNpZXMg4oCYaG1z4oCZLCDigJhxdWFkcHJvZ+KAmSwg4oCYem9v4oCZLCDigJh0aWR5c2VsZWN04oCZLCDigJhwbG9ncuKAmSwg4oCYcGFkcuKAmSwg4oCYcmVhZHLigJksIOKAmFBlcmZvcm1hbmNlQW5hbHl0aWNz4oCZLCDigJhxdWFudG1vZOKAmSwg4oCYZHBseXLigJksIOKAmFF1YW5kbOKAmSwg4oCYdGlkeXLigJksIOKAmHRpbWV0a+KAmSwg4oCYVFRS4oCZLCDigJh4dHPigJlcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi9obXNfMC41LjMudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAxMDM2MTIgYnl0ZXMgKDEwMSBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDEwMSBLQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3F1YWRwcm9nXzEuNS04LnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggMzkyOTUgYnl0ZXMgKDM4IEtCKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmRvd25sb2FkZWQgMzggS0JcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi96b29fMS44LTcudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAxMDkzOTY4IGJ5dGVzICgxLjAgTUIpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCAxLjAgTUJcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi90aWR5c2VsZWN0XzEuMC4wLnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggMjQwMTYyIGJ5dGVzICgyMzQgS0IpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCAyMzQgS0JcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi9wbG9ncl8wLjIuMC50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDEzMTc4IGJ5dGVzICgxMiBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDEyIEtCXG5cbnRyeWluZyBVUkwgJ2h0dHBzOi8vY3Jhbi5yc3R1ZGlvLmNvbS9iaW4vbWFjb3N4L2VsLWNhcGl0YW4vY29udHJpYi8zLjYvcGFkcl8wLjUuMC50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDMwNjMzNjQgYnl0ZXMgKDIuOSBNQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDIuOSBNQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3JlYWRyXzEuMy4xLnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggNzkyNjU3IGJ5dGVzICg3NzQgS0IpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCA3NzQgS0JcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi9QZXJmb3JtYW5jZUFuYWx5dGljc18yLjAuNC50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDMxNjEyNzAgYnl0ZXMgKDMuMCBNQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDMuMCBNQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3F1YW50bW9kXzAuNC0xNS50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDk2MjkzMSBieXRlcyAoOTQwIEtCKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmRvd25sb2FkZWQgOTQwIEtCXG5cbnRyeWluZyBVUkwgJ2h0dHBzOi8vY3Jhbi5yc3R1ZGlvLmNvbS9iaW4vbWFjb3N4L2VsLWNhcGl0YW4vY29udHJpYi8zLjYvZHBseXJfMC44LjQudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCA2ODQ2Mzk1IGJ5dGVzICg2LjUgTUIpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCA2LjUgTUJcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi9RdWFuZGxfMi4xMC4wLnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggNTk1NDYgYnl0ZXMgKDU4IEtCKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmRvd25sb2FkZWQgNTggS0JcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi90aWR5cl8xLjAuMi50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDEwMjA0NjEgYnl0ZXMgKDk5NiBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDk5NiBLQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3RpbWV0a18wLjEuMi50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDI4MjQ2NTkgYnl0ZXMgKDIuNyBNQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDIuNyBNQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L1RUUl8wLjIzLTYudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCA1MTgzMzIgYnl0ZXMgKDUwNiBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDUwNiBLQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3h0c18wLjEyLTAudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCA5NDc4MjYgYnl0ZXMgKDkyNSBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDkyNSBLQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3RpZHlxdWFudF8wLjUuMTAudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAzMzA4Mzk4IGJ5dGVzICgzLjIgTUIpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCAzLjIgTUJcbiJ9 -->
-<pre><code>also installing the dependencies ‘hms’, ‘quadprog’, ‘zoo’, ‘tidyselect’, ‘plogr’, ‘padr’, ‘readr’, ‘PerformanceAnalytics’, ‘quantmod’, ‘dplyr’, ‘Quandl’, ‘tidyr’, ‘timetk’, ‘TTR’, ‘xts’
 
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/hms_0.5.3.tgz'
-Content type 'application/x-gzip' length 103612 bytes (101 KB)
-==================================================
-downloaded 101 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/quadprog_1.5-8.tgz'
-Content type 'application/x-gzip' length 39295 bytes (38 KB)
-==================================================
-downloaded 38 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/zoo_1.8-7.tgz'
-Content type 'application/x-gzip' length 1093968 bytes (1.0 MB)
-==================================================
-downloaded 1.0 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/tidyselect_1.0.0.tgz'
-Content type 'application/x-gzip' length 240162 bytes (234 KB)
-==================================================
-downloaded 234 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/plogr_0.2.0.tgz'
-Content type 'application/x-gzip' length 13178 bytes (12 KB)
-==================================================
-downloaded 12 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/padr_0.5.0.tgz'
-Content type 'application/x-gzip' length 3063364 bytes (2.9 MB)
-==================================================
-downloaded 2.9 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/readr_1.3.1.tgz'
-Content type 'application/x-gzip' length 792657 bytes (774 KB)
-==================================================
-downloaded 774 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/PerformanceAnalytics_2.0.4.tgz'
-Content type 'application/x-gzip' length 3161270 bytes (3.0 MB)
-==================================================
-downloaded 3.0 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/quantmod_0.4-15.tgz'
-Content type 'application/x-gzip' length 962931 bytes (940 KB)
-==================================================
-downloaded 940 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/dplyr_0.8.4.tgz'
-Content type 'application/x-gzip' length 6846395 bytes (6.5 MB)
-==================================================
-downloaded 6.5 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/Quandl_2.10.0.tgz'
-Content type 'application/x-gzip' length 59546 bytes (58 KB)
-==================================================
-downloaded 58 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/tidyr_1.0.2.tgz'
-Content type 'application/x-gzip' length 1020461 bytes (996 KB)
-==================================================
-downloaded 996 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/timetk_0.1.2.tgz'
-Content type 'application/x-gzip' length 2824659 bytes (2.7 MB)
-==================================================
-downloaded 2.7 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/TTR_0.23-6.tgz'
-Content type 'application/x-gzip' length 518332 bytes (506 KB)
-==================================================
-downloaded 506 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/xts_0.12-0.tgz'
-Content type 'application/x-gzip' length 947826 bytes (925 KB)
-==================================================
-downloaded 925 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/tidyquant_0.5.10.tgz'
-Content type 'application/x-gzip' length 3308398 bytes (3.2 MB)
-==================================================
-downloaded 3.2 MB</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy83MS82dnJuXzhweDF0Z2NmbDh3cTQxMGRsX20wMDAwZ24vVC8vUnRtcGU3WEduSS9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
-<pre><code>
-The downloaded binary packages are in
-    /var/folders/71/6vrn_8px1tgcfl8wq410dl_m0000gn/T//Rtmpe7XGnI/downloaded_packages</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>google_prices[ , c(“date”, “close”)]</p>
-<p>subset(google_prices, close &gt; mean&gt;(close))</p>
-<!-- rnb-text-end -->
-
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQojUGFydCAxCiNRMS4xCmBgYHtyfQpzdG9ja19wcmljZXMgPC1jKDIzLCAyNywgMjMsIDIxLCAzNCwgMjQsIDI1LCAzMCwgMzcsIDMwKQpzdG9ja19wcmljZXMKYGBgCiNRMS4yCmBgYHtyfQpkYXlfb2Zfd2VlayA8LWMoIk1vbmRheSIsICJUdWVzZGF5IiwgIldlZG5lc2RheSIsICJUaHVyc2RheSIsICJGcmlkYXkiLCAiTW9uZGF5IiwgIlR1ZXNkYXkiLCAiV2VkbmVzZGF5IiwgIlRodXJzZGF5IiwgIkZyaWRheSIpCmRheV9vZl93ZWVrCmBgYAojUTIuMQpgYGB7cn0KZGF5X29mX3dlZWtfZmFjdG9yIDwtIGFzLmZhY3RvcihkYXlfb2Zfd2VlaykKZGF5X29mX3dlZWtfZmFjdG9yCmBgYAojUTIuMiBYCmBgYHtyfQpuYW1lZF9zdG9ja19wcmljZXMgPC0gc3RvY2tfcHJpY2VzCm5hbWVzKG5hbWVkX3N0b2NrX3ByaWNlcykgPC0gZGF5X29mX3dlZWsKbmFtZWRfc3RvY2tfcHJpY2VzCmBgYAojUTMKYGBge3J9CnN0b2NrX2RhdGEgPC0gZGF0YS5mcmFtZShzdG9ja19wcmljZXMgPSBzdG9ja19wcmljZXMsIGRheV9vZl93ZWVrID0gZGF5X29mX3dlZWspCnN0b2NrX2RhdGEKYGBgCiNRNApgYGB7cn0Kc3RvY2tfbGlzdCA8LSBsaXN0KHN0b2NrX3ByaWNlcyA9IHN0b2NrX3ByaWNlcywgZGF5X29mX3dlZWsgPSBkYXlfb2Zfd2Vlaywgc3RvY2tfZGF0YSA9IHN0b2NrX2RhdGEpCnN0b2NrX2xpc3QKYGBgCiNQYXJ0Mi4yCiNRMS4xCmBgYHtyfQpzdG9ja19wcmljZXMgWzQ6Nl0KYGBgCiNRMS4yCmBgYHtyfQpzdG9ja19wcmljZXMgW3N0b2NrX3ByaWNlcyA+IDMwXQpgYGAKI1EyLjEKYGBge3J9CnN0b2NrX2RhdGEkZGF5X29mX3dlZWsKYGBgCiNRMi4yClNlbGVjdCB0aGUgcm93cyBvZiB0aGUgc3RvY2tfZGF0YSBkYXRhIGZyYW1lIHdoZXJlIHRoZSBzdG9ja19wcmljZXMgYXJlIGxlc3MgdGhhbiAyNS4KYGBge3J9CnN0b2NrX3ByaWNlcyA8IDI1CmBgYAoKClEzLjEKYGBge3J9CnN0b2NrX2RhdGFbLDFdCmBgYAojUTMuMgpgYGB7cn0Kc3RvY2tfZGF0YVszLF0KYGBgCiNRMy4zCmBgYHtyfQpzdG9ja19kYXRhWzMsMV0KYGBgCiNRNApgYGB7cn0Kc3RvY2tfbGlzdCRzdG9ja19kYXRhCmBgYAoKI1BhcnQgMwpgYGB7cn0KaW5zdGFsbC5wYWNrYWdlcygidGlkeXF1YW50IikKYGBgCgoKZ29vZ2xlX3ByaWNlc1sgLCBjKCJkYXRlIiwgImNsb3NlIildCgpzdWJzZXQoZ29vZ2xlX3ByaWNlcywgY2xvc2UgPiBtZWFuPihjbG9zZSkpCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9Cmluc3RhbGwucGFja2FnZXMoInJlYWRyIikKbGlicmFyeShyZWFkcikKYGBgCgoKYGBge3J9CnN0YXRlX2luY29tZSA8LSByZWFkLmNzdigiZGF0YS9zdGF0ZV9pbmNvbWVfZGF0YS5jc3YiKQpzdGF0ZV9pbmNvbWUKCiNzdGF0ZSBjb2wgbmFtZXMgYnkgaW5jbHVkaW5nZm9sbG93aW5nIGluIHRoZSBzY3JpcHQgY29sX25hbWVzID0gYygiQ29sIG5hbWUgMSIpCmBgYAoKI1JlYWQgaW4gdGhlIGNhcnMuY3N2IGZpbGUgYW5kIHVzZSB0aGUgY29sX3R5cGVzKCkgZnVuY3Rpb24gdG8gZW5zdXJlIHlvdSBsb2FkIGluOgpgYGB7cn0KY2FycyA8LSByZWFkLmNzdigKICAiZGF0YS9jYXJzLmNzdiIsIAogIGNvbF90eXBlcyA9IGNvbHMoCiAgICB4MSA9IGNvbF9jaGFyYWN0ZXIoKSwKICAgIG1wZyA9IGNvbF9kb3VibGUoKSwKICAgIGN5bCA9IGNvbF9kb3VibGUoKSwKICAgIGRpc3AgPSBjb2xfZG91YmxlKCksCiAgICBocCA9IGNvbF9kb3VibGUoKSwKICAgIHZzID0gY29sX2xvZ2ljYWwoKQogICAgKQopCmBgYAoKI1JlYWQgaW4gdGhlIHNjb3RsYW5kLnR4dCBmaWxlIHVzaW5nIHRoZSBhcHByb3ByaWF0ZSBmdW5jdGlvbi4KYGBge3J9CnNjb3RsYW5kIDwtIHJlYWQuY3N2MigiZGF0YS9zY290bGFuZC50eHQiLCBza2lwID0gMSkKc2NvdGxhbmQKYGBgCgojSG93IGRvIHlvdSByZWFkIHRleHQgaW50byBhIG9uZSBlbGVtZW50IGNoYXJhY3RlciB2ZWN0b3I/CmBgYHtyfQoKYGBgCgojUmVhZCBpbiB0aGUgc3RlYW0tMjAway1zYW1wbGUuY3N2IGZpbGUuIEZpeCBhbnkgcHJvYmxlbXMgeW91IG1heSBlbmNvdW50ZXIuCmBgYHtyfQpzdGVhbV8yMDBrIDwtIHJlYWQuY3N2KCJkYXRhL3N0ZWFtLTIwMGstc2FtcGxlLmNzdiIpCmBgYAoKI1JlYWQgaW4gdGhlIGhpc3RvcmljX2V1X3BheW1lbnRzLnRzdiBmaWxlLgoKYGBge3J9CmV1X3BheW1lbnRzIDwtIHJlYWQudHN2KCJkYXRhL2hpc3RvcmljX2V1X3BheW1lbnRzLnRzdiIpCmBgYAoKI0hvdyBkbyB5b3UgcmVhZCBsaW5lcyBvZiB0ZXh0IGludG8gYSBtdWx0aS1lbGVtZW50IHRleHQgdmVjdG9yPwpgYGB7cn0KCmBgYAoKI1JlYWQgaW4gdGhlIEpTT04gZmlsZSBmcm9tIHRoZSBmb2xsb3dpbmcgdXJsOiBodHRwOi8vbWFrZW1lYW5hbHlzdC5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMTcvMDYvc2FtcGxlX2pzb24udHh0CgpgYGB7cn0KaW5zdGFsbC5wYWNrYWdlcygicmpzb24iKQpgYGAKCmBgYHtyfQpzYW1wbGVfanNvbiA8LSBmcm9tSlNPTihnZXRVUkwoImh0dHA6Ly9tYWtlbWVhbmFseXN0LmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxNy8wNi9zYW1wbGVfanNvbi50eHQiKSkKCmBgYAo=</div>
 
 
 
@@ -2056,7 +1919,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("homework_2.Rmd");
+  window.initializeSourceEmbed("homework.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

@@ -73,11 +73,10 @@ stock_list$stock_data
 
 #Part 3
 ```{r}
-install.packages("tinyquant")
+install.packages("tidyquant")
 ```
 
 
 google_prices[ , c("date", "close")]
 
 subset(google_prices, close > mean>(close))
-

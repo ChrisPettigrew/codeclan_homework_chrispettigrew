@@ -1,0 +1,232 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+temp_in_edinburgh <- c(8L, 7L, 7L, 9L, 8L)
+class(temp_in_edinburgh)
+````
+
+```{r}
+rain_in_edinburgh <- c(10, 20, 20, 60, 20)
+class(rain_in_edinburgh)
+```
+
+```{r}
+cloud_cover_in_edinburgh <- c("partly", "mostly", "mostly", "showers", "partly")
+class(cloud_cover_in_edinburgh)
+  
+```
+
+```{r}
+days <- c("Wed", "Thu", "Fri", "Sat", "Sun")
+```
+
+```{r}
+named_temp_in_edinburgh <- temp_in_edinburgh
+names(named_temp_in_edinburgh) <- days
+named_temp_in_edinburgh
+```
+
+```{r}
+named_rain_in_edinburgh <- rain_in_edinburgh
+names(named_rain_in_edinburgh) <- days
+named_rain_in_edinburgh
+```
+
+```{r}
+named_cloud_cover_in_edinburgh <- cloud_cover_in_edinburgh
+names(named_cloud_cover_in_edinburgh) <- days
+named_cloud_cover_in_edinburgh
+```
+
+```{r}
+mean(temp_in_edinburgh)
+```
+
+```{r}
+mean(rain_in_edinburgh)
+```
+
+```{r}
+temp_in_edinburgh[temp_in_edinburgh > 7.8]
+#temperature[chance_of_rain <= mean(chance_of_rain)]
+```
+
+#Select only the the temperatures when the chance of rain is lower than or equal to the average.
+```{r}
+temp_in_edinburgh[rain_in_edinburgh <= 26]
+```
+
+#Select only the cloud covers from the weekend.
+```{r}
+cloud_cover_in_edinburgh[4:5]
+```
+
+
+```{r}
+test_results <- c(6, 7, 9, 7, 9, 3, 9, 7, 3, 8, 10, 5, 5, 9, 7, 5, 9, 8, 9, 5)
+```
+#How many marks do we have?
+```{r}
+length(test_results)
+```
+
+
+#What was the average mark?
+```{r}
+mean(test_results)
+```
+
+#What was the highest and lowest result?
+```{r}
+max(test_results)
+min(test_results)
+```
+
+#How many people scored each mark?
+```{r}
+table(test_results)
+```
+
+Express each mark as a percentage out of 100
+```{r}
+test_results/10 * 100
+```
+
+
+How many people scored eight or higher?
+
+```{r}
+sum(test_results >=8)
+```
+
+#Matrix
+```{r}
+temp_forecast_edin <-c (7, 7, 9, 9, 10, 10, 8, 8, 8, 7, 7, 7, 8, 7)
+forecast_days <- c("Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed")
+week <-c("week 1", "week 2")
+```
+
+```{r}
+fortnight_temp_forecast <- matrix(temp_forecast_edin, nrow = 2, ncol = 7, byrow = TRUE)
+fortnight_temp_forecast
+```
+
+```{r}
+rownames(fortnight_temp_forecast) <- c("week 1", "week 2")
+colnames(fortnight_temp_forecast) <- c("Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed")
+fortnight_temp_forecast
+```
+
+```{r}
+rowMeans(fortnight_temp_forecast)
+```
+
+#Find the average temperature on each day of the week (i.e the average temperature on the two Mondays, the two Tuesdays etc.)
+
+```{r}
+colMeans(fortnight_temp_forecast)
+```
+
+```{r}
+fortnight_temp_forecast[2,3]
+```
+
+```{r}
+fortnight_temp_forecast[2,]
+```
+
+```{r}
+fortnight_temp_forecast[,"Wed"]
+```
+
+```{r}
+fortnight_temp_forecast * 1.8 + 32
+
+```
+
+# Factors
+Now we will go back to our 5 day forecast.
+
+Make the vector with the days of the week into an ordered factor, where the order correspond to the order of days in a week, starting Monday.
+
+Now select only the temperatures after Tuesday.
+
+```{r}
+days_in_order <- c(
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday"
+)
+
+days_of_week_factor <- factor(
+  days,
+  levels = days_in_order,
+  ordered = TRUE
+)
+```
+
+```{r}
+forecast_5_days <- data.frame(
+  temp_in_edinburgh = temp_in_edinburgh,
+  rain_in_edinburgh = rain_in_edinburgh,
+  cloud_cover_in_edinburgh = cloud_cover_in_edinburgh,
+  days = days
+)
+```
+
+```{r}
+rm(temp_in_edinburgh)
+rm(rain_in_edinburgh)
+rm(cloud_cover_in_edinburgh)
+rm(days)
+rm(days_of_week_factor)
+```
+
+```{r}
+subset(forecast_5_days, temp_in_edinburgh > mean(temp_in_edinburgh))
+
+```
+
+#Select the rows when the chance of rain is lower than or equal to the average. .
+```{r}
+subset(forecast_5_days, rain_in_edinburgh <= mean(rain_in_edinburgh))
+```
+
+#Sort the data frame so that the highest temperatures come first.
+```{r}
+positions <- rev(order(forecast_5_days$temp_in_edinburgh))
+
+forecast_5_days[positions, ]
+```
+
+```{r}
+forecast_5_days_list <- list(
+  "Thursday" = as.list(forecast_5_days[1, 1:3]),
+  "Friday"   = as.list(forecast_5_days[2, 1:3]),  
+  "Saturday" = as.list(forecast_5_days[3, 1:3]),
+  "Sunday"   = as.list(forecast_5_days[4, 1:3]),
+  "Monday"   = as.list(forecast_5_days[5, 1:3])
+)
+```
+
+```{r}
+forecast_5_days_list$Sunday$rain_in_edinburgh
+```
+
+```{r}
+forecast_5_days_list$Friday$cloud_cover_in_edinburgh
+
+```
+
+```{r}
+forecast_5_days_list$Thursday$temp_in_edinburgh
+
+```
+
