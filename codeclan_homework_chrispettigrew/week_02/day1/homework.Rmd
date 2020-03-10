@@ -4,7 +4,6 @@ output: html_notebook
 ---
 
 ```{r}
-install.packages("readr")
 library(readr)
 ```
 
@@ -18,10 +17,8 @@ state_income
 
 #Read in the cars.csv file and use the col_types() function to ensure you load in:
 ```{r}
-cars <- read.csv(
-  "data/cars.csv", 
-  col_types = cols(
-    x1 = col_character(),
+cars <- read_csv("data/cars.csv", col_types = cols(
+    X1 = col_character(),
     mpg = col_double(),
     cyl = col_double(),
     disp = col_double(),
@@ -29,6 +26,8 @@ cars <- read.csv(
     vs = col_logical()
     )
 )
+
+cars
 ```
 
 #Read in the scotland.txt file using the appropriate function.
@@ -44,27 +43,29 @@ scotland
 
 #Read in the steam-200k-sample.csv file. Fix any problems you may encounter.
 ```{r}
-steam_200k <- read.csv("data/steam-200k-sample.csv")
+steam_200k <- read_csv("data/steam-200k-sample.csv")
 ```
 
 #Read in the historic_eu_payments.tsv file.
 
 ```{r}
-eu_payments <- read.tsv("data/historic_eu_payments.tsv")
+eu_payments <- read_tsv("data/historic_eu_payments.tsv")
 ```
 
 #How do you read lines of text into a multi-element text vector?
 ```{r}
-
+read_lines()
 ```
 
 #Read in the JSON file from the following url: http://makemeanalyst.com/wp-content/uploads/2017/06/sample_json.txt
 
 ```{r}
 install.packages("rjson")
+library(rjson)
 ```
 
 ```{r}
-sample_json <- fromJSON(getURL("http://makemeanalyst.com/wp-content/uploads/2017/06/sample_json.txt"))
+sample_json_data <- fromJSON(file="http://makemeanalyst.com/wp-content/uploads/2017/06/sample_json.txt")
+sample_json_data
 
 ```
