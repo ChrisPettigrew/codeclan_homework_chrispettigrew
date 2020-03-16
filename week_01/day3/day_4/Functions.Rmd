@@ -1,0 +1,376 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+if (10 < 15) {
+  print("yes")
+}
+```
+
+```{r}
+if (5 %in% c(1,4, 8)) {
+  print("yes")
+}
+```
+
+```{r}
+x <- 8
+y <- 7
+
+if (x > y) {
+  print("yes")
+}
+```
+
+```{r}
+x <- 4
+
+if (x %% 2 == 0) {
+  print("Yes that divides by 2")
+}
+```
+
+```{r}
+if (10 != 5) {
+  if (3 > 5) {
+    print ("Hello")
+  }
+  print("Goodbye")
+}
+```
+
+```{r}
+x <- 2
+y <- 10
+
+if (x > y) {
+  print("Start of outer if block")
+  if (x %% y == 0) {
+    print("Inner if block 1")
+  }
+  if (y %in% c(1:5)) {
+    print("Inner if block 2")
+  }
+  print("End of outer if block")
+}
+print("After if statement")
+
+```
+
+```{r}
+if (4 > 5) {
+  print("yes")
+} else {
+  print("no")
+}
+```
+
+```{r}
+
+x <- 5
+
+if (x %% 2 == 0) {
+  print("Yes that divides by 2")
+} else {
+  print("No that does not print by 2")
+}
+```
+
+```{r}
+x <- 6
+y <- 13
+
+if (x %in% c(3, 4, 5)){
+  
+  print("x is in our list")
+  
+  if (x == 5){
+    
+    print("x is exactly 5")
+    
+  }
+  
+} else {
+  
+  print("Start of else statement")
+  
+  if (y %% x == 0){
+    
+    print("x divides y")
+  
+  } else(
+    
+    print("x does not divide Y")
+  )
+  
+  print ("End of else statement")
+  
+}
+
+```
+
+```{r}
+ifelse(1:10 <=5, "Less than or equal to 5", "Greater than 5")
+```
+
+```{r}
+animals <- c("cat", "dog", "monkey", "elephant", "dog")
+animals
+```
+
+```{r}
+ifelse(animals == "dog", "dog", "not dog")
+```
+
+```{r}
+x <- 1:10
+
+ifelse(x %% 3 == "0", "multiple of 3", "not multiple of 3")
+
+```
+
+```{r}
+x <- c("sum", 2, "rain")
+
+ifelse(x == "sum", "sun", x)
+```
+
+```{r}
+library(dplyr)
+```
+
+```{r}
+x <- 1:10
+
+case_when(
+  x %% 3 == 0 ~ "Divisible by 3",
+  x %% 2 == 0 ~ "Even",
+  x %% 5 == 5 ~ "Divisible by 5",
+  TRUE        ~ "Other number"
+)
+```
+
+```{r}
+animals <- c(animals "mouse")
+```
+
+```{r}
+case_when(
+  animals == "cat" ~ 4,
+  animals == "dog" ~ 4,
+  animals == "monkey" ~ 2,
+  animals == "elephant" ~ 4,
+  animals == "mouse" ~ 4
+)
+```
+
+```{r}
+x <- 1:100
+
+dplyr::case_when(
+  x %% 3 == 0 & x %% 5 == 0 ~ "FizzBuzz",
+  x %% 3 == 0 ~ "Fizz",
+  x %% 5 == 0 ~ "Buzz",
+  TRUE ~ as.character(x)
+  )
+```
+
+```{r}
+x <- as.factor(c("green", "blue", "blue", "red"))
+ifelse(x == "green", "blue", x)
+```
+
+```{r}
+dplyr::recode(x, "green" = "blue", "red" = "purple")
+```
+
+```{r}
+name <- c("John", "Clara", "Smith")
+sex <- c(1, 2, 1)
+age <- c(30, 32, 54)
+# create a new dataframe
+student_df <- data.frame(name, sex, age)
+student_df
+```
+
+```{r}
+dplyr::recode(student_df$sex,"1" = "male", "2" = "female")
+```
+
+```{r}
+weekdays <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+
+for (day in weekdays) {
+  print(paste("The day is", day))
+  
+}
+```
+
+```{r}
+numberoos <- c("1", "2", "3", "4", "5")
+
+for (fig in numberoos) {
+  print(paste("Print", fig))
+  
+}
+```
+
+```{r}
+weekdays <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+
+for (i in 1:length(weekdays)) {
+  print(paste("The day is", weekdays[i]))
+}
+```
+
+```{r}
+my_matrix <- replicate(5, rnorm(5))
+
+num_rows <- dim(my_matrix)[1]
+num_cols <- dim(my_matrix)[2]
+
+for (row_index in 1:num_rows) {
+  for (col_index in 1:num_cols) {
+    
+    print(my_matrix[row_index, col_index])
+    
+  }
+}
+```
+
+```{r}
+product_matrix <- matrix(nrow = 5, ncol = 5)
+
+num_rows <- dim(my_matrix)[1]
+num_cols <- dim(my_matrix)[2]
+
+for (row_index in 1:num_rows) {
+  for (col_index in 1:num_cols) {
+    
+    product_matrix[row_index, col_index] <- row_index * col_index
+  }
+}
+product_matrix
+```
+
+#starwars[[1]]
+
+```{r}
+library(CodeClanData)
+starwars <- CodeClanData::starwars
+
+for (character in starwars) {
+print(character$name)
+}
+```
+
+```{r}
+```
+
+```{r}
+m1 <- matrix(data = 1:10, nrow = 5, ncol = 6)
+m1
+```
+
+```{r}
+apply(m1, MARGIN = 2, FUN = sum)
+```
+
+```{r}
+lapply
+sapply
+```
+```{r}
+
+cars
+```
+
+```{r}
+cars_lapply <- lapply(X = cars, FUN = mean)
+cars_lapply
+```
+
+```{r}
+cars_sapply <- sapply(X = cars, FUN = mean)
+cars_sapply
+```
+
+```{r}
+nchar("hello", type = "bytes")
+```
+
+```{r}
+apply(X = m1, MARGIN = 2, FUN = sum)
+```
+
+```{r}
+nchar(c("yes", "no"))
+```
+
+```{r}
+multiply_by_5 <- function(x){
+  return(x*5)
+}
+```
+
+```{r}
+multiply_by_5(10)
+```
+
+```{r}
+multiply_by <- function(x, y = 5) {
+  return(x*y)
+}
+```
+
+```{r}
+multiply_by(10,3)
+```
+
+```{r}
+make_price <- function(x) {
+  paste("£", x)
+}
+```
+
+```{r}
+make_price(4)
+```
+
+```{r}
+n <- 8
+
+multiply_by_n <- function(x, n) {
+  x*n
+}
+
+multiply_by_n(5, n)
+```
+
+```{r}
+multiply_by_3_add_2 <- function(x){
+
+}
+```
+
+```{r}
+multiply_by_3_add_2 <- function(x) {
+  
+  times_3 <- x*3
+  add_2 <- times_3 + 2
+  
+  return(list(times_3 = times_3, add_2 = add_2))
+}
+```
+
+
+```{r}
+debug(multiply_by_3_add_2)
+
+```
+```{r}
+multiply_by_3_add_2(5)
+```
+

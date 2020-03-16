@@ -1,0 +1,78 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+#always add libraries to the top
+library(beepr)
+library(RXKCD)
+
+# Showing XKCD images -----
+searchXKCD("code")
+getXKCD(117)
+
+# Playing a sound
+
+```
+
+```{r}
+height [, 5]
+
+this_is_my_variable <- data_csv("")
+height[height == 4]
+
+#Spaces are special characters and should be present around operators like +=
+```
+
+```{r}
+big_function(
+   something = "that",
+   many = "this"
+   arguments =
+   )
+```
+
+
+```{r}
+ #snake_case
+ this_is_my_variable <-
+ 
+ #PascalCase
+ ThisIsMyVariable <-
+   
+ # camelCase
+ thisIsMyVariable
+ 
+#give things descriptive names - try adding initials
+
+Parenthesis
+[]Square Brackets
+()Brackets
+{}Flowery/Curly Brackets
+
+
+```
+
+```{r}
+
+# data loading section -------------
+spending <- c(9.1, 8.55, 14.32, 14.17, 14.34, 7.97, 9.79, 11.47, 12.44)
+category <- c("Lunch", "Dinner", "Lunch", "Lunch", "Cinema", "Drinks", "Lunch", "Lunch", "Dinner")
+
+# put variable into a dataframe
+my_week_of_spending <- data.frame(
+  amount_spent = spending,
+  spending_category = category
+  )
+
+# Analysis section ---------
+
+# total amounts spent
+sum(my_week_of_spending$amount_spent)
+
+# check lunch category spending
+lunch_spending <- subset(my_week_of_spending, spending_category == "Lunch")
+sum(lunch_spending$amount_spent)
+```
+

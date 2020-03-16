@@ -1,0 +1,23 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+student_data <- read_csv("file")
+
+student_data$age
+```
+
+```{r}
+
+#there is a hierarchy to the files, with the lowest one taking priority. Good idea to  
+library(dplyr)
+library(MASS)
+
+select(mtcars, "mpg")
+
+#conflcits indicates whats causing the issue
+conflicts()
+```
+

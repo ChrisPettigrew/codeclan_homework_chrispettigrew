@@ -1,0 +1,21 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+ #snake_case
+ this_is_my_variable <-
+ 
+ #PascalCase
+ ThisIsMyVariable <-
+   
+ # camelCase
+ thisIsMyVariable
+ 
+#give things descriptive names - try adding initials
+
+
+
+
+```

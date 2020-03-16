@@ -1,0 +1,75 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(keyring)
+library(RPostgreSQL)
+## Loading required package: DBI
+# first, let's get our credentials from the local keyring
+keyring_unlock(keyring = "local")
+username <- key_get(service = "postgresql_username", keyring = "local")
+password <- key_get(service = "postgresql_password", keyring = "local")
+keyring_lock(keyring = "local")
+
+# next, we create a connection to the database
+my_db_connection <- dbConnect(drv = PostgreSQL(max.con = 3), user = username, password = password, dbname = 'acme_employees', host = 'localhost')
+
+```
+
+```{r}
+dbListTables(conn = my_db_connection)
+dbListFields(conn = my_db_connection, name = "employees")
+```
+
+```{r}
+dbListTables(conn = my_db_connection)
+dbListFields(conn = my_db_connection, name = "teams")
+```
+
+
+#Create a new data.frame containing the details of all employees held in the database
+
+```{r}
+data <- dbGetQuery(my_db_connection, "SELECT * FROM employees")
+data
+```
+
+#Retrieve the records for all employees again, but this time add a field full_name containing the first_name and last_name of each employee separated by a space.
+
+```{r}
+full_name <- dbGetQuery(my_db_connection, "SELECT id, first_name, last_name, CONCAT(first_name, ' ', last_name) AS full_name 
+           FROM employees")
+full_name
+```
+
+#Retrieve the details of all employees again, but this time listing their team name (as team_name), rather than their team_id.
+
+```{r}
+  dbGetQuery(my_db_connection, "SELECT e.first_name, e.last_name, e.email, t.name AS team_name
+           FROM employees AS e LEFT JOIN teams AS t
+           ON e.team_id = t.id")
+```
+
+#[Bit Harder] Do a breakdown of the number of employees per team (here we want two columns: team_name and num_employees). Order the table in decreasing number of employees. Include all teams, even if they have no employees.
+
+```{r}
+
+dbGetQuery(my_db_connection,
+           "SELECT t.name AS team_name, COUNT(e.id) AS num_employees
+           FROM employees AS e RIGHT JOIN teams AS t
+           ON e.team_id = t.id
+           GROUP BY t.name
+           ORDER BY num_employees DESC")
+
+```
+
+#[Bit Harder] AcmeCorp management want to send an email survey to each of their employees. However, they are worried that some of the employees may not receive the email either because their email addresses may be invalid (in that they don’t contain an ‘@’ symbol), or they may not have a stored email address at all. Can you find all these employees?
+
+```{r}
+dbGetQuery(my_db_connection,
+           "SELECT * FROM employees
+           WHERE email NOT LIKE '%@%' OR email IS NULL")
+```
+
