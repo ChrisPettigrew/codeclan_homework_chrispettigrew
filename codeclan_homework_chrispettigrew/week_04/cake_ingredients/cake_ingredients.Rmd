@@ -1,0 +1,52 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(janitor)
+```
+
+
+```{r}
+cakes <- read_csv("raw_data/cake-ingredients-1961.csv")
+codes <- read_csv("raw_data/cake_ingredient_code.csv")
+```
+
+```{r}
+clean_cake <-
+  cakes %>%
+  pivot_longer(-Cake,
+    names_to = "code", 
+    values_to = "amount",
+    )
+
+clean_cake
+```
+
+```{r}
+ cleaned_cakes <- clean_names(clean_cake)
+```
+
+
+
+```{r}
+cake_join <- 
+  left_join(cleaned_cakes, codes) %>%
+  drop_na(amount)
+
+cake_join
+```
+
+```{r}
+cake_join
+```
+
+
+
+```{r}
+cake <- select(cake_join, -code)
+cake
+```
+
