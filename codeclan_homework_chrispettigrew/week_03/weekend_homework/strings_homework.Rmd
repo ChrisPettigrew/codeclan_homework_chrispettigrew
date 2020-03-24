@@ -1,0 +1,89 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+tweets <- read_csv("data/code_clan_tweets.csv")
+```
+
+#1
+```{r}
+dim(tweets)
+names(tweets)
+```
+
+#2
+```{r}
+summary(tweets$favorite_count)
+boxplot(tweets$favorite_count)
+ggplot(tweets, aes(x = "favorite_count", favorite_count)) + 
+  geom_boxplot()
+```
+
+#3
+```{r}
+tweets %>%
+  filter(is_quote == FALSE) %>%
+  summarise(total = sum(favorite_count))
+
+```
+
+#4
+```{r}
+tweets %>%
+  filter(is_quote == FALSE) %>%
+  group_by(source) %>%
+  summarise(average_retweet = mean(retweet_count))
+```
+
+
+
+#5
+```{r}
+tweets %>%
+  mutate(media_type2 = replace_na(media_type, "text")) %>%
+  group_by(media_type2) %>%
+  summarise(favourite_count_total = sum(favorite_count)) %>%
+  arrange(desc(favourite_count_total))
+```
+
+#6
+
+```{r}
+tweets %>%
+  summarise(avg_tweet_length = mean(display_text_width))
+```
+
+#7
+
+```{r}
+codeclan_info <- read_csv("data/code_clan_info.csv")
+names(codeclan_info)
+```
+
+```{r}
+codeclan_all <- left_join(tweets,codeclan_info, by = "tweet_id")
+```
+
+
+#8
+
+```{r}
+hashtags <- codeclan_all%>% 
+  select(tweet_id, hashtags) %>%
+  mutate(lowcase_hashtag = str_to_lower(hashtags)) %>%
+  select(-hashtags) %>%
+  drop_na(lowcase_hashtag)
+
+hashtags
+```
+
+
+
+
+
