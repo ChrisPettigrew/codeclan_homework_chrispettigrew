@@ -65,7 +65,7 @@ n_ingerients
 
 Which ingredients are used only once?
 ```{r}
-solo_ingredients <- n_ingerients <- cakes %>%
+solo_ingredients <- cakes %>%
   group_by(cake) %>%
   count(n_distinct("ingredient")) %>%
   arrange(desc(n))
