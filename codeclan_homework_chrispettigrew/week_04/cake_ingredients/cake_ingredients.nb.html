@@ -1814,15 +1814,16 @@ cakes</code></pre>
 <p>Which cake has the most cocoa in it?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29jb2FfbWF4IDwtIGNha2VzICU+JSBmaWx0ZXIoaW5ncmVkaWVudCA9PSBcIkNvY29hXCIpICU+JVxuICBhcnJhbmdlKGRlc2MoYW1vdW50KSlcbmNvY29hX21heFxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29jb2FfbWF4IDwtIGNha2VzICU+JSBmaWx0ZXIoaW5ncmVkaWVudCA9PSBcIkNvY29hXCIpICU+JVxuICBhcnJhbmdlKGRlc2MoYW1vdW50KSkgJT4lXG4gIGhlYWQoMSlcbmNvY29hX21heFxuYGBgIn0= -->
 <pre class="r"><code>cocoa_max &lt;- cakes %&gt;% filter(ingredient == &quot;Cocoa&quot;) %&gt;%
-  arrange(desc(amount))
+  arrange(desc(amount)) %&gt;%
+  head(1)
 cocoa_max</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6Mn0sInJkZiI6Ikg0c0lBQUFBQUFBQUEyMVN3V3JETUF4MVU3dWxnWmF3L1VBT2c1MlNTd2ZiYldNdHZRNUtCNzI2aWRlR09uYXhuWFhIL2VQK3A1bWN4TnRpSnJBalBjbFBUeUxyNVhZZWJrT0UwQkFOUjNBVGNCRjUzYXlTQjRSd0FNRUFZVFN4M3c5SVg0T0Q0VVJ3Z2k1eDlTSlkvQ3pQUEY0Y1pDWTVOYXpMUkd1V3gwdjJYdkJiSGEra3pBR2IyWmRQTjZpeHg2OTVZeDRqV1FBUDdRZjlpdERRSFdmNkpLWDRCK2tMbnloNVRnVXRtWVpnYWtrKzRhcnIrdUlWa294VHJidE9EZ3h6YW1qNnB1QzlYKzQ0bzJZcExZZ3plblRqajJncEsyRWNVU0gyaXVVRiswSEdKYU82VXNDTGZDbGplVEtGRk1BZTJKVVRUOVJBZVVCVUNhc21UN0pESlk3SjNiMXQyT1JibTNaKzhNZkhiVTljZDF6RXlXWmlYd2czQk9GMHgzZ1h6R0NWemRUcFNSVy9rd0dxVXlNTmRYVWgvQVlPYVlaRGwyOE0rQUxaYWdJQUFBPT0ifQ== -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6MX0sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVJ3V3JETUF4MVVydWxnWmF3L1VBUHV5WXcyc09PWXgyN0RzWUt2YXFKMTRZNmRyQWR1dU8rdkoyY3hGdXd3TGIwSkQvcDJSK3YrM1d5VHdnaEV6S1o0czdRSld6MytaWTlFVUpqRENKQ3lkeWQzNWkrUjRmaVNrZUp1M2ZKVnkvcUlsYmJreXFVQU1zUlhicUs1d2ZpYlh5RGJiRU9BakN4Y0JEY05FckpvUE5jcTBzdW9lWUdnd1d1K0FlM0cxcFF5QW9CeG9TOEpWakl2elRlRDhzOVo5cXA2a0Zhd0prUC9oUnExVXJyaVNwNTFMeXMrQjh5cXptWVZqdTUxNEI3cGhwYktZbnNzWHN6Rmd3VjZRQklXK21tS2JQaTFNcHo5cmh4RGJ0OGI0dkJqMFkrN1h2UzI4REYvTmhjSGl2cFJUQUJCeTZHWUlsUDJhbk9HMTM5SzBQVTVGWlo4SFVKL3FOSE9uSGsrZ3RKL0xEOUt3SUFBQT09In0= -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["cake"],"name":[1],"type":["chr"],"align":["left"]},{"label":["amount"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["ingredient"],"name":[3],"type":["chr"],"align":["left"]},{"label":["measure"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"One Bowl Chocolate","2":"10.0","3":"Cocoa","4":"tablespoon"},{"1":"Red Devil's Food","2":"0.3","3":"Cocoa","4":"tablespoon"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
+{"columns":[{"label":["cake"],"name":[1],"type":["chr"],"align":["left"]},{"label":["amount"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["ingredient"],"name":[3],"type":["chr"],"align":["left"]},{"label":["measure"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"One Bowl Chocolate","2":"10","3":"Cocoa","4":"tablespoon"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[1]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
@@ -1834,42 +1835,57 @@ cocoa_max</code></pre>
 <p>For sponge cake, how many cups of ingredients are used in total?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BvbmdlX2N1cHMgPC0gY2FrZXMgJT4lIGZpbHRlcihjYWtlID09IFwiU3BvbmdlXCIpICU+JVxuICAgICAgICAgICAgICAgICAgICAgICAgICBmaWx0ZXIobWVhc3VyZSA9PSBcImN1cFwiKSBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgIFxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BvbmdlX2N1cHMgPC0gY2FrZXMgJT4lIGZpbHRlcihjYWtlID09IFwiU3BvbmdlXCIpICU+JVxuICAgICAgICAgICAgICAgICAgICAgICAgICBmaWx0ZXIobWVhc3VyZSA9PSBcImN1cFwiKSBcbnNwb25nZV9jdXBzICAgICAgICAgICAgICAgICAgICAgICAgXG5gYGAifQ== -->
 <pre class="r"><code>sponge_cups &lt;- cakes %&gt;% filter(cake == &quot;Sponge&quot;) %&gt;%
                           filter(measure == &quot;cup&quot;) 
-                          
-                          </code></pre>
+sponge_cups                        </code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUEzMVJ6VTdETUF6MjFtYlRLalpWNGdWNGdmYkFMdHpnZ09ET1FPd2EyclJFUzVNcWJRUkhIcGVYWU1WSm16SXFnYVVrOW1mNzgwOGVidmZiYUI4QlFBREJBbStDS3BDbng3dmtDaUNjb3pHREVGYjJmVWYzT1NvaG50aGw5STdGcmxheVpQOWFBQnViY2YwSlR2eDdBNk9jTXA3dGVOR3kvS0lReXVnQmkrODFsVVpRaXplbXBCNG56d2pwQ1VHUW1mb1A5ZmRRSzYzZVVra3IxcUN4eGpQL3dLdnJ1cTlKSU1rRWJacWhqQWVqbkxZMExUVG1UOE05Wit3VzFvTmhSZy9qWW1pbGpHdzlFWmVsWmpsbkk3S3NHRzJNdHBzN1RyaVhxbTY1a3NnK3Q5OUJKazNOOUFTSWpiVGQ1RW4yYXVRaHVkemFnczdmeTNyUWd4TTk3R3VHM2NCRmZOdE1sbHo2SVlpZ0wwd014Z1pYNmFaT2E4MS9Ka08wU1Z2VlVoOFhaVXA0eEEwSHgyOWtoakRvaGdJQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["cake"],"name":[1],"type":["chr"],"align":["left"]},{"label":["amount"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["ingredient"],"name":[3],"type":["chr"],"align":["left"]},{"label":["measure"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Sponge","2":"0.75","3":"Sifted flour","4":"cup"},{"1":"Sponge","2":"0.75","3":"Granulated sugar","4":"cup"},{"1":"Sponge","2":"2.00","3":"Water","4":"cup"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5zdW0oc3BvbmdlX2N1cHMkYW1vdW50KVxuYGBgIn0= -->
+<pre class="r"><code>
+sum(sponge_cups$amount)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDMuNVxuIn0= -->
+<pre><code>[1] 3.5</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>How many ingredients are measured in teaspoons?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVhc3Bvb25zIDwtIGNha2VzICU+JSBmaWx0ZXIobWVhc3VyZSA9PSBcInRlYXNwb29uXCIpICU+JVxuICBuKHJvdyhpbmdyZWRpZW50KSlcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVhc3Bvb25zIDwtIGNha2VzICU+JSBmaWx0ZXIobWVhc3VyZSA9PSBcInRlYXNwb29uXCIpICU+JVxuICAgICAgICAgICAgbnJvdygpXG50ZWFzcG9vbnNcbmBgYCJ9 -->
 <pre class="r"><code>teaspoons &lt;- cakes %&gt;% filter(measure == &quot;teaspoon&quot;) %&gt;%
-  n(row(ingredient))</code></pre>
+            nrow()
+teaspoons</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gbiguLCByb3coaW5ncmVkaWVudCkpIDogdW51c2VkIGFyZ3VtZW50cyAoLiwgcm93KGluZ3JlZGllbnQpKVxuIn0= -->
-<pre><code>Error in n(., row(ingredient)) : unused arguments (., row(ingredient))</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQ1XG4ifQ== -->
+<pre><code>[1] 45</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Which cake has the most unique ingredients?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5uX2luZ2VyaWVudHMgPC0gY2FrZXMgJT4lXG4gIGdyb3VwX2J5KGNha2UpICU+JVxuICBjb3VudChuX2Rpc3RpbmN0KFwiaW5ncmVkaWVudFwiKSkgJT4lXG4gIGFycmFuZ2UoZGVzYyhuKSlcblxubl9pbmdlcmllbnRzXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5uX2luZ2VyaWVudHMgPC0gY2FrZXMgJT4lXG4gIGdyb3VwX2J5KGNha2UpICU+JVxuICBjb3VudChuX2Rpc3RpbmN0KFwiaW5ncmVkaWVudFwiKSkgJT4lXG4gIGFycmFuZ2UoZGVzYyhuKSkgJT4lXG4gIGhlYWQoMSlcblxubl9pbmdlcmllbnRzXG5gYGAifQ== -->
 <pre class="r"><code>
 n_ingerients &lt;- cakes %&gt;%
   group_by(cake) %&gt;%
   count(n_distinct(&quot;ingredient&quot;)) %&gt;%
-  arrange(desc(n))
+  arrange(desc(n)) %&gt;%
+  head(1)
 
 n_ingerients</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImdyb3VwZWRfZGYiLCJ0YmxfZGYiLCJ0YmwiLCJkYXRhLmZyYW1lIl0sIm5jb2wiOjMsIm5yb3ciOjE4fSwicmRmIjoiSDRzSUFBQUFBQUFBQTYxVFBXL2JNQkNsUDJUWGFwTWFUb2VNUkphMmd3MFVYWnF4ZG1CMFNnc3BBYklWWi9FcUNaR09Ca1hHN2RaZjNKOFFsNUpKMTVVekJzSlI1T1B4N3QzeE1icTYreGplaFl5eEh1c043QmpZS1F0dWI1YlRUNHoxdTNiUllYMDJxdjgvN2ZaWjQ4blkyTnJFYlp6TVlRVVZCOE9qekpRT25Id2w1SE81S2ZnaWs0a3NRS1BiQ1JjWllvVUozSHZrTkRJbFAwTEhzVFNLTHhSQ3laZEdwQjUvRTJzRm14VXE5WXZIbVZUNjRNenJlSU9vajFKTzVnV1NRUFZFa2dnRnY4S0h2SGhiOGFXVXd1SERHQjVBNWVUZDVrRDJPOHAzc2xDbVhIRWd3YStOOWlTK0dFcnRZYUFkK3oyM2Y3d2pXUlFPRGo1VGluNHhpTmVTOXBXK2l0ZDVZdmw5azRiRXZ0a215WkFMNU5mU0hyTkFjeFAxTlQyUCtYZ3ZuWVZQMk9qQVhyUnM2R3hRMTlhU1VKQVVVRlZPUGg0TUJXaVkvVkJRWXN0OXBPUm1SaGF2SEsvdWJ6dHN0OXMvN2JqZWFkekljd2YyRCs3cG5MNkx2Tkk1SmZyZFJVNnBRcEVqNll2M1h0dGtoOGRXMUtGYzYxeVNqZHM5MnhYekgrK09hZ0ZqUXpVUE1VMHlRL2ZURDVldVczVlhtYXVnNDdycjU3MWR6djdXeFFxOEVKRFNuRHo5b0lEVlhpT250aXROdmJPMUZhZ1hYV2pSYXFhbEJ1OFgyaWZna2FZNDl2Z1gvaWRWWk80REFBQT0ifQ== -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImdyb3VwZWRfZGYiLCJ0YmxfZGYiLCJ0YmwiLCJkYXRhLmZyYW1lIl0sIm5jb2wiOjMsIm5yb3ciOjF9LCJyZGYiOiJINHNJQUFBQUFBQUFBM1ZRd1VvRE1SQ2Q3bTRxWFZFV3ZIZ3NQZWxoRjZRWHp5SitRRkhvVGRKc2JFTzNrNUprMGFOZjNqclpUYUFFREdReTgyWjRtZmRXcit0bHVTNEJJSWQ4U3BGUkN1emovYTErQmlneUtpWlF3TXkvUDlTK0d5WUJxb3ZHelF2ZmNEdm4vWHkxNnc4ZUdKcmpqZmwxd3NaRXg2MU5tTXFXTzk1OEdYNlF5ZmpNNk84R0NiZUJNL3VsY0thVDhzYWhhdGgwQkF2Qjl6TGs5L2paS3VzVUN2ZXdVTGcxc2xVUzNlSXh5a1FLcDRUMVNoK2Qwa2k4bVhlQUpYdFBUQUpVUGZvOTJscnNldHpYVDBzdkxqZ0IvemlVajM4VzU4REZBdGRVNGxaaFhKOTFmQ083VU55U0s0UGU1bWdVdXVnaW9iWngydkU0VndyZFJXUVFCNmMvNkVSYXAva0JBQUE9In0= -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["cake"],"name":[1],"type":["chr"],"align":["left"]},{"label":["n_distinct(\"ingredient\")"],"name":[2],"type":["int"],"align":["right"]},{"label":["n"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"Babas au Rhum","2":"1","3":"11"},{"1":"One Bowl Chocolate","2":"1","3":"11"},{"1":"Cheesecake","2":"1","3":"10"},{"1":"Rum Cheesecake","2":"1","3":"10"},{"1":"Sour Cream Fudge","2":"1","3":"10"},{"1":"Strawberry Shortcake","2":"1","3":"10"},{"1":"Sweet Chocolate","2":"1","3":"10"},{"1":"Blender Cheesecake","2":"1","3":"9"},{"1":"Red Devil's Food","2":"1","3":"9"},{"1":"Savarin","2":"1","3":"9"},{"1":"Banana Shortcake","2":"1","3":"8"},{"1":"Crumb and Nut","2":"1","3":"8"},{"1":"Hungarian Cream","2":"1","3":"8"},{"1":"Strawberry Roll","2":"1","3":"8"},{"1":"Angel","2":"1","3":"7"},{"1":"Sponge","2":"1","3":"7"},{"1":"Spiced Pound","2":"1","3":"6"},{"1":"Buche de Noel","2":"1","3":"5"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[18]},"pages":{}}}
+{"columns":[{"label":["cake"],"name":[1],"type":["chr"],"align":["left"]},{"label":["n_distinct(\"ingredient\")"],"name":[2],"type":["int"],"align":["right"]},{"label":["n"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"Babas au Rhum","2":"1","3":"11"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[1]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
@@ -1888,7 +1904,7 @@ n_ingerients</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGphbml0b3IpCmBgYAoKYGBge3J9CmNha2VzIDwtIHJlYWRfY3N2KCJyYXdfZGF0YS9jYWtlLWluZ3JlZGllbnRzLTE5NjEuY3N2IikKY29kZXMgPC0gcmVhZF9jc3YoInJhd19kYXRhL2Nha2VfaW5ncmVkaWVudF9jb2RlLmNzdiIpCmBgYAoKYGBge3J9CmNha2VzIDwtCiAgY2FrZXMgJT4lCiAgcGl2b3RfbG9uZ2VyKC1DYWtlLCBuYW1lc190byA9ICJjb2RlIiwgdmFsdWVzX3RvID0gImFtb3VudCIpICU+JQogICAgbGVmdF9qb2luKGNvZGVzKSAlPiUKICAgIGRyb3BfbmEoYW1vdW50KSAlPiUKICAgIHNlbGVjdCgtY29kZSkgJT4lCiAgICBjbGVhbl9uYW1lcygpCiAgICAKY2FrZXMKYGBgCgpXaGljaCBjYWtlIGhhcyB0aGUgbW9zdCBjb2NvYSBpbiBpdD8KYGBge3J9CmNvY29hX21heCA8LSBjYWtlcyAlPiUgZmlsdGVyKGluZ3JlZGllbnQgPT0gIkNvY29hIikgJT4lCiAgYXJyYW5nZShkZXNjKGFtb3VudCkpCmNvY29hX21heAoKYGBgCgpGb3Igc3BvbmdlIGNha2UsIGhvdyBtYW55IGN1cHMgb2YgaW5ncmVkaWVudHMgYXJlIHVzZWQgaW4gdG90YWw/CmBgYHtyfQpzcG9uZ2VfY3VwcyA8LSBjYWtlcyAlPiUgZmlsdGVyKGNha2UgPT0gIlNwb25nZSIpICU+JQogICAgICAgICAgICAgICAgICAgICAgICAgIGZpbHRlcihtZWFzdXJlID09ICJjdXAiKSAKICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAKYGBgCgoKSG93IG1hbnkgaW5ncmVkaWVudHMgYXJlIG1lYXN1cmVkIGluIHRlYXNwb29ucz8KYGBge3J9CnRlYXNwb29ucyA8LSBjYWtlcyAlPiUgZmlsdGVyKG1lYXN1cmUgPT0gInRlYXNwb29uIikgJT4lCiAgbigpCnRlYXNwb29ucwpgYGAKCldoaWNoIGNha2UgaGFzIHRoZSBtb3N0IHVuaXF1ZSBpbmdyZWRpZW50cz8KYGBge3J9CgpuX2luZ2VyaWVudHMgPC0gY2FrZXMgJT4lCiAgZ3JvdXBfYnkoY2FrZSkgJT4lCiAgY291bnQobl9kaXN0aW5jdCgiaW5ncmVkaWVudCIpKSAlPiUKICBhcnJhbmdlKGRlc2MobikpCgpuX2luZ2VyaWVudHMKYGBgCgpXaGljaCBpbmdyZWRpZW50cyBhcmUgdXNlZCBvbmx5IG9uY2U/CmBgYHtyfQpjYWtlcyAlPiUgbl9kaXN0aW5jdCgiaW5ncmVkaWVudCIpCmBgYAoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9CmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGphbml0b3IpCmBgYAoKYGBge3J9CmNha2VzIDwtIHJlYWRfY3N2KCJyYXdfZGF0YS9jYWtlLWluZ3JlZGllbnRzLTE5NjEuY3N2IikKY29kZXMgPC0gcmVhZF9jc3YoInJhd19kYXRhL2Nha2VfaW5ncmVkaWVudF9jb2RlLmNzdiIpCmBgYAoKYGBge3J9CmNha2VzIDwtCiAgY2FrZXMgJT4lCiAgcGl2b3RfbG9uZ2VyKC1DYWtlLCBuYW1lc190byA9ICJjb2RlIiwgdmFsdWVzX3RvID0gImFtb3VudCIpICU+JQogICAgbGVmdF9qb2luKGNvZGVzKSAlPiUKICAgIGRyb3BfbmEoYW1vdW50KSAlPiUKICAgIHNlbGVjdCgtY29kZSkgJT4lCiAgICBjbGVhbl9uYW1lcygpCiAgICAKY2FrZXMKYGBgCgpXaGljaCBjYWtlIGhhcyB0aGUgbW9zdCBjb2NvYSBpbiBpdD8KYGBge3J9CmNvY29hX21heCA8LSBjYWtlcyAlPiUgZmlsdGVyKGluZ3JlZGllbnQgPT0gIkNvY29hIikgJT4lCiAgYXJyYW5nZShkZXNjKGFtb3VudCkpICU+JQogIGhlYWQoMSkKY29jb2FfbWF4CgpgYGAKCkZvciBzcG9uZ2UgY2FrZSwgaG93IG1hbnkgY3VwcyBvZiBpbmdyZWRpZW50cyBhcmUgdXNlZCBpbiB0b3RhbD8KYGBge3J9CnNwb25nZV9jdXBzIDwtIGNha2VzICU+JSBmaWx0ZXIoY2FrZSA9PSAiU3BvbmdlIikgJT4lCiAgICAgICAgICAgICAgICAgICAgICAgICAgZmlsdGVyKG1lYXN1cmUgPT0gImN1cCIpIApzcG9uZ2VfY3VwcyAgICAgICAgICAgICAgICAgICAgICAgIAoKc3VtKHNwb25nZV9jdXBzJGFtb3VudCkKYGBgCgoKSG93IG1hbnkgaW5ncmVkaWVudHMgYXJlIG1lYXN1cmVkIGluIHRlYXNwb29ucz8KYGBge3J9CnRlYXNwb29ucyA8LSBjYWtlcyAlPiUgZmlsdGVyKG1lYXN1cmUgPT0gInRlYXNwb29uIikgJT4lCiAgICAgICAgICAgIG5yb3coKQp0ZWFzcG9vbnMKYGBgCgpXaGljaCBjYWtlIGhhcyB0aGUgbW9zdCB1bmlxdWUgaW5ncmVkaWVudHM/CmBgYHtyfQoKbl9pbmdlcmllbnRzIDwtIGNha2VzICU+JQogIGdyb3VwX2J5KGNha2UpICU+JQogIGNvdW50KG5fZGlzdGluY3QoImluZ3JlZGllbnQiKSkgJT4lCiAgYXJyYW5nZShkZXNjKG4pKSAlPiUKICBoZWFkKDEpCgpuX2luZ2VyaWVudHMKYGBgCgpXaGljaCBpbmdyZWRpZW50cyBhcmUgdXNlZCBvbmx5IG9uY2U/CmBgYHtyfQpjYWtlcyAlPiUgbl9kaXN0aW5jdCgiaW5ncmVkaWVudCIpCmBgYAoK</div>
 
 
 

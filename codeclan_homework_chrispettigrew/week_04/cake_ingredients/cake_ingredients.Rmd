@@ -28,7 +28,8 @@ cakes
 Which cake has the most cocoa in it?
 ```{r}
 cocoa_max <- cakes %>% filter(ingredient == "Cocoa") %>%
-  arrange(desc(amount))
+  arrange(desc(amount)) %>%
+  head(1)
 cocoa_max
 
 ```
@@ -37,15 +38,16 @@ For sponge cake, how many cups of ingredients are used in total?
 ```{r}
 sponge_cups <- cakes %>% filter(cake == "Sponge") %>%
                           filter(measure == "cup") 
-                          
-                          
+sponge_cups                        
+
+sum(sponge_cups$amount)
 ```
 
 
 How many ingredients are measured in teaspoons?
 ```{r}
 teaspoons <- cakes %>% filter(measure == "teaspoon") %>%
-  n()
+            nrow()
 teaspoons
 ```
 
@@ -55,7 +57,8 @@ Which cake has the most unique ingredients?
 n_ingerients <- cakes %>%
   group_by(cake) %>%
   count(n_distinct("ingredient")) %>%
-  arrange(desc(n))
+  arrange(desc(n)) %>%
+  head(1)
 
 n_ingerients
 ```
