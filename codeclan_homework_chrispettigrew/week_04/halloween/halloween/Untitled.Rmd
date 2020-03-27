@@ -1,0 +1,14 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(tidyverse)
+library(readxl)
+```
+
+
+```{r}
+fifteen <- read_xlsx("raw_data/boing  ")
+```
+

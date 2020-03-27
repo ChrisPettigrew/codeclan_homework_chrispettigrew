@@ -1,0 +1,115 @@
+---
+title: "Rmarkdown reports"
+author: "Chris Pettigrew"
+date: "28 days later"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Dirty Data Project
+
+## Dataset 2 : Cake Ingredients
+
+Here is my report about my first dataset. 
+
+
+### Cleaning notes
+
+
+The datasets I used were `cake-ingredients-1961.csv` + `cake_ingredient_code.csv`. To clean it I did the following :
+
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(janitor)
+```
+
+```{r}
+cakes <- read_csv("raw_data/cake-ingredients-1961.csv")
+codes <- read_csv("raw_data/cake_ingredient_code.csv")
+```
+
+***
+
+1. Ran a long pivot
+2. Ran a left Join, whilst dropping the NA values
+3. Ran the Janitor package to improve the variable names
+
+### Here is my beautiful pipe:
+```{r}
+cakes <-
+  cakes %>%
+  pivot_longer(-Cake, names_to = "code", values_to = "amount") %>%
+    left_join(codes) %>%
+    drop_na(amount) %>%
+    select(-code) %>%
+    clean_names()
+    
+cakes
+
+```
+
+***
+
+### Which cake has the most cocoa in it?
+```{r}
+cocoa_max <- cakes %>% filter(ingredient == "Cocoa") %>%
+  arrange(desc(amount)) %>%
+  head(1)
+cocoa_max
+
+```
+
+***
+
+### For sponge cake, how many cups of ingredients are used in total?
+```{r}
+sponge_cups <- cakes %>% filter(cake == "Sponge") %>%
+                          filter(measure == "cup") %>%
+                          summarise(sponge_cups = sum(amount))
+
+```
+
+***
+> I got stuck on this question, then I remebered the summarise function
+
+![](http://www.reactiongifs.com/r/2013/10/tim-and-eric-mind-blown.gif)
+
+***
+
+### How many ingredients are measured in teaspoons?
+```{r}
+teaspoons <- cakes %>% filter(measure == "teaspoon") %>%
+            nrow()
+teaspoons
+```
+
+***
+
+### Which cake has the most unique ingredients?
+```{r}
+
+n_ingerients <- cakes %>%
+  group_by(cake) %>%
+  count(n_distinct(ingredient)) %>%
+  arrange(desc(n)) %>%
+  head(1)
+
+n_ingerients
+```
+
+***
+
+### Caffeine consumption throughout this project
+Day 1 | Day 2
+------------- | -------------
+1 full French Press | 1 French Press
+4 Yorkshire Gold | 3 Yorkshire Gold
+1 Pot Peppermint Tea
+
+***
+
+[I found this cheatsheet useful](www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) 
