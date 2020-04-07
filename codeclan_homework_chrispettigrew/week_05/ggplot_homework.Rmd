@@ -1,0 +1,65 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+# Question 1.
+
+```{r}
+library(ggplot2)
+library(CodeClanData)
+```
+
+# Question 2. What is the distribution of backpack weights that students are carrying? Choose an appropriate graph to show the distribution.
+
+```{r}
+head(backpack)
+```
+
+
+```{r}
+ggplot(backpack) +
+  geom_bar(aes(x = backpack_weight))
+```
+
+
+#Question 3.Are there differences in backpack weight between sex?
+```{r}
+ggplot(backpack) +
+  geom_bar(aes(x = backpack_weight, fill = sex)) +
+  scale_fill_manual(values = c("red", "yellow"))
+```
+
+
+# Question 4-5. What is the relationship between body weight and backpack weight?
+
+```{r}
+ggplot(backpack) +
+  aes(backpack_weight, body_weight, colour = sex) +
+  geom_point()
+```
+
+
+
+# Question 6.What proportion of students report back pain?
+
+
+```{r}
+backpack %>%
+  
+```
+
+
+Question 7.
+
+Is this proportion different between men and women?
+
+Question 8.
+
+Now you’ve investigated your data separately, create plots to describe the relationship between backpack weight, body weight, gender and reported backpain.
+
+Try both backpack_weight and body_weight as well as the ratio.
+
+Hint: faceting would be useful here.
+
+3 Extensions
