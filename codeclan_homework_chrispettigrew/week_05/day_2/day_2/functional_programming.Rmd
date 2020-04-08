@@ -1,0 +1,143 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+colour_feelings <- list(
+    blue   = c("Sad", "Calm"),
+    red    = c("Angry", "Energetic", "Warm"),
+    green  = c("Calm", "Nature"),
+    yellow = c("Happy", "Warm", "Sunny")
+)
+```
+
+```{r}
+colour_feelings[["blue"]]
+
+```
+
+```{r}
+for (item in colour_feelings) {
+  print(length(item))
+}
+```
+
+```{r}
+map(.x = colour_feelings, .f = length)
+```
+
+```{r}
+map(.x = colour_feelings, .f = paste)
+```
+
+```{r}
+colour_translator <- list(
+  blue ="gorm",
+  red = "dearg",
+  green = "uaine",
+  yellow = "buidhe"
+)
+```
+
+
+```{r}
+add_translation <- function(text){
+  return(paste("translation: ", text))
+}
+```
+
+```{r}
+add_translation("gorm")
+```
+
+```{r}
+map(.x = colour_translator, .f = add_translation)
+```
+
+purr lets you define little 'bespoke' custom fitted functions to do wrangling
+```{r}
+map(.x = colour_translator, .f = ~ paste("Translation: ", .x))
+```
+
+dataframes in r are just lists where each eleemnt is a vector, and the label of the element is like the column head.
+
+```{r}
+library(CodeClanData)
+students
+```
+
+```{r}
+map(students, length)
+```
+
+
+```{r}
+map(colour_translator, nchar)
+```
+
+```{r}
+colour_wavelengths <- list(
+    blue   = 470,
+    red    = 665,
+    green  = 550,
+    yellow = 600
+)
+```
+
+Using the colour_wavelengths list below, round each wavelength to the nearest 100.
+```{r}
+map(colour_wavelengths, round, digits = -2)
+```
+
+
+```{r}
+map(colour_wavelengths, ~ .x/1000000000)
+```
+
+```{r}
+map_int(colour_feelings
+        ) 
+```
+
+
+```{r}
+students_list <- as.list(students)
+  map_df(students_list, sort)
+```
+
+
+```{r}
+blue <- list(
+    translation = "gorm",
+    feelings    = c("Sad", "Calm"),
+    primary     = "Yes",
+    wavelength  = 470
+)
+```
+
+```{r}
+#predicate = logical i.e. condition/question
+map_if(.x = blue, .p = is.character, .f = nchar)
+
+#apply
+map_if(.x = blue,  .p = ~ length(.x) > 1, .f = paste, collapse = ",")
+```
+
+```{r}
+str(colour_list)
+```
+
+```{r}
+map(colour_list, "wavelength")
+```
+
+```{r}
+colour_list_feelings <- map(colour_list, "feelings")
+map(colour_list_feelings, length)
+```
+
