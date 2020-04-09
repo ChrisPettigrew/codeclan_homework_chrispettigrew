@@ -108,11 +108,12 @@ qb_device_data
 
 
 ```{r}
+qb_device_data <- mutate(qb_device_data, decimal_hour = hours + (mins/60))
 
 ggplot(qb_device_data) +
-  aes(x = hours, y = counts, fill = device) +
-  geom_line(colour = "#1380A1", size = 1) +
-   facet_wrap(~ device, ncol = 4)
+  aes(x = decimal_hour, y = counts, fill = device) +
+  geom_line() +
+   facet_wrap(id ~ device, ncol = 4) 
 ```
 
 
