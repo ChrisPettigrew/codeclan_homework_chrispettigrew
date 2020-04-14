@@ -1,0 +1,115 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(prob)
+library(gtools)
+library(tidyverse)
+
+```
+
+
+----
+#1
+```{r}
+prob_5 <- 4/6
+prob_5
+```
+
+#2
+```{r}
+die3 <- rolldie(3)
+
+die3 %>%
+  summarise(size_of_s = n())
+die3
+```
+
+#3
+```{r}
+four_dice_roll <- rolldie(4) %>%
+  rowwise() %>%
+  mutate(
+    total_row = sum(X1 + X2 + X3 + X4)
+  )
+four_dice_roll
+```
+
+```{r}
+total_equals_5_6_7 <- four_dice_roll %>%
+  filter(between(total_row, 5, 7))
+total_equals_5_6_7
+```
+
+```{r}
+prob_5_6_7 <- nrow(total_equals_5_6_7) / nrow(four_dice_roll)
+prob_5_6_7
+```
+
+
+#4
+
+```{r}
+h <- c(150, 160, 170, 180, 190)
+h
+```
+
+```{r}
+seating_order <- as_tibble(permutations(n = 5, 
+                                        r = 5, 
+                                        v = heights, repeats.allowed = FALSE))
+seating_order
+```
+
+# renaming the height variables to something better
+```{r}
+seating_order <- seating_order %>%
+  rename(
+    height1 = V1,
+    height2 = V2,
+    height3 = V3,
+    height4 = V4,
+    height5 = V5
+  )   
+```
+
+```{r}
+s_size <- nrow(seating_order)
+s_size
+```
+
+# probability that they sit in order of decreasing height, left to right
+```{r}
+1/120
+```
+
+#6
+```{r}
+prob_spade <- cards(jokers = FALSE)
+
+prob_spade <- 5 %>%
+  mutate(black_card = suit == "Club" | suit == "Spade")
+```
+
+
+----
+#7
+```{r}
+patients <- c("Alice", "Bob", "Carmen", "Dinesh", "Ella", "Fergus", "Gianna", "Henry")
+
+slots <- as_tibble(combinations(n = 8, 
+                                r = 5, 
+                                v = patients, repeats.allowed = FALSE))
+
+nrow(slots)
+```
+
+#8 
+```{r}
+steams <- permutations(n = 8, 
+                                r = 5, 
+                                v = patients, repeats.allowed = FALSE)
+nrow(steams)
+```
+
