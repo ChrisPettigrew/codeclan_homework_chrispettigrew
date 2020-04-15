@@ -1,0 +1,70 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(prob)
+library(tidyverse)
+library(dplyr)
+library(janitor)
+```
+
+```{r}
+phones <- read_csv("data/20190928-items.csv") %>%
+  clean_names()
+```
+
+```{r}
+phones %>%
+  group_by(brand) %>%
+  count() %>%
+  arrange(desc(n)) %>%
+  head(1)
+  
+```
+
+```{r}
+phones %>%
+  filter(brand == "Samsung") %>%
+  ggplot(aes(x = rating)) +
+  geom_bar()
+```
+
+```{r}
+
+samsung_ratings <- phones %>%
+  filter(brand == "Samsung") %>%
+  summarise(
+    num = n(),
+    mean = mean(rating),
+    sd = sd(rating)
+  )
+samsung_ratings
+
+```
+
+
+```{r}
+phones %>%
+  filter(brand == "Samsung") %>%
+  ggplot(aes(x = rating)) +
+  geom_histogram(aes(y = ..density..), col = "white", bins = 25) +
+  stat_function(
+    fun = dnorm, 
+    args = list(
+      mean = samsung_ratings$mean, 
+      sd = samsung_ratings$sd
+    ),
+    col = "red"
+  )
+```
+
+
+```{r}
+phones %>%
+  filter(rating >= samsung_ratings$mean - samsung_ratings$sd) %>%
+  filter(rating <= samsung_ratings$mean + samsung_ratings$sd) %>%
+  summarise(prop_within_1sd = n() / nrow(samsung_ratings))
+
+```
+
