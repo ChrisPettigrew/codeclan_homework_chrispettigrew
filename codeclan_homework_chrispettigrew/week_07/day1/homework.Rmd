@@ -66,16 +66,16 @@ Question_6
 
 Start with the weather data from the nycflights13 package. Select all the variables related to temperature, humidity, and precipitation, and pick out the key and index variables. Have a look at your data, and write a small description of the time series you observe.
 ```{r}
-weather_date <- weather %>%
-  select(temp, humid, precip) 
+weather_data <- nycflights13::weather %>%
+  select(origin, time_hour, temp, humid, precip) 
 ```
 
 
 Question_7
 Change the weather data into a tsibble.
 ```{r}
-weather %>%
-  as_tsibble(key = origin)
+weather_tsbl <- weather %>%
+  as_tsibble(index = time_hour, key = origin)
 
 ```
 
