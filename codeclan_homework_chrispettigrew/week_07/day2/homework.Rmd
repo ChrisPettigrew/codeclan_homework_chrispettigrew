@@ -1,0 +1,86 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(tsibble)
+library(tsibbledata)
+library(fable)
+```
+
+```{r}
+nyc_bikes <- nyc_bikes
+```
+
+
+#Q1
+Load in the nyc_bikes data from the tsibbledata package. Have an initial look at it to see what you’re working with. Create three new columns: one that stores only the year the bike was used, one that stores only the month the bike was used, and one that stores the date. Use the data stored in start_time to create these new columns.
+```{r}
+
+date_cols <-
+nyc_bikes %>%
+  mutate(year = year  (start_time),
+         month = month(start_time),
+         date  = date(start_time))
+```
+
+
+#Q2 Summarise the number of bike hire counts by month. Make a plot of this data. *Hint: remember that to group time series (tsibble) data, you need to use index_by instead of group_by before your summarise function. What does this plot tell you about the time series? Do you think this downsampled data would be adequate to build a forecast with?
+```{r}
+ 
+bike_hires <-
+date_cols %>%
+index_by(month) %>%
+  summarise(sum = n())
+  ggplot(bike_hires) +
+  geom_line(aes(x = month, y = sum), color = "red")
+  
+
+```
+
+#Q3
+```{r}
+bike_date <-
+date_cols %>%
+index_by(date) %>%
+  summarise(count = n())
+  ggplot(bike_date) +
+  geom_line(aes(x = date, y = count), color = "red")
+
+```
+
+#Q4
+```{r}
+nyc_bikes_filled <- date_cols %>%
+  fill_gaps(count = as.integer(median(count)))
+nyc_bikes_filled
+
+```
+
+```{r}
+fit <- nyc_bikes_filled %>%
+  model(
+    snaive = SNAIVE(count),
+    mean_model = MEAN(count),
+    arima = ARIMA(count)
+  )
+fit
+```
+
+#Q5
+```{r}
+forecasted_bike_use <- fit %>%
+  fabletools::forecast(h = 120)
+forecast_bike_use
+forecast_bike_use %>%
+  autoplot(nyc_bikes_filled, level = NULL) +
+  ggtitle("Forecasts for bikes usage") +
+  xlab("month") +
+  guides(colour = guide_legend(title = "Forecast"))
+  
+```
+
+#Q6
