@@ -1,0 +1,118 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(synthpop)
+library(tidyverse)
+library(CodeClanData)
+
+```
+
+```{r}
+head(salary)
+```
+
+```{r}
+salaries <- salary %>% 
+  dplyr::select(job_area, salary)
+                    
+salaries %>%
+  ggplot(aes(x = job_area, y = salary)) +
+  geom_boxplot()
+```
+
+```{r}
+syn_sal <- syn(salaries)
+syn_sal
+```
+
+```{r}
+syn_sal_data <- syn_sal$syn
+summary(syn_sal_data)
+summary(salaries)
+```
+
+```{r}
+compare(syn_sal, salaries)
+```
+
+
+```{r}
+syn_sal_data %>%
+  ggplot(aes(x=job_area, y=salary)) +
+  geom_boxplot()
+```
+
+-----
+
+
+```{r}
+library(lubridate)
+
+IBM_stock_price_open <- IBM_stock_price %>%
+                            dplyr::select(date, open) %>%
+                            mutate(date = dmy(date))
+```
+
+
+```{r}
+syn_stock <- syn(IBM_stock_price_open)
+syn_stock
+```
+
+
+
+```{r}
+IBM_stock_price_open %>%
+  ggplot(aes(x = date, y = open)) +
+  geom_line()
+```
+
+
+```{r}
+syn_stock_data <- syn_stock$syn
+summary(syn_stock_data)
+summary(syn_stock)
+```
+
+```{r}
+syn_stock_data %>%
+  ggplot(aes(x=date, y=open)) +
+  geom_line()
+```
+
+```{r}
+rules_shetland <- list(job_area = "location == 'Shetland'")
+rvalues_shetland <-  list(job_area = "Legal")
+
+syn_sal_data_rule <- syn(salary, 
+                         visit.sequence = c("location", "salary", "job_area"), #we need to synthesise location before job_area since the rule for job_area is dependant on location
+                         rules = rules_shetland , 
+                         rvalues = rvalues_shetland)
+```
+
+```{r}
+syn_sal_data_rule$syn %>%
+  filter(location == "Shetland") %>%
+  
+  group_by(job_area) %>%
+  summarise(n = n())
+```
+
+```{r}
+population %>%
+  mutate(city = fct_rev(fct_infreq(city))) %>%
+  ggplot(aes(x = city)) +
+  geom_bar() +
+  coord_flip() +
+  theme(axis.text.y = element_text(size = 5))
+```
+
+
+
+
+
+
+
