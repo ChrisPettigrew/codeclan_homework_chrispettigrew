@@ -1,0 +1,63 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(GGally)
+```
+
+```{r}
+diamonds <- read_csv("diamonds.csv")
+```
+
+```{r}
+cor_diamonds <- diamonds %>%
+  select(x,y,z,carat)
+
+ggpairs(cor_diamonds)
+```
+
+
+```{r}
+cut_diamonds <- diamonds %>%
+  select(-c("x","y","z"))
+```
+
+```{r}
+ggpairs(cut_diamonds)
+```
+
+```{r}
+cut_diamonds %>%
+  ggplot(aes(x = price, y = carat)) +
+  geom_point()
+```
+
+```{r}
+cut_diamonds %>%
+  summarise(r = cor(carat, price))
+```
+
+```{r}
+cut_diamonds %>%
+  ggcorr()
+```
+
+```{r}
+model <- lm(carat ~ price, data = cut_diamonds)
+summary(model)
+
+
+```
+
+```{r}
+plot(model)
+```
+
+```{r}
+
+
+```
+
