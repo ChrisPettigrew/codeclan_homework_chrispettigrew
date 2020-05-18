@@ -1,0 +1,64 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(modelr)
+library(janitor)
+```
+
+```{r}
+library(ggiraphExtra)
+library(GGally)
+```
+
+```{r}
+avocado <- read_csv("data/avocado.csv")
+dict <- read_csv("data/data_dict.txt")
+```
+
+```{r}
+avocado_tidy <- avocado %>%
+  select(-region) %>%
+  mutate(type = as.factor(type)) 
+glimpse(avocado_tidy)
+```
+
+```{r}
+avocado_tidy %>%
+  ggpairs(aes(color = type, alpha = 0.5))
+```
+
+```{r}
+avocado_clean <- avocado_tidy %>%
+  select(-c(X1,Date)) 
+```
+
+```{r}
+avocado_clean %>%
+  ggpairs(aes(color = type, alpha = 0.5))
+```
+
+```{r}
+avocado_clean <- clean_names(avocado_clean)
+```
+
+
+```{r}
+avocado_clean %>%
+  rename(small_hass = x4046, large_hass = x4225, all_sizes_hass = x4770)
+```
+
+```{r}
+model1a <- lm(formula = average_price ~ type, data = avocado_clean)
+summary(model1a)
+```
+
+```{r}
+model1b <- lm(formula = average_price ~ total_volume, data = avocado_clean)
+ summary(model1b)
+```
+
+
