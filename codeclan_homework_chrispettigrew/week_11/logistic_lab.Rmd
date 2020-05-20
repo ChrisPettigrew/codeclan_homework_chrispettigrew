@@ -1,0 +1,72 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(janitor)
+library(GGally)
+```
+
+```{r}
+telecom <- readxl::read_excel("telecomms_churn.xlsx")
+```
+
+```{r}
+telecom <- clean_names(telecom) %>%
+  select(-customer_id)
+```
+
+```{r}
+telecom <- telecom %>%
+  filter(!is.na(total_charges))
+```
+
+```{r}
+split1 <- telecom %>%
+  select(gender, senior_citizen, partner, churn)
+
+split2 <- telecom %>%
+  select(dependents, tenure, phone_service, churn)
+
+split3 <- telecom %>%
+  select(internet_service, contract, monthly_charges, total_charges, churn)
+```
+
+
+```{r}
+ggpairs(split1)
+```
+
+```{r}
+ggpairs(split2)
+```
+
+```{r}
+ggpairs(split3)
+```
+
+```{r}
+telecom_factors <- telecom %>%
+  mutate_if(is_character, as_factor) %>%
+  mutate(senior_citizen = as_factor(if_else(senior_citizen == 1, "Yes", "No")))
+```
+
+```{r}
+mod1_1pred_monthly_charges <- glm(churn ~ monthly_charges, data = telecom_factors, family = binomial(link = 'logit'))
+
+mod2_1pred_tenure <- glm(churn ~ tenure, data = telecom_factors, family = binomial(link = 'logit'))
+
+mod3_1pred_senior <- glm(churn ~ senior_citizen, data = telecom_factors, family = binomial(link = 'logit'))
+
+library(broom)
+
+clean_names(tidy(mod1_1pred_monthly_charges))
+```
+
+```{r}
+clean_names(tidy(mod2_1pred_tenure))
+
+```
+
